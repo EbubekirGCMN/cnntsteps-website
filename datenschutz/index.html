@@ -3,97 +3,204 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CNNT Steps – Datenschutz · Privacy · Gizlilik</title>
-<meta name="description" content="Datenschutzerklärung für die App CNNT Steps · Privacy policy · Gizlilik politikası">
+<title>CNNT Steps – Datenschutz · Privacy</title>
+<meta name="description" content="Datenschutzerklärung der App CNNT Steps · Privacy policy of the CNNT Steps app (16 languages)">
+<meta name="theme-color" content="#0b2a52">
 <style>
   :root {
-    --text: #1b1f24; --leise: #5a6270; --akzent: #0f62c7; --akzent-weich: #e8f1fc;
-    --flaeche: #f5f7fa; --karte: #ffffff; --rand: #dde2e8; --kasten: #eef4fb; --warn: #8a5a00; --warn-bg: #fff6e0;
+    --text: #1a1f26; --leise: #5b6472; --akzent: #0067c0; --akzent-hell: #e7f1fb;
+    --flaeche: #f3f6fa; --karte: #ffffff; --rand: #dfe5ec; --warn: #7a4f00; --warn-bg: #fff4d9;
+    --gut: #0f7b3f; --schatten: 0 1px 2px rgba(16,32,56,.06), 0 8px 24px rgba(16,32,56,.07);
+    --kopf-a: #0b2a52; --kopf-b: #0067c0;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --text: #e8ebef; --leise: #a3acb8; --akzent: #6cb2ff; --akzent-weich: #1c2d42;
-      --flaeche: #15181c; --karte: #1d2127; --rand: #333a43; --kasten: #1f2a36; --warn: #f0c46b; --warn-bg: #2d2615;
+      --text: #e6eaf0; --leise: #a1abb9; --akzent: #6cb6ff; --akzent-hell: #17293d;
+      --flaeche: #11151a; --karte: #1a1f26; --rand: #2c343e; --warn: #f2c96d; --warn-bg: #2b2413;
+      --gut: #5fd08f; --schatten: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.3);
+      --kopf-a: #07182e; --kopf-b: #0a4a8c;
     }
   }
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
   body { margin: 0; background: var(--flaeche); color: var(--text);
-         font: 16px/1.65 "Segoe UI", system-ui, -apple-system, sans-serif; }
-  a { color: var(--akzent); }
-  code { font-family: Consolas, "Cascadia Mono", monospace; font-size: .92em; }
+         font: 16px/1.7 "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, sans-serif; }
+  :lang(ja) { font-family: "Yu Gothic UI", "Meiryo UI", "Segoe UI", sans-serif; }
+  :lang(zh-CN) { font-family: "Microsoft YaHei UI", "Segoe UI", sans-serif; }
+  :lang(ko) { font-family: "Malgun Gothic", "Segoe UI", sans-serif; }
+  a { color: var(--akzent); text-underline-offset: 2px; }
+  code { font-family: "Cascadia Mono", Consolas, monospace; font-size: .9em;
+          background: var(--akzent-hell); padding: 1px 6px; border-radius: 5px; }
 
-  header { background: var(--karte); border-bottom: 1px solid var(--rand); position: sticky; top: 0; z-index: 2; }
-  .kopf { max-width: 860px; margin: 0 auto; padding: 12px 16px; display: flex; align-items: center;
-          justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-  .marke { font-weight: 700; letter-spacing: .2px; }
-  .marke span { color: var(--leise); font-weight: 400; }
-  .reiter { display: flex; gap: 4px; background: var(--flaeche); border: 1px solid var(--rand);
-            border-radius: 10px; padding: 3px; }
-  .reiter button { font: inherit; font-size: .93rem; border: 0; background: transparent; color: var(--leise);
-                   padding: 6px 14px; border-radius: 7px; cursor: pointer; }
-  .reiter button[aria-selected="true"] { background: var(--karte); color: var(--text); font-weight: 600;
-                                         box-shadow: 0 1px 3px rgba(0,0,0,.12); }
-  .reiter button:focus-visible { outline: 2px solid var(--akzent); outline-offset: 1px; }
-  .ohne-js .reiter { display: none; }
+  /* ---------- Kopf ---------- */
+  .kopf { background: linear-gradient(160deg, var(--kopf-a), var(--kopf-b)); color: #fff; }
+  .kopf-innen { max-width: 1120px; margin: 0 auto; padding: 22px 20px 64px; }
+  .leiste { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .marke { display: flex; align-items: center; gap: 12px; color: #fff; text-decoration: none; }
+  .marke svg { border-radius: 10px; box-shadow: 0 4px 14px rgba(0,0,0,.25); }
+  .marke b { font-size: 1.25rem; letter-spacing: .2px; }
+  .wahl { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,.12);
+           border: 1px solid rgba(255,255,255,.25); border-radius: 999px; padding: 4px 6px 4px 12px; }
+  .wahl svg { flex-shrink: 0; opacity: .9; }
+  .wahl select { font: inherit; font-size: .95rem; color: #fff; background: transparent; border: 0;
+                  padding: 6px 28px 6px 2px; cursor: pointer; appearance: none; -webkit-appearance: none;
+                  background-image: linear-gradient(45deg, transparent 50%, #fff 50%), linear-gradient(135deg, #fff 50%, transparent 50%);
+                  background-position: calc(100% - 13px) 55%, calc(100% - 8px) 55%;
+                  background-size: 5px 5px; background-repeat: no-repeat; }
+  .wahl select option { color: #1a1f26; }
+  .wahl select:focus-visible { outline: 2px solid #fff; outline-offset: 2px; border-radius: 6px; }
+  .kopf-titel { margin-top: 34px; }
+  .kopf-titel .eyebrow { text-transform: uppercase; letter-spacing: 1.4px; font-size: .78rem; opacity: .8; }
+  .kopf-titel .gross { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; line-height: 1.2; margin: 6px 0 0; }
+  .ohne-js .wahl { display: none; }
 
-  main { max-width: 860px; margin: 0 auto; padding: 24px 16px 64px; }
-  section.sprache { background: var(--karte); border: 1px solid var(--rand); border-radius: 14px;
-                    padding: 28px clamp(18px, 4vw, 40px) 36px; }
+  /* ---------- Inhalt ---------- */
+  main { max-width: 1120px; margin: -40px auto 0; padding: 0 20px 56px; position: relative; }
+  section.sprache { background: var(--karte); border: 1px solid var(--rand); border-radius: 18px;
+                    box-shadow: var(--schatten); padding: 34px clamp(20px, 4vw, 48px) 44px; }
   .js section.sprache[hidden] { display: none; }
-  section.sprache { scroll-margin-top: 90px; }
   .ohne-js section.sprache + section.sprache { margin-top: 28px; }
-  h1 { font-size: 1.7rem; line-height: 1.25; margin: 0 0 6px; }
-  .stand { color: var(--leise); font-size: .9rem; margin: 0 0 20px; }
-  .kurz { background: var(--kasten); border-radius: 10px; padding: 14px 20px; margin-bottom: 22px; }
-  .kurz strong { display: block; margin-bottom: 4px; }
-  .kurz ul { margin: 0; padding-left: 20px; }
-  .kurz li { margin: 3px 0; }
-  nav.inhalt { border: 1px solid var(--rand); border-radius: 10px; padding: 12px 20px; margin-bottom: 8px; }
-  nav.inhalt strong { font-size: .9rem; color: var(--leise); text-transform: uppercase; letter-spacing: .6px; }
-  nav.inhalt ol { margin: 6px 0 0; padding-left: 22px; columns: 2; column-gap: 32px; }
-  nav.inhalt li { margin: 2px 0; break-inside: avoid; }
-  nav.inhalt a { text-decoration: none; }
-  nav.inhalt a:hover { text-decoration: underline; }
-  h2 { font-size: 1.2rem; margin: 34px 0 10px; padding-top: 18px; border-top: 1px solid var(--rand);
-       scroll-margin-top: 80px; }
-  .verantwortlich { background: var(--akzent-weich); border-radius: 10px; padding: 12px 18px; display: inline-block; }
-  .hinweis { background: var(--warn-bg); color: var(--warn); border-radius: 10px; padding: 10px 16px; font-size: .93rem; }
+  .einleitung > h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 4px; }
+  .js .einleitung > h1 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .stand { color: var(--leise); font-size: .9rem; margin: 0 0 18px; }
+  .hinweis { display: flex; gap: 10px; align-items: flex-start; background: var(--warn-bg); color: var(--warn);
+              border-radius: 12px; padding: 10px 16px; font-size: .93rem; margin: 0 0 20px; }
+  .hinweis::before { content: "ⓘ"; font-weight: 700; }
 
-  table { border-collapse: collapse; width: 100%; font-size: .95rem; margin: 8px 0; }
-  th, td { border-bottom: 1px solid var(--rand); padding: 10px 10px; text-align: left; vertical-align: top; }
-  th { color: var(--leise); font-weight: 600; font-size: .85rem; text-transform: uppercase; letter-spacing: .4px; }
+  /* Kurzfassung als Karten */
+  .kurz { margin: 0 0 28px; }
+  .kurz > strong { display: block; font-size: .8rem; text-transform: uppercase; letter-spacing: 1px;
+                    color: var(--leise); margin-bottom: 10px; }
+  .kurz ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px;
+              grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+  .kurz li { background: var(--akzent-hell); border-radius: 14px; padding: 14px 16px 14px 48px; position: relative;
+              font-size: .95rem; line-height: 1.55; }
+  .kurz li::before { content: "✓"; position: absolute; left: 14px; top: 12px; width: 24px; height: 24px;
+                      border-radius: 50%; background: var(--akzent); color: #fff; font-size: .8rem; font-weight: 700;
+                      display: grid; place-items: center; }
+
+  /* Inhaltsverzeichnis */
+  nav.inhalt { border: 1px solid var(--rand); border-radius: 14px; padding: 14px 18px; margin: 0 0 8px; }
+  nav.inhalt > strong { font-size: .8rem; color: var(--leise); text-transform: uppercase; letter-spacing: 1px; }
+  nav.inhalt ol { margin: 8px 0 0; padding-left: 22px; }
+  nav.inhalt li { margin: 3px 0; }
+  nav.inhalt a { text-decoration: none; color: var(--text); }
+  nav.inhalt a:hover { color: var(--akzent); }
+  nav.inhalt a.aktiv { color: var(--akzent); font-weight: 600; }
+
+  h2 { font-size: 1.22rem; line-height: 1.35; margin: 38px 0 12px; padding-top: 22px;
+        border-top: 1px solid var(--rand); scroll-margin-top: 20px; }
+  .verantwortlich { display: inline-block; background: var(--akzent-hell); border-left: 4px solid var(--akzent);
+                     border-radius: 10px; padding: 12px 20px; }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+
+  table { border-collapse: separate; border-spacing: 0; width: 100%; font-size: .94rem; margin: 12px 0;
+           border: 1px solid var(--rand); border-radius: 12px; overflow: hidden; }
+  th, td { padding: 12px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--rand); }
+  tr:last-child td { border-bottom: 0; }
+  th { background: var(--flaeche); color: var(--leise); font-weight: 600; font-size: .8rem;
+        text-transform: uppercase; letter-spacing: .6px; }
   td:first-child { font-weight: 600; width: 24%; }
   td:nth-child(2) { width: 26%; color: var(--leise); }
-  @media (max-width: 640px) {
-    nav.inhalt ol { columns: 1; }
-    table, thead, tbody, tr, td { display: block; width: 100% !important; }
-    thead { display: none; }
-    tr { border: 1px solid var(--rand); border-radius: 10px; padding: 10px 14px; margin: 10px 0; }
-    td { border: 0; padding: 3px 0; }
-    td:nth-child(2)::before { content: attr(data-label) ": "; font-weight: 600; }
+  tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--flaeche) 45%, transparent); }
+
+  /* Breite Bildschirme: Inhaltsverzeichnis links, mitlaufend */
+  @media (min-width: 1000px) {
+    section.sprache { display: grid; grid-template-columns: 250px minmax(0, 1fr); column-gap: 44px;
+                      grid-template-areas: "einleitung einleitung" "inhalt rumpf"; }
+    .einleitung { grid-area: einleitung; }
+    .rumpf { grid-area: rumpf; min-width: 0; }
+    section.sprache > nav.inhalt { grid-area: inhalt; align-self: start;
+                                    position: sticky; top: 20px; border: 0; padding: 0 0 0 2px; margin: 38px 0 0; }
+    nav.inhalt ol { padding-left: 0; list-style: none; counter-reset: n; border-left: 2px solid var(--rand); }
+    nav.inhalt li { margin: 0; }
+    nav.inhalt a { display: block; padding: 6px 12px; margin-left: -2px; border-left: 2px solid transparent;
+                    font-size: .92rem; line-height: 1.4; }
+    nav.inhalt a.aktiv { border-left-color: var(--akzent); background: var(--akzent-hell); border-radius: 0 8px 8px 0; }
   }
-  footer { max-width: 860px; margin: 0 auto; padding: 0 16px 40px; color: var(--leise); font-size: .88rem; }
+
+  /* Schmale Bildschirme: Tabelle als Karten */
+  @media (max-width: 640px) {
+    .kopf-innen { padding: 16px 16px 56px; }
+    main { padding: 0 12px 40px; }
+    table, thead, tbody, tr, td { display: block; width: 100% !important; }
+    table { border: 0; }
+    thead { display: none; }
+    tr { border: 1px solid var(--rand); border-radius: 12px; padding: 12px 14px; margin: 10px 0; }
+    td { border: 0; padding: 3px 0; background: none !important; }
+    td:nth-child(2)::before { content: attr(data-label) ": "; font-weight: 600; color: var(--text); }
+  }
+
+  footer { max-width: 1120px; margin: 0 auto; padding: 0 20px 48px; color: var(--leise); font-size: .88rem;
+            display: flex; gap: 8px 24px; flex-wrap: wrap; justify-content: space-between; }
+  @media print {
+    .kopf { background: none; color: #000; }
+    .wahl { display: none; }
+    main { margin-top: 0; }
+    section.sprache { box-shadow: none; border: 0; display: block !important; }
+    section.sprache[hidden] { display: none !important; }
+    nav.inhalt { display: none; }
+  }
 </style>
 </head>
 <body class="ohne-js">
 <script>document.body.className = "js";</script>
 
-<header>
-  <div class="kopf">
-    <div class="marke">CNNT Steps <span>· Datenschutz / Privacy / Gizlilik</span></div>
-    <div class="reiter" role="tablist" aria-label="Sprache / Language / Dil">
-      <button role="tab" id="tab-de" aria-controls="de" data-sprache="de">Deutsch</button>
-      <button role="tab" id="tab-en" aria-controls="en" data-sprache="en">English</button>
-      <button role="tab" id="tab-tr" aria-controls="tr" data-sprache="tr">Türkçe</button>
+<header class="kopf">
+  <div class="kopf-innen">
+    <div class="leiste">
+      <a class="marke" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true">
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1782d8"/>
+      <stop offset="1" stop-color="#0067c0"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="44" height="44" aria-hidden="true" rx="10" ry="10" fill="url(#tile)"/>
+  
+  <rect x="10" y="12" width="28" height="20" rx="3" ry="3"
+        fill="none" stroke="#ffffff" stroke-width="3"/>
+  
+  <circle cx="24" cy="22" r="4.2" fill="#ffffff"/>
+  
+  <path d="M18 38h12" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+</svg><b>CNNT Steps</b></a>
+      <label class="wahl">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18"/></svg>
+        <span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Sprache / Language</span>
+        <select id="sprachwahl" aria-label="Sprache / Language">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="tr">Türkçe</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="it">Italiano</option>
+        <option value="pt">Português (Brasil)</option>
+        <option value="nl">Nederlands</option>
+        <option value="pl">Polski</option>
+        <option value="cs">Čeština</option>
+        <option value="ro">Română</option>
+        <option value="uk">Українська</option>
+        <option value="ru">Русский</option>
+        <option value="ja">日本語</option>
+        <option value="zh">简体中文</option>
+        <option value="ko">한국어</option>
+        </select>
+      </label>
+    </div>
+    <div class="kopf-titel">
+      <div class="eyebrow">CNNT Steps · Microsoft Store</div>
+      <p class="gross" id="seitentitel">Datenschutzerklärung</p>
     </div>
   </div>
 </header>
 
 <main>
 
-<!-- ======================================================= DEUTSCH -->
+<!-- de -->
 <section class="sprache" id="de" lang="de" role="tabpanel" aria-labelledby="tab-de">
+<div class="einleitung">
 <h1>Datenschutzerklärung</h1>
 <p class="stand">Stand: 25.09.2026 · gilt für die im Microsoft Store angebotene Fassung der App CNNT Steps</p>
 
@@ -107,6 +214,7 @@
 </ul>
 </div>
 
+</div>
 <nav class="inhalt" aria-label="Inhalt">
 <strong>Inhalt</strong>
 <ol>
@@ -121,6 +229,7 @@
 <li><a href="#de-9">Änderungen</a></li>
 </ol>
 </nav>
+<div class="rumpf">
 
 <h2 id="de-1">1. Wer ist verantwortlich?</h2>
 <p class="verantwortlich">CNNT – Ebubekir Göcmen<br>
@@ -195,10 +304,12 @@ Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
 <h2 id="de-9">9. Änderungen</h2>
 <p>Wir passen diese Erklärung an, wenn sich die App oder die rechtlichen Anforderungen ändern. Es gilt die jeweils hier
 veröffentlichte Fassung.</p>
+</div>
 </section>
 
-<!-- ======================================================= ENGLISH -->
+<!-- en -->
 <section class="sprache" id="en" lang="en" role="tabpanel" aria-labelledby="tab-en">
+<div class="einleitung">
 <h1>Privacy Policy</h1>
 <p class="stand">Last updated: 25 September 2026 · applies to the version of the CNNT Steps app offered in the Microsoft Store</p>
 <p class="hinweis">This is a translation. In case of doubt, the German version applies.</p>
@@ -213,6 +324,7 @@ veröffentlichte Fassung.</p>
 </ul>
 </div>
 
+</div>
 <nav class="inhalt" aria-label="Contents">
 <strong>Contents</strong>
 <ol>
@@ -227,6 +339,7 @@ veröffentlichte Fassung.</p>
 <li><a href="#en-9">Changes</a></li>
 </ol>
 </nav>
+<div class="rumpf">
 
 <h2 id="en-1">1. Who is responsible?</h2>
 <p class="verantwortlich">CNNT – Ebubekir Göcmen<br>
@@ -298,10 +411,12 @@ Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
 
 <h2 id="en-9">9. Changes</h2>
 <p>We update this policy if the app or the legal requirements change. The version published here applies.</p>
+</div>
 </section>
 
-<!-- ======================================================= TÜRKÇE -->
+<!-- tr -->
 <section class="sprache" id="tr" lang="tr" role="tabpanel" aria-labelledby="tab-tr">
+<div class="einleitung">
 <h1>Gizlilik Politikası</h1>
 <p class="stand">Güncelleme: 25.09.2026 · CNNT Steps uygulamasının Microsoft Store'da sunulan sürümü için geçerlidir</p>
 <p class="hinweis">Bu bir çeviridir. Şüphe halinde Almanca metin geçerlidir.</p>
@@ -316,6 +431,7 @@ Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
 </ul>
 </div>
 
+</div>
 <nav class="inhalt" aria-label="İçindekiler">
 <strong>İçindekiler</strong>
 <ol>
@@ -330,6 +446,7 @@ Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
 <li><a href="#tr-9">Değişiklikler</a></li>
 </ol>
 </nav>
+<div class="rumpf">
 
 <h2 id="tr-1">1. Sorumlu kimdir?</h2>
 <p class="verantwortlich">CNNT – Ebubekir Göcmen<br>
@@ -402,26 +519,1378 @@ Datenschutzbehörde'dir (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p
 <h2 id="tr-9">9. Değişiklikler</h2>
 <p>Uygulama veya yasal gereklilikler değiştiğinde bu politikayı güncelleriz. Burada yayımlanan güncel sürüm
 geçerlidir.</p>
+</div>
+</section>
+
+<!-- fr -->
+<section class="sprache" id="fr" lang="fr" role="tabpanel" aria-labelledby="tab-fr">
+<div class="einleitung">
+<h1>Politique de confidentialité</h1>
+<p class="stand">Dernière mise à jour : 25 septembre 2026 · s'applique à la version de l'application CNNT Steps proposée dans le Microsoft Store</p>
+<p class="hinweis">Ceci est une traduction. En cas de doute, la version allemande fait foi.</p>
+
+<div class="kurz">
+<strong>En bref</strong>
+<ul>
+<li>CNNT Steps fonctionne sur votre appareil. Vos enregistrements ne nous sont pas transmis.</li>
+<li>L'application n'a ni compte utilisateur, ni publicité, ni outils d'analyse ou de suivi.</li>
+<li>L'application ne se connecte à Internet que pour télécharger les modèles vocaux (dictée) et pour vérifier votre abonnement via le Microsoft Store.</li>
+<li>Les captures d'écran peuvent contenir des données personnelles – ce que vous enregistrez et partagez relève de votre responsabilité.</li>
+</ul>
+</div>
+
+</div>
+<nav class="inhalt" aria-label="Sommaire">
+<strong>Sommaire</strong>
+<ol>
+<li><a href="#fr-1">Qui est responsable ?</a></li>
+<li><a href="#fr-2">Ce que l'application traite sur votre appareil</a></li>
+<li><a href="#fr-3">Votre responsabilité concernant les enregistrements</a></li>
+<li><a href="#fr-4">Quand l'application se connecte à Internet</a></li>
+<li><a href="#fr-5">Microsoft Store et abonnement</a></li>
+<li><a href="#fr-6">Si vous nous contactez</a></li>
+<li><a href="#fr-7">Conservation et suppression</a></li>
+<li><a href="#fr-8">Vos droits</a></li>
+<li><a href="#fr-9">Modifications</a></li>
+</ol>
+</nav>
+<div class="rumpf">
+
+<h2 id="fr-1">1. Qui est responsable ?</h2>
+<p class="verantwortlich">CNNT – Ebubekir Göcmen<br>
+E-mail : <a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a></p>
+<p>La présente politique s'applique à l'application CNNT Steps. Pour le Microsoft Store, pour Windows et pour les serveurs de
+téléchargement mentionnés à la <a href="#fr-4">section 4</a>, ce sont les déclarations de confidentialité des fournisseurs respectifs qui s'appliquent.</p>
+
+<h2 id="fr-2">2. Ce que l'application traite sur votre appareil</h2>
+<p>Les données suivantes sont créées sur votre appareil et y restent. Nous n'y avons pas accès.</p>
+<table>
+<thead><tr><th>Données</th><th>Quand</th><th>Ce qu'il en advient</th></tr></thead>
+<tbody>
+<tr><td>Captures d'écran de la fenêtre enregistrée ou de la zone sélectionnée</td><td data-label="Quand">uniquement pendant un enregistrement ou une capture rapide que vous lancez vous-même</td><td>Elles sont stockées dans votre fichier d'enregistrement (<code>.steps</code>) et dans les documents créés à partir de celui-ci, à l'emplacement que vous choisissez.</td></tr>
+<tr><td>Titres de fenêtres et noms des éléments de commande cliqués</td><td data-label="Quand">uniquement pendant un enregistrement ou une capture rapide</td><td>Ils servent à décrire les étapes et sont stockés dans votre fichier d'enregistrement.</td></tr>
+<tr><td>Saisies au clavier</td><td data-label="Quand">uniquement pendant un enregistrement</td><td>L'application détecte les saisies au clavier afin de reconnaître certaines touches. Seules les touches Ctrl et Suppr sont évaluées ; les autres touches sont ignorées et ne sont pas stockées.</td></tr>
+<tr><td>Raccourcis clavier</td><td data-label="Quand">tant que l'application est en cours d'exécution (y compris dans la zone de notification, si vous le paramétrez)</td><td>L'application enregistre auprès de Windows certaines combinaisons de touches, par exemple la touche Impr. écran pour la capture rapide. Windows lui signale uniquement le moment où exactement ces combinaisons sont pressées ; elle ne reçoit par ce biais aucune autre saisie au clavier.</td></tr>
+<tr><td>Champs de mot de passe</td><td data-label="Quand">lorsqu'ils sont cliqués</td><td>Un champ de mot de passe cliqué est, dans la mesure où Windows le signale comme tel, rendu illisible sur l'image ; son contenu n'est pas repris sous forme de texte. Il s'agit d'une mesure de protection supplémentaire, et non d'une garantie.</td></tr>
+<tr><td>Microphone</td><td data-label="Quand">uniquement lorsque vous activez la dictée</td><td>La parole est convertie en texte sur votre appareil. Les données audio ne sont pas stockées.</td></tr>
+<tr><td>Nom de l'auteur</td><td data-label="Quand">lors de la création de documents</td><td>Si vous n'indiquez aucun nom dans les paramètres, l'application utilise votre nom d'utilisateur Windows. Il apparaît dans les documents créés.</td></tr>
+<tr><td>Paramètres et journaux</td><td data-label="Quand">en continu ; un journal de diagnostic détaillé uniquement si vous l'activez</td><td>Ils sont stockés dans votre profil utilisateur. Les journaux peuvent contenir des titres de fenêtres et des chemins de fichiers.</td></tr>
+</tbody>
+</table>
+
+<h2 id="fr-3">3. Votre responsabilité concernant les enregistrements</h2>
+<p>Une capture d'écran montre tout ce qui est visible dans la fenêtre enregistrée – y compris des données personnelles, par
+exemple des noms, des adresses e-mail ou des données clients. L'application ne détecte pas de tels contenus. Vérifiez vos
+enregistrements avant de les partager ; dans l'éditeur, les images peuvent être rognées et floutées par endroits.</p>
+<p>Si vous enregistrez, stockez ou partagez des contenus comportant des données personnelles d'autres personnes, il vous
+appartient de vous assurer que cela est licite – par exemple vis-à-vis de vos clients, de vos collègues ou de votre employeur.</p>
+
+<h2 id="fr-4">4. Quand l'application se connecte à Internet</h2>
+<ul>
+<li><strong>Modèles vocaux pour la dictée :</strong> lorsque vous utilisez la dictée pour la première fois, l'application
+télécharge un modèle vocal, selon le paramétrage depuis <code>huggingface.co</code> (Hugging Face) ou
+<code>alphacephei.com</code>. Comme pour tout téléchargement, le serveur reçoit les données de connexion techniquement
+nécessaires, par exemple votre adresse IP. Aucun enregistrement ni aucun texte de votre part n'est transmis à cette occasion.</li>
+<li><strong>Microsoft Store :</strong> l'application demande au Microsoft Store, par l'intermédiaire de Windows, si votre
+abonnement est actif. Pour plus de détails, voir la <a href="#fr-5">section 5</a>.</li>
+<li><strong>« Gérer l'abonnement »</strong> ouvre votre compte Microsoft dans le navigateur.</li>
+</ul>
+<p>En dehors de cela, la version actuelle de l'application n'établit aucune connexion.</p>
+
+<h2 id="fr-5">5. Microsoft Store et abonnement</h2>
+<p>L'achat, le paiement et la gestion de l'abonnement sont assurés par le Microsoft Store. En tant qu'exploitant du Store,
+Microsoft traite des données de manière autonome, par exemple concernant les achats, les installations et les plantages,
+conformément à la <a href="https://privacy.microsoft.com/">Déclaration de confidentialité de Microsoft</a>.</p>
+<p>Nous recevons de Microsoft des rapports, par exemple des chiffres de ventes et d'installations ou des rapports de plantage,
+en règle générale sous forme agrégée. Nous ne recevons pas de données de paiement.</p>
+
+<h2 id="fr-6">6. Si vous nous contactez</h2>
+<p>Si vous nous écrivez un e-mail ou nous envoyez un rapport de problème, nous traitons les informations que vous nous
+transmettez – par exemple votre adresse e-mail, votre message et les journaux contenus dans le rapport – exclusivement pour
+traiter votre demande (art. 6, paragraphe 1, point b) ou f), du RGPD). Nous supprimons ces données dès qu'elles ne sont plus
+nécessaires à cette fin, sauf obligation légale de conservation.</p>
+<p>Vous créez un rapport de problème via <em>Paramètres → Contact → Signaler un problème</em>. Il est créé sur votre appareil
+et n'est pas envoyé automatiquement ; vous décidez si vous l'envoyez et à qui. Il ne contient aucun enregistrement, mais les
+journaux peuvent contenir des titres de fenêtres et des chemins de fichiers. Veuillez le vérifier avant de l'envoyer et ne
+nous envoyez pas d'enregistrements contenant des données personnelles d'autres personnes.</p>
+
+<h2 id="fr-7">7. Conservation et suppression</h2>
+<p>Vos enregistrements et documents sont des fichiers ordinaires, à l'emplacement où vous les enregistrez ; vous pouvez les
+supprimer à tout moment. Les paramètres et journaux de l'application sont en règle générale supprimés lors de la désinstallation de l'application.</p>
+
+<h2 id="fr-8">8. Vos droits</h2>
+<p>Dans la mesure où nous traitons des données personnelles vous concernant, vous disposez d'un droit d'accès, de
+rectification, d'effacement, de limitation du traitement, à la portabilité des données et d'opposition (art. 15 à 21 du RGPD).
+Pour ce faire, adressez-vous à <a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a>.</p>
+<p>Vous avez en outre le droit d'introduire une réclamation auprès d'une autorité de contrôle de la protection des données ;
+en Autriche, il s'agit de la Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
+
+<h2 id="fr-9">9. Modifications</h2>
+<p>Nous adaptons la présente politique lorsque l'application ou les exigences légales changent. La version publiée ici fait foi.</p>
+</div>
+</section>
+
+<!-- es -->
+<section class="sprache" id="es" lang="es" role="tabpanel" aria-labelledby="tab-es">
+<div class="einleitung">
+<h1>Política de privacidad</h1>
+<p class="stand">Última actualización: 25 de septiembre de 2026 · se aplica a la versión de la aplicación CNNT Steps ofrecida en Microsoft Store</p>
+<p class="hinweis">Esta es una traducción. En caso de duda, prevalece la versión alemana.</p>
+
+<div class="kurz">
+<strong>En resumen</strong>
+<ul>
+<li>CNNT Steps funciona en su dispositivo. Sus grabaciones no se nos transmiten.</li>
+<li>La aplicación no tiene cuenta de usuario, ni publicidad, ni herramientas de análisis o seguimiento.</li>
+<li>La aplicación solo se conecta a Internet para descargar los modelos de voz (dictado) y para comprobar su suscripción a través de Microsoft Store.</li>
+<li>Las capturas de pantalla pueden contener datos personales: lo que usted graba y comparte es responsabilidad suya.</li>
+</ul>
+</div>
+
+</div>
+<nav class="inhalt" aria-label="Contenido">
+<strong>Contenido</strong>
+<ol>
+<li><a href="#es-1">¿Quién es el responsable?</a></li>
+<li><a href="#es-2">Qué procesa la aplicación en su dispositivo</a></li>
+<li><a href="#es-3">Su responsabilidad sobre las grabaciones</a></li>
+<li><a href="#es-4">Cuándo se conecta la aplicación a Internet</a></li>
+<li><a href="#es-5">Microsoft Store y suscripción</a></li>
+<li><a href="#es-6">Si se pone en contacto con nosotros</a></li>
+<li><a href="#es-7">Conservación y eliminación</a></li>
+<li><a href="#es-8">Sus derechos</a></li>
+<li><a href="#es-9">Modificaciones</a></li>
+</ol>
+</nav>
+<div class="rumpf">
+
+<h2 id="es-1">1. ¿Quién es el responsable?</h2>
+<p class="verantwortlich">CNNT – Ebubekir Göcmen<br>
+Correo electrónico: <a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a></p>
+<p>Esta política se aplica a la aplicación CNNT Steps. Para Microsoft Store, para Windows y para los servidores de descarga
+mencionados en el <a href="#es-4">apartado 4</a> se aplican las declaraciones de privacidad de los respectivos proveedores.</p>
+
+<h2 id="es-2">2. Qué procesa la aplicación en su dispositivo</h2>
+<p>Los siguientes datos se generan en su dispositivo y permanecen en él. Nosotros no tenemos acceso a ellos.</p>
+<table>
+<thead><tr><th>Datos</th><th>Cuándo</th><th>Qué se hace con ellos</th></tr></thead>
+<tbody>
+<tr><td>Capturas de pantalla de la ventana grabada o del área seleccionada</td><td data-label="Cuándo">solo durante una grabación o captura rápida que usted mismo inicia</td><td>Se guardan en su archivo de grabación (<code>.steps</code>) y en los documentos creados a partir de él, en la ubicación que usted elija.</td></tr>
+<tr><td>Títulos de ventana y nombres de los controles en los que se hace clic</td><td data-label="Cuándo">solo durante una grabación o captura rápida</td><td>Sirven para describir los pasos y se guardan en su archivo de grabación.</td></tr>
+<tr><td>Pulsaciones de teclas</td><td data-label="Cuándo">solo durante una grabación</td><td>La aplicación percibe las pulsaciones de teclas para reconocer determinadas teclas. Se evalúan las teclas Ctrl y Supr; las demás teclas se descartan y no se guardan.</td></tr>
+<tr><td>Métodos abreviados de teclado</td><td data-label="Cuándo">mientras la aplicación esté en ejecución (también en el área de notificación, si así lo configura)</td><td>La aplicación registra en Windows determinadas combinaciones de teclas, por ejemplo la tecla Impr Pant para la captura rápida. Windows solo le comunica cuándo se pulsan exactamente esas combinaciones; de este modo no recibe ninguna otra pulsación de teclas.</td></tr>
+<tr><td>Campos de contraseña</td><td data-label="Cuándo">al hacer clic en ellos</td><td>Un campo de contraseña en el que se hace clic se vuelve ilegible en la imagen, siempre que Windows lo notifique como tal; su contenido no se adopta como texto. Se trata de una medida de protección adicional, no de una garantía.</td></tr>
+<tr><td>Micrófono</td><td data-label="Cuándo">solo cuando usted activa el dictado</td><td>La voz se convierte en texto en su dispositivo. Los datos de audio no se guardan.</td></tr>
+<tr><td>Nombre del autor</td><td data-label="Cuándo">al crear documentos</td><td>Si no introduce ningún nombre en la configuración, la aplicación utiliza su nombre de usuario de Windows. Este aparece en los documentos creados.</td></tr>
+<tr><td>Configuración y registros</td><td data-label="Cuándo">de forma continua; un registro de diagnóstico detallado solo si usted lo activa</td><td>Se guardan en su perfil de usuario. Los registros pueden contener títulos de ventana y rutas de archivo.</td></tr>
+</tbody>
+</table>
+
+<h2 id="es-3">3. Su responsabilidad sobre las grabaciones</h2>
+<p>Una captura de pantalla muestra todo lo que es visible en la ventana grabada, incluidos datos personales como nombres,
+direcciones de correo electrónico o datos de clientes. La aplicación no detecta este tipo de contenido. Revise sus
+grabaciones antes de compartirlas; en el editor, las imágenes pueden recortarse y desenfocarse parcialmente.</p>
+<p>Si graba, guarda o comparte contenidos con datos personales de otras personas, usted es el responsable de que ello
+esté permitido, por ejemplo frente a clientes, compañeros de trabajo o su empleador.</p>
+
+<h2 id="es-4">4. Cuándo se conecta la aplicación a Internet</h2>
+<ul>
+<li><strong>Modelos de voz para el dictado:</strong> la primera vez que utiliza el dictado, la aplicación descarga un
+modelo de voz, según la configuración, de <code>huggingface.co</code> (Hugging Face) o de <code>alphacephei.com</code>.
+Como en cualquier descarga, el servidor recibe los datos de conexión técnicamente necesarios, como su dirección IP.
+No se transmiten grabaciones ni textos suyos.</li>
+<li><strong>Microsoft Store:</strong> la aplicación consulta a Microsoft Store, a través de Windows, si su suscripción
+está activa. Encontrará más detalles en el <a href="#es-5">apartado 5</a>.</li>
+<li><strong>“Administrar suscripción”</strong> abre su cuenta de Microsoft en el navegador.</li>
+</ul>
+<p>Aparte de esto, la versión actual de la aplicación no establece ninguna conexión.</p>
+
+<h2 id="es-5">5. Microsoft Store y suscripción</h2>
+<p>La compra, el pago y la gestión de la suscripción se realizan a través de Microsoft Store. Como operador de la tienda,
+Microsoft trata datos de forma independiente, por ejemplo sobre compras, instalaciones y bloqueos, conforme a la
+<a href="https://privacy.microsoft.com/">Declaración de privacidad de Microsoft</a>.</p>
+<p>Recibimos informes de Microsoft, como cifras de ventas e instalaciones o informes de bloqueos, por lo general de
+forma agregada. No recibimos datos de pago.</p>
+
+<h2 id="es-6">6. Si se pone en contacto con nosotros</h2>
+<p>Si nos escribe un correo electrónico o nos envía un informe de problemas, tratamos los datos que nos facilita, como su
+dirección de correo electrónico, su mensaje y los registros incluidos en el informe, exclusivamente para tramitar su
+solicitud (art. 6, apartado 1, letra b) o f), del RGPD). Suprimimos estos datos en cuanto dejan de ser necesarios para
+ese fin, salvo que existan obligaciones legales de conservación.</p>
+<p>Puede crear un informe de problemas en <em>Configuración → Contacto → Notificar un problema</em>. Se crea en su
+dispositivo y no se envía automáticamente; usted decide si lo envía y a quién. No contiene grabaciones, pero los
+registros pueden contener títulos de ventana y rutas de archivo. Revíselo antes de enviarlo y no nos envíe grabaciones
+que contengan datos personales de otras personas.</p>
+
+<h2 id="es-7">7. Conservación y eliminación</h2>
+<p>Sus grabaciones y documentos son archivos normales guardados en la ubicación que usted elija; puede eliminarlos en
+cualquier momento. La configuración y los registros de la aplicación se eliminan, por lo general, al desinstalar la aplicación.</p>
+
+<h2 id="es-8">8. Sus derechos</h2>
+<p>En la medida en que tratemos datos personales suyos, usted tiene derecho de acceso, rectificación, supresión,
+limitación del tratamiento, portabilidad de los datos y oposición (arts. 15 a 21 del RGPD). Para ello, diríjase a
+<a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a>.</p>
+<p>Además, tiene derecho a presentar una reclamación ante una autoridad de control de protección de datos; en Austria,
+ante la Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
+
+<h2 id="es-9">9. Modificaciones</h2>
+<p>Adaptamos esta política cuando cambian la aplicación o los requisitos legales. Se aplica la versión publicada aquí en cada momento.</p>
+</div>
+</section>
+
+<!-- it -->
+<section class="sprache" id="it" lang="it" role="tabpanel" aria-labelledby="tab-it">
+<div class="einleitung">
+<h1>Informativa sulla privacy</h1>
+<p class="stand">Ultimo aggiornamento: 25 settembre 2026 · si applica alla versione dell'app CNNT Steps offerta nel Microsoft Store</p>
+<p class="hinweis">Questa è una traduzione. In caso di dubbio prevale la versione tedesca.</p>
+
+<div class="kurz">
+<strong>In breve</strong>
+<ul>
+<li>CNNT Steps funziona sul Suo dispositivo. Le Sue registrazioni non vengono trasmesse a noi.</li>
+<li>L'app non ha account utente, pubblicità né strumenti di analisi o di tracciamento.</li>
+<li>L'app si connette a Internet solo per scaricare i modelli vocali (dettatura) e per verificare l'abbonamento tramite il Microsoft Store.</li>
+<li>Gli screenshot possono contenere dati personali: ciò che Lei registra e condivide è sotto la Sua responsabilità.</li>
+</ul>
+</div>
+
+</div>
+<nav class="inhalt" aria-label="Indice">
+<strong>Indice</strong>
+<ol>
+<li><a href="#it-1">Chi è il titolare?</a></li>
+<li><a href="#it-2">Cosa elabora l'app sul Suo dispositivo</a></li>
+<li><a href="#it-3">La Sua responsabilità per le registrazioni</a></li>
+<li><a href="#it-4">Quando l'app si connette a Internet</a></li>
+<li><a href="#it-5">Microsoft Store e abbonamento</a></li>
+<li><a href="#it-6">Se ci contatta</a></li>
+<li><a href="#it-7">Conservazione e cancellazione</a></li>
+<li><a href="#it-8">I Suoi diritti</a></li>
+<li><a href="#it-9">Modifiche</a></li>
+</ol>
+</nav>
+<div class="rumpf">
+
+<h2 id="it-1">1. Chi è il titolare?</h2>
+<p class="verantwortlich">CNNT – Ebubekir Göcmen<br>
+E-mail: <a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a></p>
+<p>La presente informativa si applica all'app CNNT Steps. Per il Microsoft Store, per Windows e per i server di download
+indicati nella <a href="#it-4">sezione 4</a> valgono le informative sulla privacy dei rispettivi fornitori.</p>
+
+<h2 id="it-2">2. Cosa elabora l'app sul Suo dispositivo</h2>
+<p>I seguenti dati vengono generati sul Suo dispositivo e vi rimangono. Noi non vi abbiamo accesso.</p>
+<table>
+<thead><tr><th>Dati</th><th>Quando</th><th>Cosa succede</th></tr></thead>
+<tbody>
+<tr><td>Screenshot della finestra registrata o dell'area selezionata</td><td data-label="Quando">solo durante una registrazione o un'acquisizione rapida avviata da Lei</td><td>Vengono salvati nel Suo file di registrazione (<code>.steps</code>) e nei documenti creati a partire da esso, nella posizione da Lei scelta.</td></tr>
+<tr><td>Titoli delle finestre e nomi dei controlli su cui si fa clic</td><td data-label="Quando">solo durante una registrazione o un'acquisizione rapida</td><td>Servono a descrivere i passaggi e vengono salvati nel Suo file di registrazione.</td></tr>
+<tr><td>Input da tastiera</td><td data-label="Quando">solo durante una registrazione</td><td>L'app rileva gli input da tastiera per riconoscere determinati tasti. Vengono valutati i tasti Ctrl e Canc; gli altri tasti vengono scartati e non vengono salvati.</td></tr>
+<tr><td>Tasti di scelta rapida</td><td data-label="Quando">finché l'app è in esecuzione (anche nell'area di notifica, se Lei lo imposta)</td><td>L'app registra presso Windows singole combinazioni di tasti, ad esempio il tasto Stamp per l'acquisizione rapida. Windows le comunica solo quando vengono premute esattamente queste combinazioni; in questo modo l'app non riceve altri input da tastiera.</td></tr>
+<tr><td>Campi password</td><td data-label="Quando">quando vi si fa clic</td><td>Un campo password su cui si fa clic viene reso illeggibile nell'immagine, nella misura in cui Windows lo segnala come tale; il suo contenuto non viene acquisito come testo. Si tratta di una misura di protezione aggiuntiva, non di una garanzia.</td></tr>
+<tr><td>Microfono</td><td data-label="Quando">solo quando Lei attiva la dettatura</td><td>Il parlato viene convertito in testo sul Suo dispositivo. I dati audio non vengono salvati.</td></tr>
+<tr><td>Nome dell'autore</td><td data-label="Quando">durante la creazione di documenti</td><td>Se Lei non inserisce un nome nelle impostazioni, l'app utilizza il Suo nome utente di Windows. Questo compare nei documenti creati.</td></tr>
+<tr><td>Impostazioni e log</td><td data-label="Quando">in modo continuativo; un log di diagnostica dettagliato solo se Lei lo attiva</td><td>Vengono salvati nel Suo profilo utente. I log possono contenere titoli di finestre e percorsi di file.</td></tr>
+</tbody>
+</table>
+
+<h2 id="it-3">3. La Sua responsabilità per le registrazioni</h2>
+<p>Uno screenshot mostra tutto ciò che è visibile nella finestra registrata, compresi dati personali come nomi, indirizzi
+e-mail o dati dei clienti. L'app non riconosce tali contenuti. Controlli le Sue registrazioni prima di condividerle;
+nell'editor le immagini possono essere ritagliate e sfocate in parte.</p>
+<p>Se Lei registra, salva o condivide contenuti con dati personali di altre persone, è Lei stesso responsabile di
+garantire che ciò sia consentito, ad esempio nei confronti di clienti, colleghi o del Suo datore di lavoro.</p>
+
+<h2 id="it-4">4. Quando l'app si connette a Internet</h2>
+<ul>
+<li><strong>Modelli vocali per la dettatura:</strong> quando utilizza la dettatura per la prima volta, l'app scarica un
+modello vocale, a seconda dell'impostazione da <code>huggingface.co</code> (Hugging Face) o da <code>alphacephei.com</code>.
+Come per qualsiasi download, il server riceve i dati di connessione tecnicamente necessari, ad esempio il Suo indirizzo IP.
+Non vengono trasmesse registrazioni né testi Suoi.</li>
+<li><strong>Microsoft Store:</strong> l'app chiede al Microsoft Store, tramite Windows, se il Suo abbonamento è attivo.
+Per i dettagli si veda la <a href="#it-5">sezione 5</a>.</li>
+<li><strong>“Gestisci abbonamento”</strong> apre il Suo account Microsoft nel browser.</li>
+</ul>
+<p>Al di fuori di questi casi, la versione attuale dell'app non stabilisce alcuna connessione.</p>
+
+<h2 id="it-5">5. Microsoft Store e abbonamento</h2>
+<p>L'acquisto, il pagamento e la gestione dell'abbonamento sono gestiti dal Microsoft Store. In qualità di gestore dello
+Store, Microsoft tratta dati in modo autonomo, ad esempio relativi ad acquisti, installazioni e arresti anomali, secondo
+l'<a href="https://privacy.microsoft.com/">Informativa sulla privacy di Microsoft</a>.</p>
+<p>Riceviamo da Microsoft dei report, ad esempio dati su vendite e installazioni o report sugli arresti anomali, di norma
+in forma aggregata. Non riceviamo dati di pagamento.</p>
+
+<h2 id="it-6">6. Se ci contatta</h2>
+<p>Se ci scrive un'e-mail o ci invia una segnalazione del problema, trattiamo le informazioni che ci trasmette, ad esempio
+il Suo indirizzo e-mail, il Suo messaggio e i log contenuti nella segnalazione, esclusivamente per gestire la Sua
+richiesta (art. 6, paragrafo 1, lettera b) o f), GDPR). Cancelliamo tali dati non appena non sono più necessari a tal
+fine, salvo che sussistano obblighi legali di conservazione.</p>
+<p>La segnalazione del problema si crea tramite <em>Impostazioni → Contatto → Segnala un problema</em>. Viene creata sul
+Suo dispositivo e non viene inviata automaticamente; è Lei a decidere se e a chi inviarla. Non contiene registrazioni,
+ma i log possono contenere titoli di finestre e percorsi di file. La preghiamo di controllarla prima dell'invio e di non
+inviarci registrazioni contenenti dati personali di altre persone.</p>
+
+<h2 id="it-7">7. Conservazione e cancellazione</h2>
+<p>Le Sue registrazioni e i Suoi documenti sono normali file che si trovano nella posizione in cui Lei li salva; può
+eliminarli in qualsiasi momento. Le impostazioni e i log dell'app vengono di norma rimossi quando l'app viene disinstallata.</p>
+
+<h2 id="it-8">8. I Suoi diritti</h2>
+<p>Nella misura in cui trattiamo Suoi dati personali, Lei ha il diritto di accesso, rettifica, cancellazione, limitazione
+del trattamento, portabilità dei dati e opposizione (artt. 15–21 GDPR). A tal fine si rivolga a
+<a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a>.</p>
+<p>Lei ha inoltre il diritto di proporre reclamo a un'autorità di controllo per la protezione dei dati; in Austria si tratta
+della Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
+
+<h2 id="it-9">9. Modifiche</h2>
+<p>Aggiorniamo la presente informativa quando cambiano l'app o i requisiti di legge. Si applica la versione di volta in volta pubblicata qui.</p>
+</div>
+</section>
+
+<!-- pt -->
+<section class="sprache" id="pt" lang="pt-BR" role="tabpanel" aria-labelledby="tab-pt">
+<div class="einleitung">
+<h1>Política de Privacidade</h1>
+<p class="stand">Última atualização: 25 de setembro de 2026 · aplica-se à versão do aplicativo CNNT Steps oferecida na Microsoft Store</p>
+<p class="hinweis">Esta é uma tradução. Em caso de dúvida, prevalece a versão em alemão.</p>
+
+<div class="kurz">
+<strong>Em resumo</strong>
+<ul>
+<li>O CNNT Steps funciona no seu dispositivo. Suas gravações não são transmitidas para nós.</li>
+<li>O aplicativo não tem conta de usuário, nem publicidade, nem ferramentas de análise ou rastreamento.</li>
+<li>O aplicativo só se conecta à internet para baixar os modelos de voz (ditado) e para verificar sua assinatura por meio da Microsoft Store.</li>
+<li>As capturas de tela podem conter dados pessoais – o que você grava e compartilha é de sua responsabilidade.</li>
+</ul>
+</div>
+
+</div>
+<nav class="inhalt" aria-label="Conteúdo">
+<strong>Conteúdo</strong>
+<ol>
+<li><a href="#pt-1">Quem é o responsável?</a></li>
+<li><a href="#pt-2">O que o aplicativo processa no seu dispositivo</a></li>
+<li><a href="#pt-3">Sua responsabilidade pelas gravações</a></li>
+<li><a href="#pt-4">Quando o aplicativo se conecta à internet</a></li>
+<li><a href="#pt-5">Microsoft Store e assinatura</a></li>
+<li><a href="#pt-6">Se você entrar em contato conosco</a></li>
+<li><a href="#pt-7">Armazenamento e exclusão</a></li>
+<li><a href="#pt-8">Seus direitos</a></li>
+<li><a href="#pt-9">Alterações</a></li>
+</ol>
+</nav>
+<div class="rumpf">
+
+<h2 id="pt-1">1. Quem é o responsável?</h2>
+<p class="verantwortlich">CNNT – Ebubekir Göcmen<br>
+E-mail: <a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a></p>
+<p>Esta política se aplica ao aplicativo CNNT Steps. Para a Microsoft Store, para o Windows e para os servidores de
+download mencionados na <a href="#pt-4">seção 4</a>, valem as declarações de privacidade dos respectivos fornecedores.</p>
+
+<h2 id="pt-2">2. O que o aplicativo processa no seu dispositivo</h2>
+<p>Os dados a seguir são gerados no seu dispositivo e permanecem nele. Não temos acesso a eles.</p>
+<table>
+<thead><tr><th>Dados</th><th>Quando</th><th>O que acontece com eles</th></tr></thead>
+<tbody>
+<tr><td>Capturas de tela da janela gravada ou da área selecionada</td><td data-label="Quando">somente durante uma gravação ou captura rápida iniciada por você</td><td>São salvas no seu arquivo de gravação (<code>.steps</code>) e nos documentos criados a partir dele, no local que você escolher.</td></tr>
+<tr><td>Títulos de janelas e nomes dos controles clicados</td><td data-label="Quando">somente durante uma gravação ou captura rápida</td><td>Servem para descrever as etapas e são salvos no seu arquivo de gravação.</td></tr>
+<tr><td>Entradas do teclado</td><td data-label="Quando">somente durante uma gravação</td><td>O aplicativo percebe as entradas do teclado para reconhecer determinadas teclas. São avaliadas as teclas Ctrl e Delete; as demais teclas são descartadas e não são salvas.</td></tr>
+<tr><td>Atalhos de teclado</td><td data-label="Quando">enquanto o aplicativo estiver em execução (inclusive na área de notificação, se você configurar assim)</td><td>O aplicativo registra no Windows combinações de teclas específicas, como a tecla Print Screen para a captura rápida. O Windows informa ao aplicativo apenas quando exatamente essas combinações são pressionadas; por esse meio, ele não recebe nenhuma outra entrada do teclado.</td></tr>
+<tr><td>Campos de senha</td><td data-label="Quando">ao serem clicados</td><td>Um campo de senha clicado é tornado ilegível na imagem, desde que o Windows o informe como tal; seu conteúdo não é capturado como texto. Trata-se de uma medida de proteção adicional, não de uma garantia.</td></tr>
+<tr><td>Microfone</td><td data-label="Quando">somente quando você ativa o ditado</td><td>A fala é convertida em texto no seu dispositivo. Os dados de áudio não são salvos.</td></tr>
+<tr><td>Nome do autor</td><td data-label="Quando">ao criar documentos</td><td>Se você não informar um nome nas configurações, o aplicativo usará seu nome de usuário do Windows. Ele aparece nos documentos criados.</td></tr>
+<tr><td>Configurações e logs</td><td data-label="Quando">continuamente; um log de diagnóstico detalhado somente se você o ativar</td><td>São salvos no seu perfil de usuário. Os logs podem conter títulos de janelas e caminhos de arquivos.</td></tr>
+</tbody>
+</table>
+
+<h2 id="pt-3">3. Sua responsabilidade pelas gravações</h2>
+<p>Uma captura de tela mostra tudo o que está visível na janela gravada – inclusive dados pessoais, como nomes,
+endereços de e-mail ou dados de clientes. O aplicativo não reconhece esse tipo de conteúdo. Verifique suas gravações
+antes de compartilhá-las; no editor, as imagens podem ser cortadas e parcialmente desfocadas.</p>
+<p>Se você gravar, armazenar ou compartilhar conteúdos com dados pessoais de outras pessoas, você mesmo é responsável
+por garantir que isso seja permitido – por exemplo, perante clientes, colegas de trabalho ou seu empregador.</p>
+
+<h2 id="pt-4">4. Quando o aplicativo se conecta à internet</h2>
+<ul>
+<li><strong>Modelos de voz para o ditado:</strong> quando você usa o ditado pela primeira vez, o aplicativo baixa um
+modelo de voz, conforme a configuração, de <code>huggingface.co</code> (Hugging Face) ou de <code>alphacephei.com</code>.
+Como em qualquer download, o servidor recebe os dados de conexão tecnicamente necessários, como seu endereço IP.
+Nenhuma gravação ou texto seu é transmitido nesse processo.</li>
+<li><strong>Microsoft Store:</strong> o aplicativo consulta a Microsoft Store, por meio do Windows, se sua assinatura
+está ativa. Os detalhes estão na <a href="#pt-5">seção 5</a>.</li>
+<li><strong>“Gerenciar assinatura”</strong> abre sua conta Microsoft no navegador.</li>
+</ul>
+<p>Além disso, a versão atual do aplicativo não estabelece nenhuma conexão.</p>
+
+<h2 id="pt-5">5. Microsoft Store e assinatura</h2>
+<p>A compra, o pagamento e o gerenciamento da assinatura são realizados pela Microsoft Store. Como operadora da loja,
+a Microsoft trata dados de forma independente, por exemplo sobre compras, instalações e falhas, de acordo com a
+<a href="https://privacy.microsoft.com/">Política de Privacidade da Microsoft</a>.</p>
+<p>Recebemos relatórios da Microsoft, como números de vendas e de instalações ou relatórios de falhas, em geral de forma
+agregada. Não recebemos dados de pagamento.</p>
+
+<h2 id="pt-6">6. Se você entrar em contato conosco</h2>
+<p>Se você nos escrever um e-mail ou nos enviar um relatório de problemas, trataremos as informações que você nos
+transmitir – como seu endereço de e-mail, sua mensagem e os logs contidos no relatório – exclusivamente para atender à
+sua solicitação (art. 6.º, n.º 1, alínea b) ou f), do Regulamento Geral sobre a Proteção de Dados (RGPD)). Excluímos
+esses dados assim que deixarem de ser necessários para essa finalidade, salvo se houver obrigações legais de retenção.</p>
+<p>Você cria um relatório de problemas em <em>Configurações → Contato → Relatar um problema</em>. Ele é criado no seu
+dispositivo e não é enviado automaticamente; você decide se o envia e para quem. Ele não contém gravações, mas os logs
+podem conter títulos de janelas e caminhos de arquivos. Revise-o antes de enviar e não nos envie gravações que contenham
+dados pessoais de outras pessoas.</p>
+
+<h2 id="pt-7">7. Armazenamento e exclusão</h2>
+<p>Suas gravações e documentos são arquivos comuns, no local em que você os salvar; você pode excluí-los a qualquer
+momento. As configurações e os logs do aplicativo geralmente são removidos quando o aplicativo é desinstalado.</p>
+
+<h2 id="pt-8">8. Seus direitos</h2>
+<p>Na medida em que tratarmos dados pessoais seus, você tem direito de acesso, retificação, apagamento, limitação do
+tratamento, portabilidade dos dados e oposição (arts. 15.º a 21.º do RGPD). Para isso, entre em contato com
+<a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a>.</p>
+<p>Você também tem o direito de apresentar uma reclamação a uma autoridade de controle de proteção de dados; na Áustria,
+trata-se da Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
+
+<h2 id="pt-9">9. Alterações</h2>
+<p>Atualizamos esta política quando o aplicativo ou os requisitos legais mudam. Aplica-se a versão publicada aqui.</p>
+</div>
+</section>
+
+<!-- nl -->
+<section class="sprache" id="nl" lang="nl" role="tabpanel" aria-labelledby="tab-nl">
+<div class="einleitung">
+<h1>Privacyverklaring</h1>
+<p class="stand">Laatst bijgewerkt: 25 september 2026 · geldt voor de versie van de app CNNT Steps die in de Microsoft Store wordt aangeboden</p>
+<p class="hinweis">Dit is een vertaling. In geval van twijfel geldt de Duitse versie.</p>
+
+<div class="kurz">
+<strong>In het kort</strong>
+<ul>
+<li>CNNT Steps werkt op uw apparaat. Uw opnamen worden niet naar ons verzonden.</li>
+<li>De app heeft geen gebruikersaccount, geen reclame en geen analyse- of trackingtools.</li>
+<li>De app maakt alleen verbinding met internet om de spraakmodellen (dicteren) te downloaden en om uw abonnement via de Microsoft Store te controleren.</li>
+<li>Schermafbeeldingen kunnen persoonsgegevens bevatten – wat u opneemt en deelt, valt onder uw verantwoordelijkheid.</li>
+</ul>
+</div>
+
+</div>
+<nav class="inhalt" aria-label="Inhoud">
+<strong>Inhoud</strong>
+<ol>
+<li><a href="#nl-1">Wie is verantwoordelijk?</a></li>
+<li><a href="#nl-2">Wat de app op uw apparaat verwerkt</a></li>
+<li><a href="#nl-3">Uw verantwoordelijkheid voor opnamen</a></li>
+<li><a href="#nl-4">Wanneer de app verbinding maakt met internet</a></li>
+<li><a href="#nl-5">Microsoft Store en abonnement</a></li>
+<li><a href="#nl-6">Als u contact met ons opneemt</a></li>
+<li><a href="#nl-7">Opslag en verwijdering</a></li>
+<li><a href="#nl-8">Uw rechten</a></li>
+<li><a href="#nl-9">Wijzigingen</a></li>
+</ol>
+</nav>
+<div class="rumpf">
+
+<h2 id="nl-1">1. Wie is verantwoordelijk?</h2>
+<p class="verantwortlich">CNNT – Ebubekir Göcmen<br>
+E-mail: <a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a></p>
+<p>Deze verklaring geldt voor de app CNNT Steps. Voor de Microsoft Store, voor Windows en voor de in
+<a href="#nl-4">hoofdstuk 4</a> genoemde downloadservers gelden de privacyverklaringen van de betreffende aanbieders.</p>
+
+<h2 id="nl-2">2. Wat de app op uw apparaat verwerkt</h2>
+<p>De volgende gegevens ontstaan op uw apparaat en blijven daar. Wij hebben er geen toegang toe.</p>
+<table>
+<thead><tr><th>Gegevens</th><th>Wanneer</th><th>Wat ermee gebeurt</th></tr></thead>
+<tbody>
+<tr><td>Schermafbeeldingen van het opgenomen venster of het geselecteerde gebied</td><td data-label="Wanneer">alleen tijdens een opname of snelle opname die u zelf start</td><td>Ze worden opgeslagen in uw opnamebestand (<code>.steps</code>) en in de daaruit gemaakte documenten, op de locatie die u kiest.</td></tr>
+<tr><td>Venstertitels en namen van aangeklikte bedieningselementen</td><td data-label="Wanneer">alleen tijdens een opname of snelle opname</td><td>Ze dienen als beschrijving van de stappen en worden opgeslagen in uw opnamebestand.</td></tr>
+<tr><td>Toetsenbordinvoer</td><td data-label="Wanneer">alleen tijdens een opname</td><td>De app neemt toetsenbordinvoer waar om bepaalde toetsen te herkennen. De Ctrl- en de Delete-toets worden geëvalueerd; andere toetsen worden genegeerd en niet opgeslagen.</td></tr>
+<tr><td>Sneltoetsen</td><td data-label="Wanneer">zolang de app actief is (ook in het systeemvak, als u dat instelt)</td><td>De app registreert afzonderlijke toetscombinaties bij Windows, zoals de Print Screen-toets voor snelle opname. Windows meldt de app alleen wanneer precies deze combinaties worden ingedrukt; andere toetsenbordinvoer ontvangt de app op deze manier niet.</td></tr>
+<tr><td>Wachtwoordvelden</td><td data-label="Wanneer">bij het aanklikken</td><td>Een aangeklikt wachtwoordveld wordt, voor zover Windows het als zodanig meldt, in de afbeelding onleesbaar gemaakt; de inhoud ervan wordt niet als tekst overgenomen. Dit is een extra beschermingsmaatregel, geen garantie.</td></tr>
+<tr><td>Microfoon</td><td data-label="Wanneer">alleen als u dicteren inschakelt</td><td>Spraak wordt op uw apparaat omgezet in tekst. De audiogegevens worden daarbij niet opgeslagen.</td></tr>
+<tr><td>Auteursnaam</td><td data-label="Wanneer">bij het maken van documenten</td><td>Als u in de instellingen geen naam invult, gebruikt de app uw Windows-gebruikersnaam. Deze verschijnt in de gemaakte documenten.</td></tr>
+<tr><td>Instellingen en logboeken</td><td data-label="Wanneer">doorlopend; een uitgebreid diagnoselogboek alleen als u dit inschakelt</td><td>Ze worden opgeslagen in uw gebruikersprofiel. Logboeken kunnen venstertitels en bestandspaden bevatten.</td></tr>
+</tbody>
+</table>
+
+<h2 id="nl-3">3. Uw verantwoordelijkheid voor opnamen</h2>
+<p>Een schermafbeelding toont alles wat in het opgenomen venster zichtbaar is – ook persoonsgegevens, zoals namen,
+e-mailadressen of klantgegevens. De app herkent dergelijke inhoud niet. Controleer uw opnamen voordat u ze deelt;
+afbeeldingen kunnen in de editor worden bijgesneden en plaatselijk worden vervaagd.</p>
+<p>Als u inhoud met persoonsgegevens van andere personen opneemt, opslaat of deelt, bent u er zelf verantwoordelijk voor
+dat dit is toegestaan – bijvoorbeeld tegenover klanten, collega's of uw werkgever.</p>
+
+<h2 id="nl-4">4. Wanneer de app verbinding maakt met internet</h2>
+<ul>
+<li><strong>Spraakmodellen voor dicteren:</strong> wanneer u dicteren voor het eerst gebruikt, downloadt de app een
+spraakmodel, afhankelijk van de instelling van <code>huggingface.co</code> (Hugging Face) of <code>alphacephei.com</code>.
+Zoals bij elke download ontvangt de server technisch noodzakelijke verbindingsgegevens, zoals uw IP-adres. Opnamen of
+teksten van u worden daarbij niet verzonden.</li>
+<li><strong>Microsoft Store:</strong> de app vraagt via Windows bij de Microsoft Store na of uw abonnement actief is.
+Details vindt u in <a href="#nl-5">hoofdstuk 5</a>.</li>
+<li><strong>“Abonnement beheren”</strong> opent uw Microsoft-account in de browser.</li>
+</ul>
+<p>Verder maakt de huidige versie van de app geen verbindingen.</p>
+
+<h2 id="nl-5">5. Microsoft Store en abonnement</h2>
+<p>Aankoop, betaling en beheer van het abonnement worden afgehandeld door de Microsoft Store. Microsoft verwerkt daarbij
+als exploitant van de Store zelfstandig gegevens, bijvoorbeeld over aankopen, installaties en crashes, volgens de
+<a href="https://privacy.microsoft.com/">Privacyverklaring van Microsoft</a>.</p>
+<p>Wij ontvangen van Microsoft rapporten, zoals verkoop- en installatiecijfers of crashrapporten, doorgaans in
+geaggregeerde vorm. Betalingsgegevens ontvangen wij niet.</p>
+
+<h2 id="nl-6">6. Als u contact met ons opneemt</h2>
+<p>Als u ons een e-mail stuurt of een probleemrapport toestuurt, verwerken wij de gegevens die u ons verstrekt – zoals uw
+e-mailadres, uw bericht en de logboeken in het rapport – uitsluitend om uw verzoek af te handelen (art. 6, lid 1,
+onder b resp. f, AVG). Wij verwijderen deze gegevens zodra ze daarvoor niet meer nodig zijn, tenzij er wettelijke
+bewaarplichten gelden.</p>
+<p>U maakt een probleemrapport via <em>Instellingen → Contact → Probleem melden</em>. Het wordt op uw apparaat gemaakt en
+niet automatisch verzonden; u beslist zelf of en naar wie u het stuurt. Het bevat geen opnamen, maar de logboeken kunnen
+venstertitels en bestandspaden bevatten. Controleer het rapport voordat u het verzendt en stuur ons geen opnamen met
+persoonsgegevens van andere personen.</p>
+
+<h2 id="nl-7">7. Opslag en verwijdering</h2>
+<p>Uw opnamen en documenten zijn gewone bestanden op de locatie waar u ze opslaat; u kunt ze op elk moment verwijderen.
+Instellingen en logboeken van de app worden doorgaans verwijderd wanneer de app wordt verwijderd.</p>
+
+<h2 id="nl-8">8. Uw rechten</h2>
+<p>Voor zover wij persoonsgegevens van u verwerken, hebt u recht op inzage, rectificatie, wissing, beperking van de
+verwerking, overdraagbaarheid van gegevens en bezwaar (art. 15–21 AVG). Neem daarvoor contact op met
+<a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a>.</p>
+<p>Daarnaast hebt u het recht een klacht in te dienen bij een toezichthoudende autoriteit voor gegevensbescherming; in
+Oostenrijk is dat de Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
+
+<h2 id="nl-9">9. Wijzigingen</h2>
+<p>Wij passen deze verklaring aan wanneer de app of de wettelijke vereisten veranderen. De hier gepubliceerde versie is van toepassing.</p>
+</div>
+</section>
+
+<!-- pl -->
+<section class="sprache" id="pl" lang="pl" role="tabpanel" aria-labelledby="tab-pl">
+<div class="einleitung">
+<h1>Polityka prywatności</h1>
+<p class="stand">Ostatnia aktualizacja: 25 września 2026 r. · dotyczy wersji aplikacji CNNT Steps oferowanej w Microsoft Store</p>
+<p class="hinweis">To jest tłumaczenie. W razie wątpliwości obowiązuje wersja niemiecka.</p>
+
+<div class="kurz">
+<strong>W skrócie</strong>
+<ul>
+<li>CNNT Steps działa na Państwa urządzeniu. Państwa nagrania nie są do nas przesyłane.</li>
+<li>Aplikacja nie ma konta użytkownika, reklam ani narzędzi analitycznych lub śledzących.</li>
+<li>Aplikacja łączy się z internetem wyłącznie w celu pobrania modeli mowy (dyktowanie) oraz sprawdzenia subskrypcji za pośrednictwem Microsoft Store.</li>
+<li>Zrzuty ekranu mogą zawierać dane osobowe – za to, co Państwo nagrywają i udostępniają, odpowiadają Państwo sami.</li>
+</ul>
+</div>
+
+</div>
+<nav class="inhalt" aria-label="Spis treści">
+<strong>Spis treści</strong>
+<ol>
+<li><a href="#pl-1">Kto jest administratorem danych?</a></li>
+<li><a href="#pl-2">Co aplikacja przetwarza na Państwa urządzeniu</a></li>
+<li><a href="#pl-3">Państwa odpowiedzialność za nagrania</a></li>
+<li><a href="#pl-4">Kiedy aplikacja łączy się z internetem</a></li>
+<li><a href="#pl-5">Microsoft Store i subskrypcja</a></li>
+<li><a href="#pl-6">Jeśli skontaktują się Państwo z nami</a></li>
+<li><a href="#pl-7">Przechowywanie i usuwanie</a></li>
+<li><a href="#pl-8">Państwa prawa</a></li>
+<li><a href="#pl-9">Zmiany</a></li>
+</ol>
+</nav>
+<div class="rumpf">
+
+<h2 id="pl-1">1. Kto jest administratorem danych?</h2>
+<p class="verantwortlich">CNNT – Ebubekir Göcmen<br>
+E-mail: <a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a></p>
+<p>Niniejsza polityka dotyczy aplikacji CNNT Steps. W odniesieniu do Microsoft Store, systemu Windows oraz serwerów pobierania
+wymienionych w <a href="#pl-4">sekcji 4</a> obowiązują informacje o ochronie prywatności poszczególnych dostawców.</p>
+
+<h2 id="pl-2">2. Co aplikacja przetwarza na Państwa urządzeniu</h2>
+<p>Poniższe dane powstają i pozostają na Państwa urządzeniu. Nie mamy do nich dostępu.</p>
+<table>
+<thead><tr><th>Dane</th><th>Kiedy</th><th>Co się z nimi dzieje</th></tr></thead>
+<tbody>
+<tr><td>Zrzuty ekranu nagrywanego okna lub wybranego obszaru</td><td data-label="Kiedy">wyłącznie podczas nagrywania lub szybkiego przechwytywania, które uruchamiają Państwo sami</td><td>Są zapisywane w Państwa pliku nagrania (<code>.steps</code>) oraz w utworzonych na jego podstawie dokumentach, w wybranym przez Państwa miejscu.</td></tr>
+<tr><td>Tytuły okien i nazwy klikniętych elementów sterujących</td><td data-label="Kiedy">wyłącznie podczas nagrywania lub szybkiego przechwytywania</td><td>Służą jako opis kroków i są zapisywane w Państwa pliku nagrania.</td></tr>
+<tr><td>Naciśnięcia klawiszy</td><td data-label="Kiedy">wyłącznie podczas nagrywania</td><td>Aplikacja odbiera naciśnięcia klawiszy, aby rozpoznawać określone klawisze. Analizowane są klawisze Ctrl i Delete; pozostałe klawisze są odrzucane i nie są zapisywane.</td></tr>
+<tr><td>Skróty klawiaturowe</td><td data-label="Kiedy">przez cały czas działania aplikacji (także w obszarze powiadomień, jeśli Państwo tak ustawią)</td><td>Aplikacja rejestruje w systemie Windows pojedyncze kombinacje klawiszy, np. klawisz Print Screen do szybkiego przechwytywania. Windows informuje ją jedynie o tym, kiedy zostaną naciśnięte dokładnie te kombinacje; innych naciśnięć klawiszy aplikacja w ten sposób nie otrzymuje.</td></tr>
+<tr><td>Pola haseł</td><td data-label="Kiedy">po kliknięciu</td><td>Kliknięte pole hasła jest – o ile Windows zgłasza je jako takie – maskowane na obrazie tak, aby było nieczytelne; jego zawartość nie jest przejmowana jako tekst. Jest to dodatkowy środek ochrony, a nie gwarancja.</td></tr>
+<tr><td>Mikrofon</td><td data-label="Kiedy">wyłącznie wtedy, gdy włączą Państwo dyktowanie</td><td>Mowa jest przekształcana w tekst na Państwa urządzeniu. Dane audio nie są przy tym zapisywane.</td></tr>
+<tr><td>Nazwa autora</td><td data-label="Kiedy">podczas tworzenia dokumentów</td><td>Jeśli nie wpiszą Państwo nazwy w ustawieniach, aplikacja używa Państwa nazwy użytkownika systemu Windows. Pojawia się ona w tworzonych dokumentach.</td></tr>
+<tr><td>Ustawienia i dzienniki</td><td data-label="Kiedy">na bieżąco; szczegółowy dziennik diagnostyczny tylko wtedy, gdy Państwo go włączą</td><td>Są zapisywane w Państwa profilu użytkownika. Dzienniki mogą zawierać tytuły okien i ścieżki plików.</td></tr>
+</tbody>
+</table>
+
+<h2 id="pl-3">3. Państwa odpowiedzialność za nagrania</h2>
+<p>Zrzut ekranu pokazuje wszystko, co jest widoczne w nagrywanym oknie – także dane osobowe, np. imiona i nazwiska,
+adresy e-mail lub dane klientów. Aplikacja nie rozpoznaje takich treści. Prosimy sprawdzać nagrania przed ich
+udostępnieniem; obrazy można w edytorze przycinać i miejscowo rozmywać.</p>
+<p>Jeśli nagrywają, zapisują lub udostępniają Państwo treści zawierające dane osobowe innych osób, sami Państwo
+odpowiadają za to, aby było to dopuszczalne – np. wobec klientów, współpracowników lub Państwa pracodawcy.</p>
+
+<h2 id="pl-4">4. Kiedy aplikacja łączy się z internetem</h2>
+<ul>
+<li><strong>Modele mowy do dyktowania:</strong> Gdy po raz pierwszy korzystają Państwo z dyktowania, aplikacja pobiera
+model mowy, w zależności od ustawienia z <code>huggingface.co</code> (Hugging Face) lub <code>alphacephei.com</code>.
+Jak przy każdym pobieraniu, serwer otrzymuje technicznie niezbędne dane połączenia, np. Państwa adres IP. Państwa
+nagrania ani teksty nie są przy tym przesyłane.</li>
+<li><strong>Microsoft Store:</strong> Aplikacja sprawdza za pośrednictwem systemu Windows w Microsoft Store, czy Państwa
+subskrypcja jest aktywna. Szczegóły znajdują się w <a href="#pl-5">sekcji 5</a>.</li>
+<li><strong>„Zarządzaj subskrypcją”</strong> otwiera Państwa konto Microsoft w przeglądarce.</li>
+</ul>
+<p>Poza tym aplikacja w obecnej wersji nie nawiązuje żadnych połączeń.</p>
+
+<h2 id="pl-5">5. Microsoft Store i subskrypcja</h2>
+<p>Zakup, płatność i zarządzanie subskrypcją obsługuje Microsoft Store. Microsoft jako operator sklepu przetwarza przy
+tym samodzielnie dane, np. dotyczące zakupu, instalacji i awarii, zgodnie z
+<a href="https://privacy.microsoft.com/">Oświadczeniem Microsoft dotyczącym prywatności</a>.</p>
+<p>Otrzymujemy od Microsoft raporty, np. dane o sprzedaży i liczbie instalacji lub raporty o awariach, z reguły w formie
+zagregowanej. Nie otrzymujemy danych dotyczących płatności.</p>
+
+<h2 id="pl-6">6. Jeśli skontaktują się Państwo z nami</h2>
+<p>Jeśli napiszą Państwo do nas e-mail lub prześlą raport o problemie, przetwarzamy przekazane nam przez Państwa
+informacje – np. adres e-mail, treść wiadomości i dzienniki zawarte w raporcie – wyłącznie w celu obsługi Państwa
+zapytania (art. 6 ust. 1 lit. b lub f RODO). Usuwamy te dane, gdy tylko przestaną być do tego potrzebne, o ile nie
+obowiązują ustawowe obowiązki ich przechowywania.</p>
+<p>Raport o problemie tworzą Państwo za pomocą <em>Ustawienia → Dane kontaktowe → Zgłoś problem</em>. Jest on tworzony
+na Państwa urządzeniu i nie jest wysyłany automatycznie; to Państwo decydują, czy i komu go przesłać. Nie zawiera on
+nagrań, jednak dzienniki mogą zawierać tytuły okien i ścieżki plików. Prosimy przejrzeć raport przed wysłaniem i nie
+przesyłać nam nagrań zawierających dane osobowe innych osób.</p>
+
+<h2 id="pl-7">7. Przechowywanie i usuwanie</h2>
+<p>Państwa nagrania i dokumenty są zwykłymi plikami w miejscu, w którym je Państwo zapisali; mogą je Państwo w każdej
+chwili usunąć. Ustawienia i dzienniki aplikacji są z reguły usuwane podczas odinstalowywania aplikacji.</p>
+
+<h2 id="pl-8">8. Państwa prawa</h2>
+<p>W zakresie, w jakim przetwarzamy Państwa dane osobowe, przysługuje Państwu prawo dostępu do danych, ich sprostowania,
+usunięcia, ograniczenia przetwarzania, przenoszenia danych oraz prawo sprzeciwu (art. 15–21 RODO). W tym celu prosimy
+o kontakt pod adresem <a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a>.</p>
+<p>Przysługuje Państwu również prawo wniesienia skargi do organu nadzorczego ds. ochrony danych; w Austrii jest to
+Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
+
+<h2 id="pl-9">9. Zmiany</h2>
+<p>Dostosowujemy niniejszą politykę, gdy zmienia się aplikacja lub wymogi prawne. Obowiązuje wersja opublikowana
+w danym momencie na tej stronie.</p>
+</div>
+</section>
+
+<!-- cs -->
+<section class="sprache" id="cs" lang="cs" role="tabpanel" aria-labelledby="tab-cs">
+<div class="einleitung">
+<h1>Zásady ochrany osobních údajů</h1>
+<p class="stand">Poslední aktualizace: 25. září 2026 · platí pro verzi aplikace CNNT Steps nabízenou v Microsoft Store</p>
+<p class="hinweis">Jedná se o překlad. V případě pochybností platí německé znění.</p>
+
+<div class="kurz">
+<strong>Stručně</strong>
+<ul>
+<li>CNNT Steps pracuje ve vašem zařízení. Vaše záznamy se nám nepředávají.</li>
+<li>Aplikace nemá uživatelský účet, reklamu ani analytické či sledovací nástroje.</li>
+<li>Aplikace se připojuje k internetu pouze kvůli stažení modelů řeči (diktování) a kvůli ověření předplatného prostřednictvím Microsoft Store.</li>
+<li>Snímky obrazovky mohou obsahovat osobní údaje – za to, co zaznamenáte a sdílíte, odpovídáte vy.</li>
+</ul>
+</div>
+
+</div>
+<nav class="inhalt" aria-label="Obsah">
+<strong>Obsah</strong>
+<ol>
+<li><a href="#cs-1">Kdo je správcem?</a></li>
+<li><a href="#cs-2">Co aplikace zpracovává ve vašem zařízení</a></li>
+<li><a href="#cs-3">Vaše odpovědnost za záznamy</a></li>
+<li><a href="#cs-4">Kdy se aplikace připojuje k internetu</a></li>
+<li><a href="#cs-5">Microsoft Store a předplatné</a></li>
+<li><a href="#cs-6">Pokud nás kontaktujete</a></li>
+<li><a href="#cs-7">Ukládání a mazání</a></li>
+<li><a href="#cs-8">Vaše práva</a></li>
+<li><a href="#cs-9">Změny</a></li>
+</ol>
+</nav>
+<div class="rumpf">
+
+<h2 id="cs-1">1. Kdo je správcem?</h2>
+<p class="verantwortlich">CNNT – Ebubekir Göcmen<br>
+E-mail: <a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a></p>
+<p>Tyto zásady platí pro aplikaci CNNT Steps. Pro Microsoft Store, Windows a servery pro stahování uvedené v
+<a href="#cs-4">oddílu 4</a> platí prohlášení o ochraně osobních údajů příslušných poskytovatelů.</p>
+
+<h2 id="cs-2">2. Co aplikace zpracovává ve vašem zařízení</h2>
+<p>Následující údaje vznikají a zůstávají ve vašem zařízení. Nemáme k nim přístup.</p>
+<table>
+<thead><tr><th>Údaje</th><th>Kdy</th><th>Co se s nimi děje</th></tr></thead>
+<tbody>
+<tr><td>Snímky obrazovky zaznamenávaného okna, resp. vybrané oblasti</td><td data-label="Kdy">pouze během záznamu nebo rychlého zachycení, které sami spustíte</td><td>Ukládají se do vašeho souboru záznamu (<code>.steps</code>) a do dokumentů z něj vytvořených, a to v umístění, které zvolíte.</td></tr>
+<tr><td>Názvy oken a názvy ovládacích prvků, na které bylo kliknuto</td><td data-label="Kdy">pouze během záznamu nebo rychlého zachycení</td><td>Slouží jako popis kroků a ukládají se do vašeho souboru záznamu.</td></tr>
+<tr><td>Vstupy z klávesnice</td><td data-label="Kdy">pouze během záznamu</td><td>Aplikace vnímá vstupy z klávesnice, aby rozpoznala určité klávesy. Vyhodnocují se klávesy Ctrl a Delete; ostatní klávesy se zahazují a neukládají.</td></tr>
+<tr><td>Klávesové zkratky</td><td data-label="Kdy">po celou dobu běhu aplikace (i v oznamovací oblasti, pokud to nastavíte)</td><td>Aplikace registruje ve Windows jednotlivé kombinace kláves, například klávesu Print Screen pro rychlé zachycení. Windows jí sděluje pouze to, kdy jsou stisknuty právě tyto kombinace; jiné vstupy z klávesnice tímto způsobem nedostává.</td></tr>
+<tr><td>Pole pro hesla</td><td data-label="Kdy">při kliknutí</td><td>Pole pro heslo, na které bylo kliknuto, je – pokud je Windows jako takové ohlásí – na obrázku znečitelněno; jeho obsah se nepřebírá jako text. Jde o dodatečné ochranné opatření, nikoli o záruku.</td></tr>
+<tr><td>Mikrofon</td><td data-label="Kdy">pouze když zapnete diktování</td><td>Řeč se převádí na text ve vašem zařízení. Zvuková data se přitom neukládají.</td></tr>
+<tr><td>Jméno autora</td><td data-label="Kdy">při vytváření dokumentů</td><td>Pokud v nastavení nezadáte žádné jméno, použije aplikace vaše uživatelské jméno ve Windows. Zobrazuje se ve vytvořených dokumentech.</td></tr>
+<tr><td>Nastavení a protokoly</td><td data-label="Kdy">průběžně; podrobný diagnostický protokol pouze tehdy, když jej zapnete</td><td>Ukládají se ve vašem uživatelském profilu. Protokoly mohou obsahovat názvy oken a cesty k souborům.</td></tr>
+</tbody>
+</table>
+
+<h2 id="cs-3">3. Vaše odpovědnost za záznamy</h2>
+<p>Snímek obrazovky zobrazuje vše, co je v zaznamenávaném okně viditelné – včetně osobních údajů, například jmen,
+e-mailových adres nebo údajů o zákaznících. Aplikace takový obsah nerozpoznává. Před sdílením své záznamy
+zkontrolujte; obrázky lze v editoru oříznout a místy rozostřit.</p>
+<p>Pokud zaznamenáváte, ukládáte nebo sdílíte obsah s osobními údaji jiných osob, sami odpovídáte za to, že je to
+přípustné – například vůči zákazníkům, kolegům nebo vašemu zaměstnavateli.</p>
+
+<h2 id="cs-4">4. Kdy se aplikace připojuje k internetu</h2>
+<ul>
+<li><strong>Modely řeči pro diktování:</strong> Když diktování použijete poprvé, aplikace stáhne model řeči, podle
+nastavení ze serveru <code>huggingface.co</code> (Hugging Face) nebo <code>alphacephei.com</code>. Jako při každém
+stahování obdrží server technicky nezbytné údaje o připojení, například vaši IP adresu. Vaše záznamy ani texty se
+přitom nepřenášejí.</li>
+<li><strong>Microsoft Store:</strong> Zda je vaše předplatné aktivní, zjišťuje aplikace prostřednictvím Windows
+v Microsoft Store. Podrobnosti najdete v <a href="#cs-5">oddílu 5</a>.</li>
+<li><strong>„Spravovat předplatné“</strong> otevře váš účet Microsoft v prohlížeči.</li>
+</ul>
+<p>Kromě toho aplikace v aktuální verzi nenavazuje žádná připojení.</p>
+
+<h2 id="cs-5">5. Microsoft Store a předplatné</h2>
+<p>Nákup, platbu a správu předplatného zajišťuje Microsoft Store. Microsoft přitom jako provozovatel obchodu samostatně
+zpracovává údaje, například o nákupu, instalaci a pádech aplikace, podle
+<a href="https://privacy.microsoft.com/">Prohlášení společnosti Microsoft o zásadách ochrany osobních údajů</a>.</p>
+<p>Od společnosti Microsoft dostáváme přehledy, například údaje o prodejích a počtu instalací nebo hlášení o pádech,
+zpravidla v souhrnné podobě. Platební údaje nedostáváme.</p>
+
+<h2 id="cs-6">6. Pokud nás kontaktujete</h2>
+<p>Pokud nám napíšete e-mail nebo pošlete hlášení o problému, zpracováváme údaje, které nám předáte – například vaši
+e-mailovou adresu, vaši zprávu a protokoly v hlášení –, výhradně za účelem vyřízení vašeho požadavku (čl. 6 odst. 1
+písm. b), resp. f) obecného nařízení o ochraně osobních údajů – GDPR). Tyto údaje vymažeme, jakmile k tomu již nejsou
+potřeba, pokud nejsou stanoveny zákonné povinnosti jejich uchovávání.</p>
+<p>Hlášení o problému vytvoříte přes <em>Nastavení → Kontakty → Nahlásit problém</em>. Vytváří se ve vašem zařízení
+a neodesílá se automaticky; sami rozhodnete, zda a komu ho pošlete. Neobsahuje žádné záznamy, protokoly však mohou
+obsahovat názvy oken a cesty k souborům. Před odesláním ho prosím zkontrolujte a neposílejte nám záznamy s osobními
+údaji jiných osob.</p>
+
+<h2 id="cs-7">7. Ukládání a mazání</h2>
+<p>Vaše záznamy a dokumenty jsou běžné soubory v umístění, kam je uložíte; kdykoli je můžete smazat. Nastavení
+a protokoly aplikace se zpravidla odstraní při odinstalování aplikace.</p>
+
+<h2 id="cs-8">8. Vaše práva</h2>
+<p>Pokud zpracováváme vaše osobní údaje, máte právo na přístup, opravu, výmaz, omezení zpracování, přenositelnost
+údajů a právo vznést námitku (čl. 15–21 GDPR). Obraťte se prosím na
+<a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a>.</p>
+<p>Máte také právo podat stížnost u dozorového úřadu pro ochranu osobních údajů; v Rakousku je to
+Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
+
+<h2 id="cs-9">9. Změny</h2>
+<p>Tyto zásady upravíme, pokud se změní aplikace nebo právní požadavky. Platí vždy znění zde zveřejněné.</p>
+</div>
+</section>
+
+<!-- ro -->
+<section class="sprache" id="ro" lang="ro" role="tabpanel" aria-labelledby="tab-ro">
+<div class="einleitung">
+<h1>Politica de confidențialitate</h1>
+<p class="stand">Ultima actualizare: 25 septembrie 2026 · se aplică versiunii aplicației CNNT Steps oferite în Microsoft Store</p>
+<p class="hinweis">Aceasta este o traducere. În caz de îndoială, se aplică versiunea în limba germană.</p>
+
+<div class="kurz">
+<strong>Pe scurt</strong>
+<ul>
+<li>CNNT Steps funcționează pe dispozitivul dumneavoastră. Înregistrările dumneavoastră nu ne sunt transmise.</li>
+<li>Aplicația nu are cont de utilizator, nu conține reclame și nu folosește instrumente de analiză sau de urmărire.</li>
+<li>Aplicația se conectează la internet numai pentru a descărca modelele vocale (dictare) și pentru a verifica abonamentul prin Microsoft Store.</li>
+<li>Capturile de ecran pot conține date cu caracter personal – ceea ce înregistrați și partajați este responsabilitatea dumneavoastră.</li>
+</ul>
+</div>
+
+</div>
+<nav class="inhalt" aria-label="Cuprins">
+<strong>Cuprins</strong>
+<ol>
+<li><a href="#ro-1">Cine este operatorul de date?</a></li>
+<li><a href="#ro-2">Ce prelucrează aplicația pe dispozitivul dumneavoastră</a></li>
+<li><a href="#ro-3">Responsabilitatea dumneavoastră pentru înregistrări</a></li>
+<li><a href="#ro-4">Când se conectează aplicația la internet</a></li>
+<li><a href="#ro-5">Microsoft Store și abonamentul</a></li>
+<li><a href="#ro-6">Dacă ne contactați</a></li>
+<li><a href="#ro-7">Stocare și ștergere</a></li>
+<li><a href="#ro-8">Drepturile dumneavoastră</a></li>
+<li><a href="#ro-9">Modificări</a></li>
+</ol>
+</nav>
+<div class="rumpf">
+
+<h2 id="ro-1">1. Cine este operatorul de date?</h2>
+<p class="verantwortlich">CNNT – Ebubekir Göcmen<br>
+E-mail: <a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a></p>
+<p>Prezenta politică se aplică aplicației CNNT Steps. Pentru Microsoft Store, Windows și serverele de descărcare
+menționate în <a href="#ro-4">secțiunea 4</a> se aplică declarațiile de confidențialitate ale furnizorilor respectivi.</p>
+
+<h2 id="ro-2">2. Ce prelucrează aplicația pe dispozitivul dumneavoastră</h2>
+<p>Datele următoare sunt generate și rămân pe dispozitivul dumneavoastră. Nu avem acces la ele.</p>
+<table>
+<thead><tr><th>Date</th><th>Când</th><th>Ce se întâmplă cu ele</th></tr></thead>
+<tbody>
+<tr><td>Capturi de ecran ale ferestrei înregistrate, respectiv ale zonei selectate</td><td data-label="Când">numai în timpul unei înregistrări sau al unei capturi rapide pe care o porniți chiar dumneavoastră</td><td>Sunt salvate în fișierul dumneavoastră de înregistrare (<code>.steps</code>) și în documentele create pe baza acestuia, în locul pe care îl alegeți.</td></tr>
+<tr><td>Titlurile ferestrelor și denumirile elementelor de control pe care s-a făcut clic</td><td data-label="Când">numai în timpul unei înregistrări sau al unei capturi rapide</td><td>Servesc drept descriere a pașilor și sunt salvate în fișierul dumneavoastră de înregistrare.</td></tr>
+<tr><td>Introducerile de la tastatură</td><td data-label="Când">numai în timpul unei înregistrări</td><td>Aplicația percepe introducerile de la tastatură pentru a recunoaște anumite taste. Sunt evaluate tastele Ctrl și Delete; celelalte taste sunt eliminate și nu sunt salvate.</td></tr>
+<tr><td>Comenzi rapide de la tastatură</td><td data-label="Când">cât timp rulează aplicația (inclusiv în zona de notificare, dacă setați acest lucru)</td><td>Aplicația înregistrează în Windows combinații de taste individuale, de exemplu tasta Print Screen pentru captura rapidă. Windows îi comunică doar momentul în care sunt apăsate exact aceste combinații; pe această cale aplicația nu primește alte introduceri de la tastatură.</td></tr>
+<tr><td>Câmpuri de parolă</td><td data-label="Când">la clic</td><td>Un câmp de parolă pe care s-a făcut clic este, în măsura în care Windows îl raportează ca atare, făcut ilizibil în imagine; conținutul său nu este preluat ca text. Aceasta este o măsură de protecție suplimentară, nu o garanție.</td></tr>
+<tr><td>Microfon</td><td data-label="Când">numai când activați dictarea</td><td>Vorbirea este convertită în text pe dispozitivul dumneavoastră. Datele audio nu sunt salvate.</td></tr>
+<tr><td>Numele autorului</td><td data-label="Când">la crearea documentelor</td><td>Dacă nu introduceți un nume în setări, aplicația folosește numele dumneavoastră de utilizator Windows. Acesta apare în documentele create.</td></tr>
+<tr><td>Setări și jurnale</td><td data-label="Când">în mod continuu; un jurnal de diagnosticare detaliat numai dacă îl activați</td><td>Sunt salvate în profilul dumneavoastră de utilizator. Jurnalele pot conține titluri de ferestre și căi de fișiere.</td></tr>
+</tbody>
+</table>
+
+<h2 id="ro-3">3. Responsabilitatea dumneavoastră pentru înregistrări</h2>
+<p>O captură de ecran arată tot ce este vizibil în fereastra înregistrată – inclusiv date cu caracter personal, de
+exemplu nume, adrese de e-mail sau date ale clienților. Aplicația nu recunoaște astfel de conținut. Verificați
+înregistrările înainte de a le partaja; imaginile pot fi decupate și estompate parțial în editor.</p>
+<p>Dacă înregistrați, salvați sau partajați conținut care include date cu caracter personal ale altor persoane, vă
+revine dumneavoastră responsabilitatea de a vă asigura că acest lucru este permis – de exemplu față de clienți, colegi
+sau angajatorul dumneavoastră.</p>
+
+<h2 id="ro-4">4. Când se conectează aplicația la internet</h2>
+<ul>
+<li><strong>Modele vocale pentru dictare:</strong> Când folosiți dictarea pentru prima dată, aplicația descarcă un model
+vocal, în funcție de setare de pe <code>huggingface.co</code> (Hugging Face) sau de pe <code>alphacephei.com</code>. Ca
+la orice descărcare, serverul primește datele de conexiune necesare din punct de vedere tehnic, de exemplu adresa
+dumneavoastră IP. Înregistrările sau textele dumneavoastră nu sunt transmise cu această ocazie.</li>
+<li><strong>Microsoft Store:</strong> Aplicația verifică prin Windows, la Microsoft Store, dacă abonamentul
+dumneavoastră este activ. Detalii găsiți în <a href="#ro-5">secțiunea 5</a>.</li>
+<li><strong>„Gestionare abonament”</strong> deschide contul dumneavoastră Microsoft în browser.</li>
+</ul>
+<p>În afară de acestea, versiunea actuală a aplicației nu stabilește nicio conexiune.</p>
+
+<h2 id="ro-5">5. Microsoft Store și abonamentul</h2>
+<p>Achiziția, plata și administrarea abonamentului sunt realizate prin Microsoft Store. În calitate de operator al
+magazinului, Microsoft prelucrează în mod independent date, de exemplu privind achizițiile, instalările și blocările,
+conform <a href="https://privacy.microsoft.com/">Declarației de confidențialitate Microsoft</a>.</p>
+<p>Primim de la Microsoft rapoarte, de exemplu cifre privind vânzările și instalările sau rapoarte de blocare, de regulă
+în formă agregată. Nu primim date de plată.</p>
+
+<h2 id="ro-6">6. Dacă ne contactați</h2>
+<p>Dacă ne scrieți un e-mail sau ne trimiteți un raport de problemă, prelucrăm informațiile pe care ni le transmiteți –
+de exemplu adresa dumneavoastră de e-mail, mesajul dumneavoastră și jurnalele din raport – exclusiv pentru a vă
+soluționa solicitarea (art. 6 alin. (1) lit. (b), respectiv (f) din Regulamentul general privind protecția datelor –
+RGPD). Ștergem aceste date de îndată ce nu mai sunt necesare în acest scop, cu excepția cazului în care există
+obligații legale de păstrare.</p>
+<p>Raportul de problemă îl creați din <em>Setări → Contact → Raportare problemă</em>. Acesta este creat pe dispozitivul
+dumneavoastră și nu este trimis automat; dumneavoastră decideți dacă și cui îl trimiteți. Nu conține înregistrări, însă
+jurnalele pot conține titluri de ferestre și căi de fișiere. Vă rugăm să îl verificați înainte de trimitere și să nu ne
+trimiteți înregistrări care conțin date cu caracter personal ale altor persoane.</p>
+
+<h2 id="ro-7">7. Stocare și ștergere</h2>
+<p>Înregistrările și documentele dumneavoastră sunt fișiere obișnuite, aflate în locul în care le salvați; le puteți
+șterge oricând. Setările și jurnalele aplicației sunt, de regulă, eliminate la dezinstalarea aplicației.</p>
+
+<h2 id="ro-8">8. Drepturile dumneavoastră</h2>
+<p>În măsura în care prelucrăm date cu caracter personal care vă privesc, aveți dreptul de acces, dreptul la
+rectificare, la ștergere, la restricționarea prelucrării, la portabilitatea datelor și dreptul de opoziție (art. 15–21
+RGPD). În acest scop, vă rugăm să ne contactați la <a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a>.</p>
+<p>De asemenea, aveți dreptul de a depune o plângere la o autoritate de supraveghere a protecției datelor; în Austria,
+aceasta este Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
+
+<h2 id="ro-9">9. Modificări</h2>
+<p>Actualizăm această politică atunci când se modifică aplicația sau cerințele legale. Se aplică versiunea publicată
+aici la momentul respectiv.</p>
+</div>
+</section>
+
+<!-- uk -->
+<section class="sprache" id="uk" lang="uk" role="tabpanel" aria-labelledby="tab-uk">
+<div class="einleitung">
+<h1>Політика конфіденційності</h1>
+<p class="stand">Останнє оновлення: 25 вересня 2026 р. · стосується версії програми CNNT Steps, що пропонується в Microsoft Store</p>
+<p class="hinweis">Це переклад. У разі сумнівів чинною є німецька версія.</p>
+
+<div class="kurz">
+<strong>Коротко</strong>
+<ul>
+<li>CNNT Steps працює на вашому пристрої. Ваші записи нам не передаються.</li>
+<li>Програма не має облікового запису користувача, реклами, а також інструментів аналітики чи відстеження.</li>
+<li>Програма підключається до інтернету лише для завантаження мовних моделей (диктування) та для перевірки передплати через Microsoft Store.</li>
+<li>Знімки екрана можуть містити персональні дані – за те, що ви записуєте й поширюєте, відповідаєте ви.</li>
+</ul>
+</div>
+
+</div>
+<nav class="inhalt" aria-label="Зміст">
+<strong>Зміст</strong>
+<ol>
+<li><a href="#uk-1">Хто відповідає за обробку даних?</a></li>
+<li><a href="#uk-2">Що програма обробляє на вашому пристрої</a></li>
+<li><a href="#uk-3">Ваша відповідальність за записи</a></li>
+<li><a href="#uk-4">Коли програма підключається до інтернету</a></li>
+<li><a href="#uk-5">Microsoft Store і передплата</a></li>
+<li><a href="#uk-6">Якщо ви звертаєтеся до нас</a></li>
+<li><a href="#uk-7">Зберігання та видалення</a></li>
+<li><a href="#uk-8">Ваші права</a></li>
+<li><a href="#uk-9">Зміни</a></li>
+</ol>
+</nav>
+<div class="rumpf">
+
+<h2 id="uk-1">1. Хто відповідає за обробку даних?</h2>
+<p class="verantwortlich">CNNT – Ebubekir Göcmen<br>
+Ел. пошта: <a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a></p>
+<p>Ця політика стосується програми CNNT Steps. Щодо Microsoft Store, Windows і серверів завантаження, зазначених
+у <a href="#uk-4">розділі 4</a>, діють положення про конфіденційність відповідних постачальників.</p>
+
+<h2 id="uk-2">2. Що програма обробляє на вашому пристрої</h2>
+<p>Наведені нижче дані створюються та залишаються на вашому пристрої. Ми не маємо до них доступу.</p>
+<table>
+<thead><tr><th>Дані</th><th>Коли</th><th>Що з ними відбувається</th></tr></thead>
+<tbody>
+<tr><td>Знімки екрана записуваного вікна або вибраної області</td><td data-label="Коли">лише під час запису або швидкого захоплення, які ви запускаєте самі</td><td>Вони зберігаються у вашому файлі запису (<code>.steps</code>) та в документах, створених на його основі, у вибраному вами місці.</td></tr>
+<tr><td>Заголовки вікон і назви елементів керування, на які було клацнуто</td><td data-label="Коли">лише під час запису або швидкого захоплення</td><td>Вони слугують описом кроків і зберігаються у вашому файлі запису.</td></tr>
+<tr><td>Введення з клавіатури</td><td data-label="Коли">лише під час запису</td><td>Програма сприймає введення з клавіатури, щоб розпізнавати певні клавіші. Аналізуються клавіші Ctrl і Delete; інші клавіші відкидаються й не зберігаються.</td></tr>
+<tr><td>Сполучення клавіш</td><td data-label="Коли">поки програма працює (зокрема в області сповіщень, якщо ви це налаштуєте)</td><td>Програма реєструє в Windows окремі сполучення клавіш, наприклад клавішу Print Screen для швидкого захоплення. Windows повідомляє їй лише про те, коли натиснуто саме ці сполучення; іншого введення з клавіатури програма в такий спосіб не отримує.</td></tr>
+<tr><td>Поля паролів</td><td data-label="Коли">після клацання</td><td>Поле пароля, на яке клацнули, – якщо Windows повідомляє про нього як про поле пароля – на зображенні робиться нерозбірливим; його вміст не переноситься як текст. Це додатковий захід захисту, а не гарантія.</td></tr>
+<tr><td>Мікрофон</td><td data-label="Коли">лише якщо ви вмикаєте диктування</td><td>Мовлення перетворюється на текст на вашому пристрої. Аудіодані при цьому не зберігаються.</td></tr>
+<tr><td>Ім’я автора</td><td data-label="Коли">під час створення документів</td><td>Якщо ви не вкажете ім’я в параметрах, програма використовує ваше ім’я користувача Windows. Воно відображається у створених документах.</td></tr>
+<tr><td>Параметри та журнали</td><td data-label="Коли">постійно; докладний журнал діагностики – лише якщо ви його ввімкнете</td><td>Вони зберігаються у вашому профілі користувача. Журнали можуть містити заголовки вікон і шляхи до файлів.</td></tr>
+</tbody>
+</table>
+
+<h2 id="uk-3">3. Ваша відповідальність за записи</h2>
+<p>Знімок екрана показує все, що видно в записуваному вікні, – зокрема й персональні дані, наприклад імена, адреси
+електронної пошти чи дані клієнтів. Програма не розпізнає такий вміст. Перевіряйте свої записи, перш ніж поширювати їх;
+зображення можна обрізати та частково розмити в редакторі.</p>
+<p>Якщо ви записуєте, зберігаєте або поширюєте вміст, що містить персональні дані інших осіб, ви самі відповідаєте за
+те, щоб це було допустимо, – наприклад щодо клієнтів, колег або вашого роботодавця.</p>
+
+<h2 id="uk-4">4. Коли програма підключається до інтернету</h2>
+<ul>
+<li><strong>Мовні моделі для диктування:</strong> Коли ви вперше використовуєте диктування, програма завантажує мовну
+модель, залежно від налаштування з <code>huggingface.co</code> (Hugging Face) або <code>alphacephei.com</code>. Як і під
+час будь-якого завантаження, сервер отримує технічно необхідні дані з’єднання, наприклад вашу IP-адресу. Ваші записи
+чи тексти при цьому не передаються.</li>
+<li><strong>Microsoft Store:</strong> Чи активна ваша передплата, програма перевіряє через Windows у Microsoft Store.
+Докладніше – у <a href="#uk-5">розділі 5</a>.</li>
+<li><strong>«Керувати передплатою»</strong> відкриває ваш обліковий запис Microsoft у браузері.</li>
+</ul>
+<p>Крім цього, поточна версія програми не встановлює жодних з’єднань.</p>
+
+<h2 id="uk-5">5. Microsoft Store і передплата</h2>
+<p>Купівлю, оплату та керування передплатою здійснює Microsoft Store. Microsoft як оператор магазину при цьому
+самостійно обробляє дані, наприклад щодо купівлі, встановлення та збоїв, відповідно до
+<a href="https://privacy.microsoft.com/">Декларації про конфіденційність Microsoft</a>.</p>
+<p>Ми отримуємо від Microsoft звіти, наприклад дані про продажі та кількість встановлень або звіти про збої, як правило,
+в узагальненому вигляді. Платіжних даних ми не отримуємо.</p>
+
+<h2 id="uk-6">6. Якщо ви звертаєтеся до нас</h2>
+<p>Якщо ви надсилаєте нам електронний лист або звіт про проблему, ми обробляємо надану вами інформацію – наприклад вашу
+адресу електронної пошти, ваше повідомлення та журнали у звіті – виключно для опрацювання вашого запиту (ст. 6(1)(b)
+або (f) Загального регламенту захисту даних (GDPR)). Ми видаляємо ці дані, щойно вони більше не потрібні для цієї
+мети, якщо немає передбачених законом обов’язків щодо їх зберігання.</p>
+<p>Звіт про проблему ви створюєте через <em>Параметри → Контакти → Повідомити про проблему</em>. Він створюється на
+вашому пристрої й не надсилається автоматично; ви самі вирішуєте, чи надсилати його і кому. Він не містить записів,
+проте журнали можуть містити заголовки вікон і шляхи до файлів. Будь ласка, перегляньте його перед надсиланням і не
+надсилайте нам записи, що містять персональні дані інших осіб.</p>
+
+<h2 id="uk-7">7. Зберігання та видалення</h2>
+<p>Ваші записи й документи – це звичайні файли в тому місці, де ви їх зберігаєте; ви можете будь-коли їх видалити.
+Параметри та журнали програми, як правило, видаляються під час деінсталяції програми.</p>
+
+<h2 id="uk-8">8. Ваші права</h2>
+<p>Тією мірою, якою ми обробляємо ваші персональні дані, ви маєте право на доступ, виправлення, видалення, обмеження
+обробки, перенесення даних і заперечення (ст. 15–21 GDPR). Для цього звертайтеся на адресу
+<a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a>.</p>
+<p>Ви також маєте право подати скаргу до наглядового органу з питань захисту даних; в Австрії це
+Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
+
+<h2 id="uk-9">9. Зміни</h2>
+<p>Ми оновлюємо цю політику, якщо змінюється програма або правові вимоги. Чинною є версія, опублікована тут на
+відповідний момент.</p>
+</div>
+</section>
+
+<!-- ru -->
+<section class="sprache" id="ru" lang="ru" role="tabpanel" aria-labelledby="tab-ru">
+<div class="einleitung">
+<h1>Политика конфиденциальности</h1>
+<p class="stand">Последнее обновление: 25 сентября 2026 г. · распространяется на версию приложения CNNT Steps, предлагаемую в Microsoft Store</p>
+<p class="hinweis">Это перевод. В случае сомнений действует немецкая версия.</p>
+
+<div class="kurz">
+<strong>Кратко</strong>
+<ul>
+<li>CNNT Steps работает на вашем устройстве. Ваши записи нам не передаются.</li>
+<li>В приложении нет учетной записи пользователя, рекламы, а также инструментов аналитики или отслеживания.</li>
+<li>Приложение подключается к интернету только для скачивания речевых моделей (диктовка) и для проверки подписки через Microsoft Store.</li>
+<li>Снимки экрана могут содержать персональные данные — за то, что вы записываете и передаете другим, отвечаете вы.</li>
+</ul>
+</div>
+
+</div>
+<nav class="inhalt" aria-label="Содержание">
+<strong>Содержание</strong>
+<ol>
+<li><a href="#ru-1">Кто отвечает за обработку данных?</a></li>
+<li><a href="#ru-2">Что приложение обрабатывает на вашем устройстве</a></li>
+<li><a href="#ru-3">Ваша ответственность за записи</a></li>
+<li><a href="#ru-4">Когда приложение подключается к интернету</a></li>
+<li><a href="#ru-5">Microsoft Store и подписка</a></li>
+<li><a href="#ru-6">Если вы обращаетесь к нам</a></li>
+<li><a href="#ru-7">Хранение и удаление</a></li>
+<li><a href="#ru-8">Ваши права</a></li>
+<li><a href="#ru-9">Изменения</a></li>
+</ol>
+</nav>
+<div class="rumpf">
+
+<h2 id="ru-1">1. Кто отвечает за обработку данных?</h2>
+<p class="verantwortlich">CNNT – Ebubekir Göcmen<br>
+Эл. почта: <a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a></p>
+<p>Настоящая политика распространяется на приложение CNNT Steps. В отношении Microsoft Store, Windows и серверов
+загрузки, указанных в <a href="#ru-4">разделе 4</a>, действуют положения о конфиденциальности соответствующих
+поставщиков.</p>
+
+<h2 id="ru-2">2. Что приложение обрабатывает на вашем устройстве</h2>
+<p>Следующие данные создаются и остаются на вашем устройстве. У нас нет к ним доступа.</p>
+<table>
+<thead><tr><th>Данные</th><th>Когда</th><th>Что с ними происходит</th></tr></thead>
+<tbody>
+<tr><td>Снимки экрана записываемого окна или выбранной области</td><td data-label="Когда">только во время записи или быстрого снимка, которые вы запускаете сами</td><td>Они сохраняются в вашем файле записи (<code>.steps</code>) и в созданных на его основе документах — в выбранном вами месте.</td></tr>
+<tr><td>Заголовки окон и названия элементов управления, по которым выполнен щелчок</td><td data-label="Когда">только во время записи или быстрого снимка</td><td>Они служат описанием шагов и сохраняются в вашем файле записи.</td></tr>
+<tr><td>Ввод с клавиатуры</td><td data-label="Когда">только во время записи</td><td>Приложение получает ввод с клавиатуры, чтобы распознавать определенные клавиши. Анализируются клавиши Ctrl и Delete; остальные клавиши отбрасываются и не сохраняются.</td></tr>
+<tr><td>Сочетания клавиш</td><td data-label="Когда">пока приложение работает (в том числе в области уведомлений, если вы это настроите)</td><td>Приложение регистрирует в Windows отдельные сочетания клавиш, например клавишу Print Screen для быстрого снимка. Windows сообщает ему только о том, когда нажаты именно эти сочетания; другого ввода с клавиатуры приложение таким образом не получает.</td></tr>
+<tr><td>Поля паролей</td><td data-label="Когда">при щелчке</td><td>Поле пароля, по которому выполнен щелчок, — если Windows сообщает о нем как о таковом — делается на изображении неразборчивым; его содержимое не переносится в виде текста. Это дополнительная мера защиты, а не гарантия.</td></tr>
+<tr><td>Микрофон</td><td data-label="Когда">только если вы включаете диктовку</td><td>Речь преобразуется в текст на вашем устройстве. Аудиоданные при этом не сохраняются.</td></tr>
+<tr><td>Имя автора</td><td data-label="Когда">при создании документов</td><td>Если вы не укажете имя в параметрах, приложение использует ваше имя пользователя Windows. Оно отображается в создаваемых документах.</td></tr>
+<tr><td>Параметры и журналы</td><td data-label="Когда">постоянно; подробный журнал диагностики — только если вы его включите</td><td>Они хранятся в вашем профиле пользователя. Журналы могут содержать заголовки окон и пути к файлам.</td></tr>
+</tbody>
+</table>
+
+<h2 id="ru-3">3. Ваша ответственность за записи</h2>
+<p>Снимок экрана показывает все, что видно в записываемом окне, — в том числе персональные данные, например имена,
+адреса электронной почты или данные клиентов. Приложение не распознает такое содержимое. Проверяйте свои записи,
+прежде чем передавать их другим; изображения можно обрезать и частично размыть в редакторе.</p>
+<p>Если вы записываете, сохраняете или передаете другим содержимое с персональными данными других лиц, вы сами
+отвечаете за то, чтобы это было допустимо, — например по отношению к клиентам, коллегам или вашему работодателю.</p>
+
+<h2 id="ru-4">4. Когда приложение подключается к интернету</h2>
+<ul>
+<li><strong>Речевые модели для диктовки:</strong> При первом использовании диктовки приложение скачивает речевую
+модель, в зависимости от настройки с <code>huggingface.co</code> (Hugging Face) или <code>alphacephei.com</code>. Как
+и при любом скачивании, сервер получает технически необходимые данные подключения, например ваш IP-адрес. Ваши записи
+или тексты при этом не передаются.</li>
+<li><strong>Microsoft Store:</strong> Активна ли ваша подписка, приложение проверяет через Windows в Microsoft Store.
+Подробнее см. в <a href="#ru-5">разделе 5</a>.</li>
+<li><strong>«Управление подпиской»</strong> открывает вашу учетную запись Microsoft в браузере.</li>
+</ul>
+<p>Помимо этого, текущая версия приложения не устанавливает никаких подключений.</p>
+
+<h2 id="ru-5">5. Microsoft Store и подписка</h2>
+<p>Покупку, оплату и управление подпиской обеспечивает Microsoft Store. Microsoft как оператор магазина при этом
+самостоятельно обрабатывает данные, например о покупках, установках и сбоях, в соответствии с
+<a href="https://privacy.microsoft.com/">Заявлением о конфиденциальности Microsoft</a>.</p>
+<p>Мы получаем от Microsoft отчеты, например данные о продажах и количестве установок или отчеты о сбоях, как правило,
+в обобщенном виде. Платежные данные мы не получаем.</p>
+
+<h2 id="ru-6">6. Если вы обращаетесь к нам</h2>
+<p>Если вы пишете нам по электронной почте или отправляете отчет о проблеме, мы обрабатываем предоставленные вами
+сведения — например ваш адрес электронной почты, ваше сообщение и журналы в отчете — исключительно для рассмотрения
+вашего запроса (ст. 6(1)(b) или (f) Общего регламента по защите данных (GDPR)). Мы удаляем эти данные, как только они
+больше не нужны для этой цели, если не действуют установленные законом обязанности по их хранению.</p>
+<p>Отчет о проблеме вы создаете через <em>Параметры → Контакты → Сообщить о проблеме</em>. Он создается на вашем
+устройстве и не отправляется автоматически; вы сами решаете, отправлять ли его и кому. Он не содержит записей, однако
+журналы могут содержать заголовки окон и пути к файлам. Пожалуйста, просмотрите его перед отправкой и не присылайте
+нам записи с персональными данными других лиц.</p>
+
+<h2 id="ru-7">7. Хранение и удаление</h2>
+<p>Ваши записи и документы — это обычные файлы в том месте, где вы их сохраняете; вы можете удалить их в любое время.
+Параметры и журналы приложения, как правило, удаляются при деинсталляции приложения.</p>
+
+<h2 id="ru-8">8. Ваши права</h2>
+<p>В той мере, в какой мы обрабатываем ваши персональные данные, вы имеете право на доступ, исправление, удаление,
+ограничение обработки, переносимость данных и возражение (ст. 15–21 GDPR). Для этого обращайтесь по адресу
+<a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a>.</p>
+<p>Вы также имеете право подать жалобу в надзорный орган по защите данных; в Австрии это
+Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
+
+<h2 id="ru-9">9. Изменения</h2>
+<p>Мы вносим изменения в эту политику, если меняется приложение или правовые требования. Действует версия,
+опубликованная здесь на соответствующий момент.</p>
+</div>
+</section>
+
+<!-- ja -->
+<section class="sprache" id="ja" lang="ja" role="tabpanel" aria-labelledby="tab-ja">
+<div class="einleitung">
+<h1>プライバシーポリシー</h1>
+<p class="stand">最終更新日：2026年9月25日 · Microsoft Store で提供されている CNNT Steps アプリのバージョンに適用されます</p>
+<p class="hinweis">これは翻訳です。疑義がある場合は、ドイツ語版が優先されます。</p>
+
+<div class="kurz">
+<strong>概要</strong>
+<ul>
+<li>CNNT Steps はお使いのデバイス上で動作します。お客様の記録が当社に送信されることはありません。</li>
+<li>本アプリには、ユーザーアカウント、広告、分析ツールやトラッキングツールはありません。</li>
+<li>本アプリがインターネットに接続するのは、音声モデル（音声入力）のダウンロードと、Microsoft Store を介したサブスクリプションの確認の場合に限られます。</li>
+<li>スクリーンショットには個人データが含まれる場合があります。何を記録し、共有するかはお客様の責任です。</li>
+</ul>
+</div>
+
+</div>
+<nav class="inhalt" aria-label="目次">
+<strong>目次</strong>
+<ol>
+<li><a href="#ja-1">責任者は誰ですか？</a></li>
+<li><a href="#ja-2">本アプリがお使いのデバイス上で処理するデータ</a></li>
+<li><a href="#ja-3">記録に関するお客様の責任</a></li>
+<li><a href="#ja-4">本アプリがインターネットに接続する場合</a></li>
+<li><a href="#ja-5">Microsoft Store とサブスクリプション</a></li>
+<li><a href="#ja-6">当社へのお問い合わせ</a></li>
+<li><a href="#ja-7">保存と削除</a></li>
+<li><a href="#ja-8">お客様の権利</a></li>
+<li><a href="#ja-9">変更</a></li>
+</ol>
+</nav>
+<div class="rumpf">
+
+<h2 id="ja-1">1. 責任者は誰ですか？</h2>
+<p class="verantwortlich">CNNT – Ebubekir Göcmen<br>
+メール：<a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a></p>
+<p>本ポリシーは CNNT Steps アプリに適用されます。Microsoft Store、Windows、および<a href="#ja-4">第4項</a>に記載のダウンロードサーバーについては、それぞれの提供者のプライバシーに関する告知が適用されます。</p>
+
+<h2 id="ja-2">2. 本アプリがお使いのデバイス上で処理するデータ</h2>
+<p>以下のデータはお使いのデバイス上で生成され、デバイス上にとどまります。当社はこれらのデータにアクセスできません。</p>
+<table>
+<thead><tr><th>データ</th><th>タイミング</th><th>データの扱い</th></tr></thead>
+<tbody>
+<tr><td>記録したウィンドウまたは選択した範囲のスクリーンショット</td><td data-label="タイミング">お客様ご自身が開始した記録またはクイックキャプチャの実行中のみ</td><td>お客様が選択した場所に、記録ファイル（<code>.steps</code>）およびそこから作成されたドキュメントの中に保存されます。</td></tr>
+<tr><td>ウィンドウタイトルおよびクリックされた操作要素の名前</td><td data-label="タイミング">記録またはクイックキャプチャの実行中のみ</td><td>手順の説明として使用され、記録ファイルに保存されます。</td></tr>
+<tr><td>キーボード入力</td><td data-label="タイミング">記録中のみ</td><td>本アプリは、特定のキーを認識するためにキーボード入力を検知します。評価されるのは Ctrl キーと Delete キーです。その他のキーは破棄され、保存されません。</td></tr>
+<tr><td>キーボードショートカット</td><td data-label="タイミング">本アプリの実行中（そのように設定している場合は、通知領域に常駐しているときも含む）</td><td>本アプリは、クイックキャプチャ用の Print Screen キーなど、個々のキーの組み合わせを Windows に登録します。Windows が本アプリに通知するのは、まさにこれらの組み合わせが押されたタイミングのみであり、その際に本アプリがほかのキーボード入力を受け取ることはありません。</td></tr>
+<tr><td>パスワードフィールド</td><td data-label="タイミング">クリックしたとき</td><td>クリックされたパスワードフィールドは、Windows がパスワードフィールドとして通知する限りにおいて、画像内で判読できないように処理されます。その内容がテキストとして取り込まれることはありません。これは追加の保護措置であり、保証ではありません。</td></tr>
+<tr><td>マイク</td><td data-label="タイミング">音声入力をオンにした場合のみ</td><td>音声はお使いのデバイス上でテキストに変換されます。その際、音声データは保存されません。</td></tr>
+<tr><td>作成者名</td><td data-label="タイミング">ドキュメントの作成時</td><td>設定で名前を入力しない場合、本アプリはお客様の Windows ユーザー名を使用します。この名前は作成されたドキュメントに表示されます。</td></tr>
+<tr><td>設定およびログ</td><td data-label="タイミング">常時。詳細な診断ログは、お客様がオンにした場合のみ</td><td>お客様のユーザープロファイルに保存されます。ログにはウィンドウタイトルやファイルパスが含まれる場合があります。</td></tr>
+</tbody>
+</table>
+
+<h2 id="ja-3">3. 記録に関するお客様の責任</h2>
+<p>スクリーンショットには、記録したウィンドウに表示されているものがすべて写ります。これには、氏名、メールアドレス、顧客データなどの個人データも含まれます。本アプリはこのような内容を検出しません。記録を共有する前に内容をご確認ください。画像はエディターでトリミングしたり、部分的にぼかしたりできます。</p>
+<p>他者の個人データを含む内容を記録、保存または共有する場合、それが許容されることを確保する責任はお客様ご自身にあります。これは、たとえば顧客、同僚、または雇用主に対する関係において当てはまります。</p>
+
+<h2 id="ja-4">4. 本アプリがインターネットに接続する場合</h2>
+<ul>
+<li><strong>音声入力用の音声モデル：</strong>初めて音声入力を使用するとき、本アプリは設定に応じて <code>huggingface.co</code>（Hugging Face）または <code>alphacephei.com</code> から音声モデルをダウンロードします。ほかのダウンロードと同様に、サーバーは IP アドレスなど技術的に必要な接続データを受け取ります。その際、お客様の記録やテキストが送信されることはありません。</li>
+<li><strong>Microsoft Store：</strong>本アプリは、お客様のサブスクリプションが有効かどうかを、Windows を介して Microsoft Store に照会します。詳細は<a href="#ja-5">第5項</a>をご覧ください。</li>
+<li><strong>「サブスクリプションの管理」</strong>は、ブラウザーでお客様の Microsoft アカウントを開きます。</li>
+</ul>
+<p>これら以外に、現在のバージョンの本アプリが接続を確立することはありません。</p>
+
+<h2 id="ja-5">5. Microsoft Store とサブスクリプション</h2>
+<p>サブスクリプションの購入、支払いおよび管理は Microsoft Store が行います。その際、Microsoft はストアの運営者として、たとえば購入、インストール、クラッシュに関するデータを、<a href="https://privacy.microsoft.com/">Microsoft プライバシーに関する声明</a>に従って独自に処理します。</p>
+<p>当社は Microsoft から、販売数やインストール数、クラッシュレポートなどのレポートを、通常は集計された形で受け取ります。当社が支払いデータを受け取ることはありません。</p>
+
+<h2 id="ja-6">6. 当社へのお問い合わせ</h2>
+<p>お客様が当社にメールを送信した場合、または問題レポートを送付した場合、当社はお客様から提供された情報（メールアドレス、メッセージ、レポート内のログなど）を、お問い合わせへの対応のためにのみ処理します（一般データ保護規則（GDPR）第6条第1項(b)または(f)）。当社は、これらのデータが当該目的のために不要となった時点で、法定の保存義務がない限り削除します。</p>
+<p>問題レポートは <em>設定 → 連絡先 → 問題を報告</em> から作成します。レポートはお使いのデバイス上で作成され、自動的には送信されません。送信するかどうか、また誰に送信するかはお客様が決定します。レポートに記録は含まれませんが、ログにはウィンドウタイトルやファイルパスが含まれる場合があります。送信前に内容をご確認ください。また、他者の個人データを含む記録を当社に送らないでください。</p>
+
+<h2 id="ja-7">7. 保存と削除</h2>
+<p>お客様の記録およびドキュメントは、お客様が保存した場所にある通常のファイルであり、いつでも削除できます。本アプリの設定およびログは、通常、本アプリのアンインストール時に削除されます。</p>
+
+<h2 id="ja-8">8. お客様の権利</h2>
+<p>当社がお客様の個人データを処理する限りにおいて、お客様は、アクセス（開示）、訂正、消去、処理の制限、データポータビリティ、および異議申立ての権利を有します（GDPR 第15条～第21条）。これらの権利については、<a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a> までご連絡ください。</p>
+<p>また、お客様はデータ保護監督機関に苦情を申し立てる権利を有します。オーストリアでは Datenschutzbehörde（<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>）がこれに当たります。</p>
+
+<h2 id="ja-9">9. 変更</h2>
+<p>本アプリまたは法的要件が変更された場合、当社は本ポリシーを改定します。その時点でここに公開されている版が適用されます。</p>
+</div>
+</section>
+
+<!-- zh -->
+<section class="sprache" id="zh" lang="zh-CN" role="tabpanel" aria-labelledby="tab-zh">
+<div class="einleitung">
+<h1>隐私政策</h1>
+<p class="stand">更新日期：2026年9月25日 · 适用于 Microsoft Store 中提供的 CNNT Steps 应用版本</p>
+<p class="hinweis">本文为译文。如有疑义，以德文版本为准。</p>
+
+<div class="kurz">
+<strong>简要说明</strong>
+<ul>
+<li>CNNT Steps 在您的设备上运行。您的录制内容不会传输给我们。</li>
+<li>本应用没有用户帐户，没有广告，也没有任何分析或跟踪工具。</li>
+<li>本应用仅在下载语音模型（听写）以及通过 Microsoft Store 检查您的订阅时才会连接互联网。</li>
+<li>屏幕截图可能包含个人数据——您录制和分享的内容由您自行负责。</li>
+</ul>
+</div>
+
+</div>
+<nav class="inhalt" aria-label="目录">
+<strong>目录</strong>
+<ol>
+<li><a href="#zh-1">谁是责任方？</a></li>
+<li><a href="#zh-2">本应用在您的设备上处理的数据</a></li>
+<li><a href="#zh-3">您对录制内容的责任</a></li>
+<li><a href="#zh-4">本应用何时连接互联网</a></li>
+<li><a href="#zh-5">Microsoft Store 与订阅</a></li>
+<li><a href="#zh-6">当您联系我们时</a></li>
+<li><a href="#zh-7">存储与删除</a></li>
+<li><a href="#zh-8">您的权利</a></li>
+<li><a href="#zh-9">变更</a></li>
+</ol>
+</nav>
+<div class="rumpf">
+
+<h2 id="zh-1">1. 谁是责任方？</h2>
+<p class="verantwortlich">CNNT – Ebubekir Göcmen<br>
+电子邮件：<a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a></p>
+<p>本政策适用于 CNNT Steps 应用。Microsoft Store、Windows 以及<a href="#zh-4">第 4 节</a>中所述的下载服务器，适用各自提供方的隐私声明。</p>
+
+<h2 id="zh-2">2. 本应用在您的设备上处理的数据</h2>
+<p>以下数据在您的设备上产生并保留在您的设备上。我们无法访问这些数据。</p>
+<table>
+<thead><tr><th>数据</th><th>时间</th><th>如何处理</th></tr></thead>
+<tbody>
+<tr><td>所录制窗口或所选区域的屏幕截图</td><td data-label="时间">仅在您自行启动的录制或快速截图过程中</td><td>保存在您的录制文件（<code>.steps</code>）以及由其创建的文档中，存放于您选择的位置。</td></tr>
+<tr><td>窗口标题及所点击控件的名称</td><td data-label="时间">仅在录制或快速截图过程中</td><td>用于描述各个步骤，并保存在您的录制文件中。</td></tr>
+<tr><td>键盘输入</td><td data-label="时间">仅在录制过程中</td><td>本应用会感知键盘输入，以识别特定按键。仅对 Ctrl 键和 Delete 键进行分析；其他按键会被丢弃，不会被保存。</td></tr>
+<tr><td>键盘快捷键</td><td data-label="时间">在本应用运行期间（如您进行了相应设置，也包括在通知区域中运行时）</td><td>本应用会向 Windows 注册个别组合键，例如用于快速截图的 Print Screen 键。Windows 仅会告知本应用这些组合键被按下的确切时间；本应用不会由此获得任何其他键盘输入。</td></tr>
+<tr><td>密码字段</td><td data-label="时间">点击时</td><td>被点击的密码字段，只要 Windows 将其报告为密码字段，就会在图像中被处理为无法辨认；其内容不会作为文本被采集。这是一项额外的保护措施，而非保证。</td></tr>
+<tr><td>麦克风</td><td data-label="时间">仅在您开启听写时</td><td>语音在您的设备上被转换为文本。在此过程中，音频数据不会被保存。</td></tr>
+<tr><td>作者姓名</td><td data-label="时间">创建文档时</td><td>如果您未在设置中输入姓名，本应用将使用您的 Windows 用户名。该名称会显示在所创建的文档中。</td></tr>
+<tr><td>设置与日志</td><td data-label="时间">持续进行；详细的诊断日志仅在您开启时记录</td><td>保存在您的用户配置文件中。日志可能包含窗口标题和文件路径。</td></tr>
+</tbody>
+</table>
+
+<h2 id="zh-3">3. 您对录制内容的责任</h2>
+<p>屏幕截图会显示所录制窗口中可见的所有内容——包括个人数据，例如姓名、电子邮件地址或客户数据。本应用无法识别此类内容。请在分享录制内容之前对其进行检查；图像可以在编辑器中裁剪，也可以对局部进行模糊处理。</p>
+<p>如果您录制、存储或分享包含他人个人数据的内容，您须自行负责确保此类行为合法合规——例如对客户、同事或您的雇主而言。</p>
+
+<h2 id="zh-4">4. 本应用何时连接互联网</h2>
+<ul>
+<li><strong>用于听写的语音模型：</strong>当您首次使用听写功能时，本应用会根据设置从 <code>huggingface.co</code>（Hugging Face）或 <code>alphacephei.com</code> 下载语音模型。与任何下载一样，服务器会获得技术上必需的连接数据，例如您的 IP 地址。在此过程中，您的录制内容或文本不会被传输。</li>
+<li><strong>Microsoft Store：</strong>本应用通过 Windows 向 Microsoft Store 查询您的订阅是否有效。详情请参阅<a href="#zh-5">第 5 节</a>。</li>
+<li><strong>“管理订阅”</strong>会在浏览器中打开您的 Microsoft 帐户。</li>
+</ul>
+<p>除此之外，本应用的当前版本不会建立任何连接。</p>
+
+<h2 id="zh-5">5. Microsoft Store 与订阅</h2>
+<p>订阅的购买、付款和管理均由 Microsoft Store 处理。在此过程中，Microsoft 作为应用商店的运营方，根据 <a href="https://privacy.microsoft.com/">Microsoft 隐私声明</a>独立处理数据，例如有关购买、安装和崩溃的数据。</p>
+<p>我们会从 Microsoft 获得报告，例如销售和安装数量或崩溃报告，通常为汇总形式。我们不会获得付款数据。</p>
+
+<h2 id="zh-6">6. 当您联系我们时</h2>
+<p>如果您向我们发送电子邮件或问题报告，我们将仅为处理您的请求而处理您提供的信息——例如您的电子邮件地址、您的消息以及报告中的日志（《通用数据保护条例》（GDPR）第 6 条第 1 款 (b) 项或 (f) 项）。一旦这些数据不再为此目的所需，我们将予以删除，但法定保存义务另有规定的除外。</p>
+<p>您可以通过 <em>设置 → 联系方式 → 报告问题</em> 创建问题报告。该报告在您的设备上创建，不会自动发送；是否发送以及发送给谁，由您决定。报告中不包含录制内容，但日志可能包含窗口标题和文件路径。请在发送前检查报告，并且请勿向我们发送包含他人个人数据的录制内容。</p>
+
+<h2 id="zh-7">7. 存储与删除</h2>
+<p>您的录制内容和文档是存放在您所保存位置的普通文件；您可以随时将其删除。本应用的设置和日志通常会在卸载本应用时被删除。</p>
+
+<h2 id="zh-8">8. 您的权利</h2>
+<p>在我们处理您的个人数据的范围内，您享有访问权、更正权、删除权、限制处理权、数据可携带权和反对权（GDPR 第 15–21 条）。如需行使上述权利，请联系 <a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a>。</p>
+<p>此外，您有权向数据保护监管机构投诉；在奥地利，该机构为 Datenschutzbehörde（<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>）。</p>
+
+<h2 id="zh-9">9. 变更</h2>
+<p>如果本应用或法律要求发生变化，我们将相应调整本政策。以届时在此处发布的版本为准。</p>
+</div>
+</section>
+
+<!-- ko -->
+<section class="sprache" id="ko" lang="ko" role="tabpanel" aria-labelledby="tab-ko">
+<div class="einleitung">
+<h1>개인정보 처리방침</h1>
+<p class="stand">최종 업데이트: 2026년 9월 25일 · Microsoft Store에서 제공되는 CNNT Steps 앱 버전에 적용됩니다</p>
+<p class="hinweis">이 문서는 번역본입니다. 의문이 있는 경우 독일어판이 우선합니다.</p>
+
+<div class="kurz">
+<strong>요약</strong>
+<ul>
+<li>CNNT Steps는 사용자의 기기에서 작동합니다. 사용자의 기록은 당사로 전송되지 않습니다.</li>
+<li>이 앱에는 사용자 계정, 광고, 분석 또는 추적 도구가 없습니다.</li>
+<li>이 앱은 음성 모델(받아쓰기) 다운로드와 Microsoft Store를 통한 구독 확인을 위해서만 인터넷에 연결합니다.</li>
+<li>스크린샷에는 개인정보가 포함될 수 있습니다. 무엇을 기록하고 공유할지는 사용자의 책임입니다.</li>
+</ul>
+</div>
+
+</div>
+<nav class="inhalt" aria-label="목차">
+<strong>목차</strong>
+<ol>
+<li><a href="#ko-1">책임자는 누구입니까?</a></li>
+<li><a href="#ko-2">앱이 사용자의 기기에서 처리하는 데이터</a></li>
+<li><a href="#ko-3">기록에 대한 사용자의 책임</a></li>
+<li><a href="#ko-4">앱이 인터넷에 연결하는 경우</a></li>
+<li><a href="#ko-5">Microsoft Store 및 구독</a></li>
+<li><a href="#ko-6">당사에 문의하는 경우</a></li>
+<li><a href="#ko-7">저장 및 삭제</a></li>
+<li><a href="#ko-8">사용자의 권리</a></li>
+<li><a href="#ko-9">변경</a></li>
+</ol>
+</nav>
+<div class="rumpf">
+
+<h2 id="ko-1">1. 책임자는 누구입니까?</h2>
+<p class="verantwortlich">CNNT – Ebubekir Göcmen<br>
+이메일: <a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a></p>
+<p>본 방침은 CNNT Steps 앱에 적용됩니다. Microsoft Store, Windows 및 <a href="#ko-4">제4항</a>에 언급된 다운로드 서버에는 각 제공자의 개인정보 보호 고지가 적용됩니다.</p>
+
+<h2 id="ko-2">2. 앱이 사용자의 기기에서 처리하는 데이터</h2>
+<p>다음 데이터는 사용자의 기기에서 생성되며 기기에 그대로 남습니다. 당사는 이 데이터에 접근할 수 없습니다.</p>
+<table>
+<thead><tr><th>데이터</th><th>시점</th><th>처리 방식</th></tr></thead>
+<tbody>
+<tr><td>기록된 창 또는 선택한 영역의 스크린샷</td><td data-label="시점">사용자가 직접 시작한 기록 또는 빠른 캡처 중에만</td><td>사용자가 선택한 위치에 있는 기록 파일(<code>.steps</code>) 및 이를 바탕으로 작성된 문서에 저장됩니다.</td></tr>
+<tr><td>창 제목 및 클릭한 컨트롤의 이름</td><td data-label="시점">기록 또는 빠른 캡처 중에만</td><td>단계를 설명하는 데 사용되며 기록 파일에 저장됩니다.</td></tr>
+<tr><td>키보드 입력</td><td data-label="시점">기록 중에만</td><td>앱은 특정 키를 인식하기 위해 키보드 입력을 감지합니다. 평가 대상은 Ctrl 키와 Delete 키이며, 다른 키는 폐기되고 저장되지 않습니다.</td></tr>
+<tr><td>바로 가기 키</td><td data-label="시점">앱이 실행되는 동안(그렇게 설정한 경우 알림 영역에서 실행되는 동안에도)</td><td>앱은 빠른 캡처용 Print Screen 키 등 개별 키 조합을 Windows에 등록합니다. Windows는 정확히 이 조합이 눌린 시점만 앱에 알려 주며, 앱은 이 과정에서 다른 키보드 입력을 받지 않습니다.</td></tr>
+<tr><td>암호 입력란</td><td data-label="시점">클릭할 때</td><td>클릭한 암호 입력란은 Windows가 이를 암호 입력란으로 보고하는 범위에서 이미지에서 알아볼 수 없게 처리되며, 그 내용은 텍스트로 가져오지 않습니다. 이는 추가적인 보호 조치일 뿐 보장은 아닙니다.</td></tr>
+<tr><td>마이크</td><td data-label="시점">받아쓰기를 켠 경우에만</td><td>음성은 사용자의 기기에서 텍스트로 변환됩니다. 이 과정에서 오디오 데이터는 저장되지 않습니다.</td></tr>
+<tr><td>작성자 이름</td><td data-label="시점">문서를 작성할 때</td><td>설정에서 이름을 입력하지 않으면 앱은 사용자의 Windows 사용자 이름을 사용합니다. 이 이름은 작성된 문서에 표시됩니다.</td></tr>
+<tr><td>설정 및 로그</td><td data-label="시점">상시; 상세 진단 로그는 사용자가 켠 경우에만</td><td>사용자 프로필에 저장됩니다. 로그에는 창 제목과 파일 경로가 포함될 수 있습니다.</td></tr>
+</tbody>
+</table>
+
+<h2 id="ko-3">3. 기록에 대한 사용자의 책임</h2>
+<p>스크린샷에는 기록된 창에 보이는 모든 것이 담깁니다. 여기에는 이름, 이메일 주소, 고객 데이터와 같은 개인정보도 포함됩니다. 앱은 이러한 내용을 인식하지 않습니다. 기록을 공유하기 전에 확인하십시오. 편집기에서 이미지를 자르거나 일부를 흐리게 처리할 수 있습니다.</p>
+<p>다른 사람의 개인정보가 포함된 내용을 기록, 저장 또는 공유하는 경우, 이것이 허용되는지 확인할 책임은 사용자 본인에게 있습니다. 예를 들어 고객, 동료 또는 고용주와의 관계에서 그러합니다.</p>
+
+<h2 id="ko-4">4. 앱이 인터넷에 연결하는 경우</h2>
+<ul>
+<li><strong>받아쓰기용 음성 모델:</strong> 받아쓰기를 처음 사용할 때 앱은 설정에 따라 <code>huggingface.co</code>(Hugging Face) 또는 <code>alphacephei.com</code>에서 음성 모델을 다운로드합니다. 여느 다운로드와 마찬가지로 서버는 사용자의 IP 주소 등 기술적으로 필요한 연결 데이터를 받습니다. 이때 사용자의 기록이나 텍스트는 전송되지 않습니다.</li>
+<li><strong>Microsoft Store:</strong> 앱은 Windows를 통해 Microsoft Store에 사용자의 구독이 활성 상태인지 조회합니다. 자세한 내용은 <a href="#ko-5">제5항</a>을 참조하십시오.</li>
+<li><strong>“구독 관리”</strong>를 선택하면 브라우저에서 사용자의 Microsoft 계정이 열립니다.</li>
+</ul>
+<p>그 밖에 현재 버전의 앱은 어떠한 연결도 설정하지 않습니다.</p>
+
+<h2 id="ko-5">5. Microsoft Store 및 구독</h2>
+<p>구독의 구매, 결제 및 관리는 Microsoft Store가 처리합니다. 이때 Microsoft는 스토어 운영자로서 <a href="https://privacy.microsoft.com/">Microsoft 개인정보처리방침</a>에 따라 구매, 설치, 충돌 등에 관한 데이터를 독자적으로 처리합니다.</p>
+<p>당사는 Microsoft로부터 판매 및 설치 수치나 충돌 보고서 등의 보고서를 일반적으로 집계된 형태로 받습니다. 당사는 결제 데이터를 받지 않습니다.</p>
+
+<h2 id="ko-6">6. 당사에 문의하는 경우</h2>
+<p>사용자가 당사에 이메일을 보내거나 문제 보고서를 보내는 경우, 당사는 사용자가 제공한 정보(예: 이메일 주소, 메시지 및 보고서에 포함된 로그)를 오로지 사용자의 요청을 처리하기 위해서만 처리합니다(일반 데이터 보호 규정(GDPR) 제6조 제1항 (b)호 또는 (f)호). 당사는 법정 보존 의무가 없는 한, 이 데이터가 해당 목적에 더 이상 필요하지 않게 되는 즉시 삭제합니다.</p>
+<p>문제 보고서는 <em>설정 → 문의 → 문제 보고</em>에서 만들 수 있습니다. 보고서는 사용자의 기기에서 생성되며 자동으로 전송되지 않습니다. 보고서를 보낼지 여부와 누구에게 보낼지는 사용자가 결정합니다. 보고서에는 기록이 포함되지 않지만, 로그에는 창 제목과 파일 경로가 포함될 수 있습니다. 보내기 전에 보고서를 검토하시고, 다른 사람의 개인정보가 포함된 기록은 당사에 보내지 마십시오.</p>
+
+<h2 id="ko-7">7. 저장 및 삭제</h2>
+<p>사용자의 기록과 문서는 사용자가 저장한 위치에 있는 일반 파일이며, 언제든지 삭제할 수 있습니다. 앱의 설정과 로그는 일반적으로 앱을 제거할 때 삭제됩니다.</p>
+
+<h2 id="ko-8">8. 사용자의 권리</h2>
+<p>당사가 사용자의 개인정보를 처리하는 한, 사용자는 열람, 정정, 삭제, 처리 제한, 데이터 이동 및 반대에 대한 권리를 가집니다(GDPR 제15조~제21조). 이를 위해서는 <a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a>으로 연락하십시오.</p>
+<p>또한 사용자는 데이터 보호 감독 기관에 민원을 제기할 권리가 있으며, 오스트리아에서는 Datenschutzbehörde(<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>)가 이에 해당합니다.</p>
+
+<h2 id="ko-9">9. 변경</h2>
+<p>앱 또는 법적 요건이 변경되는 경우 당사는 본 방침을 수정합니다. 해당 시점에 이곳에 게시된 버전이 적용됩니다.</p>
+</div>
 </section>
 
 </main>
 
 <footer>
-CNNT – Ebubekir Göcmen · <a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a>
+  <span>© 2026 CNNT – Ebubekir Göcmen</span>
+  <a href="mailto:support@cnntsteps.com">support@cnntsteps.com</a>
 </footer>
 
 <script>
 (function () {
-  var sprachen = ["de", "en", "tr"];
-  var knoepfe = document.querySelectorAll(".reiter button");
+  var sprachen = ["de", "en", "tr", "fr", "es", "it", "pt", "nl", "pl", "cs", "ro", "uk", "ru", "ja", "zh", "ko"];
+  var wahl = document.getElementById("sprachwahl");
+  var titel = document.getElementById("seitentitel");
 
   function zeige(sprache, merken) {
-    sprachen.forEach(function (s) {
-      document.getElementById(s).hidden = (s !== sprache);
-      document.getElementById("tab-" + s).setAttribute("aria-selected", s === sprache ? "true" : "false");
-      document.getElementById("tab-" + s).tabIndex = (s === sprache) ? 0 : -1;
-    });
-    document.documentElement.lang = sprache;
+    sprachen.forEach(function (s) { document.getElementById(s).hidden = (s !== sprache); });
+    var abschnitt = document.getElementById(sprache);
+    document.documentElement.lang = abschnitt.getAttribute("lang") || sprache;
+    var h1 = abschnitt.querySelector("h1");
+    if (h1) { titel.textContent = h1.textContent; document.title = "CNNT Steps – " + h1.textContent; }
+    wahl.value = sprache;
+    beobachte(abschnitt);
     if (merken && history.replaceState) { history.replaceState(null, "", "#" + sprache); }
   }
 
@@ -432,30 +1901,41 @@ CNNT – Ebubekir Göcmen · <a href="mailto:support@cnntsteps.com">support@cnnt
     if (sprachen.indexOf(ausAnker) >= 0) { return ausAnker; }
     var liste = navigator.languages || [navigator.language || ""];
     for (var i = 0; i < liste.length; i++) {
-      var code = String(liste[i]).slice(0, 2).toLowerCase();
+      var kennung = String(liste[i]).toLowerCase();
+      var code = kennung.slice(0, 2);
+      if (code === "zh" && /(tw|hk|mo|hant)/.test(kennung)) { continue; }
       if (sprachen.indexOf(code) >= 0) { return code; }
     }
     return "en";
   }
 
-  knoepfe.forEach(function (k, i) {
-    k.addEventListener("click", function () { zeige(k.dataset.sprache, true); window.scrollTo(0, 0); });
-    k.addEventListener("keydown", function (e) {
-      var ziel = null;
-      if (e.key === "ArrowRight") { ziel = knoepfe[(i + 1) % knoepfe.length]; }
-      if (e.key === "ArrowLeft") { ziel = knoepfe[(i + knoepfe.length - 1) % knoepfe.length]; }
-      if (ziel) { e.preventDefault(); ziel.focus(); ziel.click(); }
-    });
-  });
+  // Inhaltsverzeichnis: den gerade gelesenen Abschnitt hervorheben.
+  var beobachter = null;
+  function beobachte(abschnitt) {
+    if (!("IntersectionObserver" in window)) { return; }
+    if (beobachter) { beobachter.disconnect(); }
+    var links = abschnitt.querySelectorAll("nav.inhalt a");
+    beobachter = new IntersectionObserver(function (eintraege) {
+      eintraege.forEach(function (e) {
+        if (!e.isIntersecting) { return; }
+        links.forEach(function (a) { a.classList.toggle("aktiv", a.getAttribute("href") === "#" + e.target.id); });
+      });
+    }, { rootMargin: "0px 0px -70% 0px" });
+    abschnitt.querySelectorAll("h2[id]").forEach(function (h) { beobachter.observe(h); });
+  }
 
+  wahl.addEventListener("change", function () { zeige(wahl.value, true); window.scrollTo(0, 0); });
   zeige(start(), false);
-  // Nur die Sprache im Link (#de, #en, #tr): oben beginnen. Ein Abschnitt
-  // (#tr-4): dorthin springen - scroll-margin haelt ihn unter der Kopfzeile frei.
   var anker = (location.hash || "").slice(1);
+  // Nur die Sprache im Link (#de): oben beginnen. Ein Abschnitt (#de-4):
+  // dorthin springen.
   if (anker.indexOf("-") > 0 && document.getElementById(anker)) {
     document.getElementById(anker).scrollIntoView();
   } else {
+    // Der Browser springt nach dem Laden selbst zum Anker (#de = der
+    // ganze Abschnitt) - danach noch einmal nach oben.
     window.scrollTo(0, 0);
+    window.addEventListener("load", function () { window.scrollTo(0, 0); });
   }
 })();
 </script>
