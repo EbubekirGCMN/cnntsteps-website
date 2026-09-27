@@ -202,14 +202,14 @@
 <section class="sprache" id="de" lang="de" role="tabpanel" aria-labelledby="tab-de">
 <div class="einleitung">
 <h1>Datenschutzerklärung</h1>
-<p class="stand">Stand: 27.09.2026 · gilt für die App CNNT Steps – die Fassung aus dem Microsoft Store und die Fassung von unserer Webseite – und für die Webseite cnntsteps.com</p>
+<p class="stand">Stand: 27.09.2026 (Nachtrag: Übersetzung, Texterkennung, Rechtschreibprüfung) · gilt für die App CNNT Steps – die Fassung aus dem Microsoft Store und die Fassung von unserer Webseite – und für die Webseite cnntsteps.com</p>
 
 <div class="kurz">
 <strong>Kurz zusammengefasst</strong>
 <ul>
 <li>CNNT Steps arbeitet auf Ihrem Gerät. Ihre Aufzeichnungen werden nicht an uns übertragen.</li>
 <li>Die App hat kein Benutzerkonto, keine Werbung und keine Analyse- oder Tracking-Werkzeuge.</li>
-<li>Ins Internet geht die App nur für den Download der Sprachmodelle (Diktat) und für die Lizenzprüfung – in der Store-Fassung über den Microsoft Store, in der Fassung von unserer Webseite über unseren Lizenzdienst.</li>
+<li>Ins Internet geht die App nur für den Download der Sprach- und Übersetzungsmodelle und für die Lizenzprüfung – in der Store-Fassung über den Microsoft Store, in der Fassung von unserer Webseite über unseren Lizenzdienst.</li>
 <li>Unsere Webseite setzt keine Cookies und keine Analyse-Werkzeuge ein.</li>
 <li>Bildschirmfotos können personenbezogene Daten enthalten – was Sie aufzeichnen und weitergeben, liegt in Ihrer Verantwortung.</li>
 </ul>
@@ -254,14 +254,18 @@ gelten die Datenschutzhinweise der jeweiligen Anbieter.</p>
 <tr><td>Kennwortfelder</td><td data-label="Wann">beim Anklicken</td><td>Ein angeklicktes Kennwortfeld wird, soweit Windows es als solches meldet, im Bild unkenntlich gemacht; sein Inhalt wird nicht als Text übernommen. Das ist eine zusätzliche Schutzmaßnahme, keine Garantie.</td></tr>
 <tr><td>Mikrofon</td><td data-label="Wann">nur, wenn Sie das Diktat einschalten</td><td>Die Sprache wird auf Ihrem Gerät in Text umgewandelt. Die Audiodaten werden dabei nicht gespeichert.</td></tr>
 <tr><td>Autorenname</td><td data-label="Wann">beim Erstellen von Dokumenten</td><td>Tragen Sie in den Einstellungen keinen Namen ein, verwendet die App Ihren Windows-Benutzernamen. Er erscheint in den erstellten Dokumenten.</td></tr>
+<tr><td>Texterkennung in Bildern</td><td data-label="Wann">nur, wenn Sie sie in den Einstellungen einschalten</td><td>Windows erkennt Text in Ihren Bildschirmfotos auf Ihrem Gerät – für die Suche im Verlauf und für „Sensible Daten suchen“. Der erkannte Text liegt im Suchindex in Ihrem Benutzerprofil.</td></tr>
+<tr><td>Rechtschreibprüfung</td><td data-label="Wann">beim Schreiben von Beschreibungen und Kommentaren</td><td>Die Prüfung übernimmt Windows auf Ihrem Gerät.</td></tr>
+<tr><td>Übersetzung</td><td data-label="Wann">nur, wenn Sie eine Anleitung übersetzen lassen</td><td>Die Übersetzung läuft mit einem heruntergeladenen Modell auf Ihrem Gerät. Kein Text verlässt es.</td></tr>
 <tr><td>Einstellungen und Protokolle</td><td data-label="Wann">laufend; ein ausführliches Diagnoseprotokoll nur, wenn Sie es einschalten</td><td>Sie werden in Ihrem Benutzerprofil gespeichert. Protokolle können Fenstertitel und Dateipfade enthalten.</td></tr>
 </tbody>
 </table>
 
 <h2 id="de-3">3. Ihre Verantwortung für Aufzeichnungen</h2>
 <p>Ein Bildschirmfoto zeigt alles, was im aufgezeichneten Fenster sichtbar ist – auch personenbezogene Daten, etwa
-Namen, E-Mail-Adressen oder Kundendaten. Die App erkennt solche Inhalte nicht. Prüfen Sie Ihre Aufzeichnungen, bevor
-Sie sie weitergeben; Bilder lassen sich im Editor zuschneiden und stellenweise weichzeichnen.</p>
+Namen, E-Mail-Adressen oder Kundendaten. Die Funktion „Sensible Daten suchen“ kann beim Finden helfen (Texterkennung
+von Windows, läuft auf Ihrem Gerät), findet aber nicht alles. Prüfen Sie Ihre Aufzeichnungen selbst, bevor Sie sie
+weitergeben; Bilder lassen sich im Editor zuschneiden, schwärzen und stellenweise weichzeichnen.</p>
 <p>Wenn Sie Inhalte mit personenbezogenen Daten anderer Personen aufzeichnen, speichern oder weitergeben, sind Sie
 selbst dafür verantwortlich, dass dies zulässig ist – etwa gegenüber Kundinnen und Kunden, Kolleginnen und Kollegen
 oder Ihrem Arbeitgeber.</p>
@@ -272,6 +276,11 @@ oder Ihrem Arbeitgeber.</p>
 Sprachmodell herunter, je nach Einstellung von <code>huggingface.co</code> (Hugging Face) oder
 <code>alphacephei.com</code>. Wie bei jedem Download erhält der Server technisch notwendige Verbindungsdaten, etwa
 Ihre IP-Adresse. Aufnahmen oder Texte von Ihnen werden dabei nicht übertragen.</li>
+<li><strong>Übersetzungsmodelle:</strong> Wenn Sie in den Einstellungen ein Übersetzungsmodell herunterladen oder zum
+ersten Mal eine Anleitung übersetzen, lädt die App das Modell von unserer eigenen Download-Ablage beim Anbieter
+Cloudflare (Cloudflare R2). Die Modelle stammen aus dem Projekt OPUS-MT (Helsinki-NLP, Lizenz CC BY 4.0). Übertragen
+werden nur technisch notwendige Verbindungsdaten wie Ihre IP-Adresse; die Übersetzung selbst läuft auf Ihrem Gerät,
+kein Text verlässt es.</li>
 <li><strong>Fassung aus dem Microsoft Store:</strong> Ob Ihr Abo aktiv ist, fragt die App über Windows beim Microsoft
 Store ab. „Abo verwalten“ öffnet Ihr Microsoft-Konto im Browser. Einzelheiten stehen in
 <a href="#de-5">Abschnitt 5</a>.</li>
@@ -356,7 +365,7 @@ die jeweils hier veröffentlichte Fassung.</p>
 <section class="sprache" id="en" lang="en" role="tabpanel" aria-labelledby="tab-en">
 <div class="einleitung">
 <h1>Privacy Policy</h1>
-<p class="stand">Last updated: 27 September 2026 · applies to the CNNT Steps app – the version from the Microsoft Store and the version from our website – and to the website cnntsteps.com</p>
+<p class="stand">Last updated: 27 September 2026 (addendum: translation, text recognition, spell check) · applies to the CNNT Steps app – the version from the Microsoft Store and the version from our website – and to the website cnntsteps.com</p>
 <p class="hinweis">This is a translation. In case of doubt, the German version applies.</p>
 
 <div class="kurz">
@@ -364,7 +373,7 @@ die jeweils hier veröffentlichte Fassung.</p>
 <ul>
 <li>CNNT Steps works on your device. Your recordings are not transmitted to us.</li>
 <li>The app has no user account, no advertising and no analytics or tracking tools.</li>
-<li>The app only goes online to download speech models (dictation) and to check the licence – in the Store version through the Microsoft Store, in the version from our website through our licence service.</li>
+<li>The app only goes online to download speech and translation models and to check the licence – in the Store version through the Microsoft Store, in the version from our website through our licence service.</li>
 <li>Our website uses no cookies and no analytics tools.</li>
 <li>Screenshots may contain personal data – what you record and share is your responsibility.</li>
 </ul>
@@ -409,14 +418,18 @@ providers.</p>
 <tr><td>Password fields</td><td data-label="When">when clicked</td><td>A clicked password field is, where Windows reports it as such, obscured in the image; its content is not taken over as text. This is an additional safeguard, not a guarantee.</td></tr>
 <tr><td>Microphone</td><td data-label="When">only when you turn on dictation</td><td>Speech is converted to text on your device. The audio is not stored.</td></tr>
 <tr><td>Author name</td><td data-label="When">when creating documents</td><td>If you do not enter a name in the settings, the app uses your Windows user name. It appears in the documents you create.</td></tr>
+<tr><td>Text recognition in images</td><td data-label="When">only if you turn it on in the settings</td><td>Windows recognises text in your screenshots on your device – for searching the history and for “Find sensitive data”. The recognised text is kept in the search index in your user profile.</td></tr>
+<tr><td>Spell check</td><td data-label="When">when writing descriptions and comments</td><td>The check is done by Windows on your device.</td></tr>
+<tr><td>Translation</td><td data-label="When">only if you have a guide translated</td><td>Translation runs with a downloaded model on your device. No text leaves it.</td></tr>
 <tr><td>Settings and logs</td><td data-label="When">ongoing; a detailed diagnostic log only if you turn it on</td><td>They are kept in your user profile. Logs may contain window titles and file paths.</td></tr>
 </tbody>
 </table>
 
 <h2 id="en-3">3. Your responsibility for recordings</h2>
 <p>A screenshot shows everything visible in the recorded window – including personal data such as names, e-mail
-addresses or customer data. The app does not detect such content. Check your recordings before sharing them; images
-can be cropped and partly blurred in the editor.</p>
+addresses or customer data. The “Find sensitive data” function can help you find such content (Windows text
+recognition, running on your device), but it does not find everything. Check your recordings yourself before sharing
+them; images can be cropped, blacked out and partly blurred in the editor.</p>
 <p>If you record, store or share content containing other people's personal data, you are responsible for making sure
 this is permitted – for example towards customers, colleagues or your employer.</p>
 
@@ -426,6 +439,10 @@ this is permitted – for example towards customers, colleagues or your employer
 depending on the setting from <code>huggingface.co</code> (Hugging Face) or <code>alphacephei.com</code>. As with any
 download, the server receives technically necessary connection data such as your IP address. No recordings or text of
 yours are transmitted.</li>
+<li><strong>Translation models:</strong> when you download a translation model in the settings or translate a guide for
+the first time, the app downloads the model from our own download storage at the provider Cloudflare (Cloudflare R2).
+The models come from the OPUS-MT project (Helsinki-NLP, licence CC BY 4.0). Only technically necessary connection data
+such as your IP address is transmitted; the translation itself runs on your device, and no text leaves it.</li>
 <li><strong>Version from the Microsoft Store:</strong> the app asks the Microsoft Store, through Windows, whether your
 subscription is active. “Manage subscription” opens your Microsoft account in the browser. See
 <a href="#en-5">section 5</a> for details.</li>
@@ -509,7 +526,7 @@ applies.</p>
 <section class="sprache" id="tr" lang="tr" role="tabpanel" aria-labelledby="tab-tr">
 <div class="einleitung">
 <h1>Gizlilik Politikası</h1>
-<p class="stand">Güncelleme: 27.09.2026 · CNNT Steps uygulaması – Microsoft Store sürümü ve web sitemizden indirilen sürüm – ile cnntsteps.com web sitesi için geçerlidir</p>
+<p class="stand">Güncelleme: 27.09.2026 (Ek: çeviri, metin tanıma, yazım denetimi) · CNNT Steps uygulaması – Microsoft Store sürümü ve web sitemizden indirilen sürüm – ile cnntsteps.com web sitesi için geçerlidir</p>
 <p class="hinweis">Bu bir çeviridir. Şüphe halinde Almanca metin geçerlidir.</p>
 
 <div class="kurz">
@@ -517,7 +534,7 @@ applies.</p>
 <ul>
 <li>CNNT Steps cihazınızda çalışır. Kayıtlarınız bize aktarılmaz.</li>
 <li>Uygulamada kullanıcı hesabı, reklam, analiz veya izleme aracı yoktur.</li>
-<li>Uygulama internete yalnızca konuşma modellerini indirmek (dikte) ve lisansı kontrol etmek için bağlanır – Microsoft Store sürümünde Microsoft Store üzerinden, web sitemizden indirilen sürümde lisans hizmetimiz üzerinden.</li>
+<li>Uygulama internete yalnızca konuşma ve çeviri modellerini indirmek ve lisansı kontrol etmek için bağlanır – Microsoft Store sürümünde Microsoft Store üzerinden, web sitemizden indirilen sürümde lisans hizmetimiz üzerinden.</li>
 <li>Web sitemiz çerez ve analiz aracı kullanmaz.</li>
 <li>Ekran görüntüleri kişisel veriler içerebilir – neyi kaydettiğiniz ve paylaştığınız sizin sorumluluğunuzdadır.</li>
 </ul>
@@ -562,14 +579,18 @@ sağlayıcıların gizlilik bildirimleri geçerlidir.</p>
 <tr><td>Parola alanları</td><td data-label="Ne zaman">tıklandığında</td><td>Tıklanan bir parola alanı, Windows onu parola alanı olarak bildirdiği ölçüde görüntüde gizlenir; içeriği metin olarak alınmaz. Bu ek bir koruma önlemidir, garanti değildir.</td></tr>
 <tr><td>Mikrofon</td><td data-label="Ne zaman">yalnızca dikteyi açtığınızda</td><td>Konuşma cihazınızda metne dönüştürülür. Ses verileri saklanmaz.</td></tr>
 <tr><td>Yazar adı</td><td data-label="Ne zaman">belge oluşturulurken</td><td>Ayarlarda bir ad girmezseniz uygulama Windows kullanıcı adınızı kullanır. Bu ad oluşturulan belgelerde görünür.</td></tr>
+<tr><td>Görüntülerdeki metin tanıma</td><td data-label="Ne zaman">yalnızca ayarlarda açtığınızda</td><td>Windows, ekran görüntülerinizdeki metni cihazınızda tanır – geçmişte arama yapmak ve „Hassas verileri ara“ için. Tanınan metin, kullanıcı profilinizdeki arama dizininde tutulur.</td></tr>
+<tr><td>Yazım denetimi</td><td data-label="Ne zaman">açıklama ve yorum yazarken</td><td>Denetimi cihazınızda Windows yapar.</td></tr>
+<tr><td>Çeviri</td><td data-label="Ne zaman">yalnızca bir kılavuzu çevirttiğinizde</td><td>Çeviri, indirilmiş bir modelle cihazınızda çalışır. Hiçbir metin cihazınızdan çıkmaz.</td></tr>
 <tr><td>Ayarlar ve günlükler</td><td data-label="Ne zaman">sürekli; ayrıntılı tanılama günlüğü yalnızca siz açarsanız</td><td>Kullanıcı profilinizde saklanır. Günlükler pencere başlıkları ve dosya yolları içerebilir.</td></tr>
 </tbody>
 </table>
 
 <h2 id="tr-3">3. Kayıtlarınızla ilgili sorumluluğunuz</h2>
 <p>Bir ekran görüntüsü, kaydedilen pencerede görünen her şeyi gösterir – adlar, e-posta adresleri veya müşteri
-verileri gibi kişisel veriler de dahil. Uygulama bu tür içerikleri algılamaz. Kayıtlarınızı paylaşmadan önce kontrol
-edin; görüntüler düzenleyicide kırpılabilir ve kısmen bulanıklaştırılabilir.</p>
+verileri gibi kişisel veriler de dahil. „Hassas verileri ara“ işlevi bunları bulmanıza yardımcı olabilir (Windows'un
+metin tanıma özelliği, cihazınızda çalışır), ancak her şeyi bulamaz. Kayıtlarınızı paylaşmadan önce kendiniz kontrol
+edin; görüntüler düzenleyicide kırpılabilir, karartılabilir ve kısmen bulanıklaştırılabilir.</p>
 <p>Başka kişilerin kişisel verilerini içeren içerikleri kaydeder, saklar veya paylaşırsanız, bunun izin verilen bir
 durum olmasından – örneğin müşterilere, iş arkadaşlarınıza veya işvereninize karşı – siz sorumlusunuz.</p>
 
@@ -579,6 +600,10 @@ durum olmasından – örneğin müşterilere, iş arkadaşlarınıza veya işve
 <code>huggingface.co</code> (Hugging Face) veya <code>alphacephei.com</code> adresinden bir konuşma modeli indirir.
 Her indirmede olduğu gibi sunucu, IP adresiniz gibi teknik olarak gerekli bağlantı verilerini alır. Kayıtlarınız veya
 metinleriniz bu sırada aktarılmaz.</li>
+<li><strong>Çeviri modelleri:</strong> Ayarlarda bir çeviri modeli indirdiğinizde veya bir kılavuzu ilk kez
+çevirdiğinizde uygulama, modeli Cloudflare sağlayıcısındaki kendi indirme depomuzdan (Cloudflare R2) indirir. Modeller
+OPUS-MT projesinden gelir (Helsinki-NLP, lisans: CC BY 4.0). Yalnızca IP adresiniz gibi teknik olarak gerekli bağlantı
+verileri aktarılır; çevirinin kendisi cihazınızda çalışır, hiçbir metin cihazınızdan çıkmaz.</li>
 <li><strong>Microsoft Store sürümü:</strong> Uygulama, aboneliğinizin etkin olup olmadığını Windows üzerinden
 Microsoft Store'a sorar. „Aboneliği yönet“, Microsoft hesabınızı tarayıcıda açar. Ayrıntılar
 <a href="#tr-5">5. bölümdedir</a>.</li>
@@ -664,7 +689,7 @@ geçerlidir.</p>
 <section class="sprache" id="fr" lang="fr" role="tabpanel" aria-labelledby="tab-fr">
 <div class="einleitung">
 <h1>Politique de confidentialité</h1>
-<p class="stand">Dernière mise à jour : 27 septembre 2026 · s'applique à l'application CNNT Steps – la version du Microsoft Store et la version de notre site web – ainsi qu'au site web cnntsteps.com</p>
+<p class="stand">Dernière mise à jour : 27 septembre 2026 (complément : traduction, reconnaissance de texte, vérification orthographique) · s'applique à l'application CNNT Steps – la version du Microsoft Store et la version de notre site web – ainsi qu'au site web cnntsteps.com</p>
 <p class="hinweis">Ceci est une traduction. En cas de doute, la version allemande fait foi.</p>
 
 <div class="kurz">
@@ -672,7 +697,7 @@ geçerlidir.</p>
 <ul>
 <li>CNNT Steps fonctionne sur votre appareil. Vos enregistrements ne nous sont pas transmis.</li>
 <li>L'application n'a ni compte utilisateur, ni publicité, ni outils d'analyse ou de suivi.</li>
-<li>L'application ne se connecte à Internet que pour télécharger les modèles vocaux (dictée) et pour vérifier la licence – dans la version du Store via le Microsoft Store, dans la version de notre site web via notre service de licences.</li>
+<li>L'application ne se connecte à Internet que pour télécharger les modèles vocaux et de traduction et pour vérifier la licence – dans la version du Store via le Microsoft Store, dans la version de notre site web via notre service de licences.</li>
 <li>Notre site web n'utilise ni cookies ni outils d'analyse.</li>
 <li>Les captures d'écran peuvent contenir des données personnelles – ce que vous enregistrez et partagez relève de votre responsabilité.</li>
 </ul>
@@ -717,14 +742,19 @@ Microsoft Store, pour Windows, pour notre revendeur et pour les serveurs de tél
 <tr><td>Champs de mot de passe</td><td data-label="Quand">lorsqu'ils sont cliqués</td><td>Un champ de mot de passe cliqué est, dans la mesure où Windows le signale comme tel, rendu illisible sur l'image ; son contenu n'est pas repris sous forme de texte. Il s'agit d'une mesure de protection supplémentaire, et non d'une garantie.</td></tr>
 <tr><td>Microphone</td><td data-label="Quand">uniquement lorsque vous activez la dictée</td><td>La parole est convertie en texte sur votre appareil. Les données audio ne sont pas stockées.</td></tr>
 <tr><td>Nom de l'auteur</td><td data-label="Quand">lors de la création de documents</td><td>Si vous n'indiquez aucun nom dans les paramètres, l'application utilise votre nom d'utilisateur Windows. Il apparaît dans les documents créés.</td></tr>
+<tr><td>Reconnaissance de texte dans les images</td><td data-label="Quand">uniquement si vous l'activez dans les paramètres</td><td>Windows reconnaît le texte de vos captures d'écran sur votre appareil – pour la recherche dans l'historique et pour « Rechercher des données sensibles ». Le texte reconnu est conservé dans l'index de recherche de votre profil utilisateur.</td></tr>
+<tr><td>Vérification orthographique</td><td data-label="Quand">lors de la rédaction de descriptions et de commentaires</td><td>La vérification est effectuée par Windows sur votre appareil.</td></tr>
+<tr><td>Traduction</td><td data-label="Quand">uniquement si vous faites traduire un guide</td><td>La traduction s'effectue avec un modèle téléchargé sur votre appareil. Aucun texte n'en sort.</td></tr>
 <tr><td>Paramètres et journaux</td><td data-label="Quand">en continu ; un journal de diagnostic détaillé uniquement si vous l'activez</td><td>Ils sont stockés dans votre profil utilisateur. Les journaux peuvent contenir des titres de fenêtres et des chemins de fichiers.</td></tr>
 </tbody>
 </table>
 
 <h2 id="fr-3">3. Votre responsabilité concernant les enregistrements</h2>
 <p>Une capture d'écran montre tout ce qui est visible dans la fenêtre enregistrée – y compris des données personnelles, par
-exemple des noms, des adresses e-mail ou des données clients. L'application ne détecte pas de tels contenus. Vérifiez vos
-enregistrements avant de les partager ; dans l'éditeur, les images peuvent être rognées et floutées par endroits.</p>
+exemple des noms, des adresses e-mail ou des données clients. La fonction « Rechercher des données sensibles » peut vous
+aider à les trouver (reconnaissance de texte de Windows, exécutée sur votre appareil), mais elle ne trouve pas tout.
+Vérifiez vous-même vos enregistrements avant de les partager ; dans l'éditeur, les images peuvent être rognées, masquées
+et floutées par endroits.</p>
 <p>Si vous enregistrez, stockez ou partagez des contenus comportant des données personnelles d'autres personnes, il vous
 appartient de vous assurer que cela est licite – par exemple vis-à-vis de vos clients, de vos collègues ou de votre employeur.</p>
 
@@ -734,6 +764,11 @@ appartient de vous assurer que cela est licite – par exemple vis-à-vis de vos
 télécharge un modèle vocal, selon le paramétrage depuis <code>huggingface.co</code> (Hugging Face) ou
 <code>alphacephei.com</code>. Comme pour tout téléchargement, le serveur reçoit les données de connexion techniquement
 nécessaires, par exemple votre adresse IP. Aucun enregistrement ni aucun texte de votre part n'est transmis à cette occasion.</li>
+<li><strong>Modèles de traduction :</strong> lorsque vous téléchargez un modèle de traduction dans les paramètres ou
+que vous traduisez un guide pour la première fois, l'application télécharge le modèle depuis notre propre espace de
+téléchargement chez le prestataire Cloudflare (Cloudflare R2). Les modèles proviennent du projet OPUS-MT (Helsinki-NLP,
+licence CC BY 4.0). Seules les données de connexion techniquement nécessaires, par exemple votre adresse IP, sont
+transmises ; la traduction elle-même s'effectue sur votre appareil, et aucun texte n'en sort.</li>
 <li><strong>Version du Microsoft Store :</strong> l'application demande au Microsoft Store, par l'intermédiaire de
 Windows, si votre abonnement est actif. « Gérer l'abonnement » ouvre votre compte Microsoft dans le navigateur. Pour
 plus de détails, voir la <a href="#fr-5">section 5</a>.</li>
@@ -824,7 +859,7 @@ en Autriche, il s'agit de la Datenschutzbehörde (<a href="https://www.dsb.gv.at
 <section class="sprache" id="es" lang="es" role="tabpanel" aria-labelledby="tab-es">
 <div class="einleitung">
 <h1>Política de privacidad</h1>
-<p class="stand">Última actualización: 27 de septiembre de 2026 · se aplica a la aplicación CNNT Steps, tanto a la versión de Microsoft Store como a la versión de nuestro sitio web, y al sitio web cnntsteps.com</p>
+<p class="stand">Última actualización: 27 de septiembre de 2026 (adenda: traducción, reconocimiento de texto, revisión ortográfica) · se aplica a la aplicación CNNT Steps, tanto a la versión de Microsoft Store como a la versión de nuestro sitio web, y al sitio web cnntsteps.com</p>
 <p class="hinweis">Esta es una traducción. En caso de duda, prevalece la versión alemana.</p>
 
 <div class="kurz">
@@ -832,7 +867,7 @@ en Autriche, il s'agit de la Datenschutzbehörde (<a href="https://www.dsb.gv.at
 <ul>
 <li>CNNT Steps funciona en su dispositivo. Sus grabaciones no se nos transmiten.</li>
 <li>La aplicación no tiene cuenta de usuario, ni publicidad, ni herramientas de análisis o seguimiento.</li>
-<li>La aplicación solo se conecta a Internet para descargar los modelos de voz (dictado) y para comprobar la licencia: en la versión de Microsoft Store, a través de Microsoft Store; en la versión de nuestro sitio web, a través de nuestro servicio de licencias.</li>
+<li>La aplicación solo se conecta a Internet para descargar los modelos de voz y de traducción y para comprobar la licencia: en la versión de Microsoft Store, a través de Microsoft Store; en la versión de nuestro sitio web, a través de nuestro servicio de licencias.</li>
 <li>Nuestro sitio web no utiliza cookies ni herramientas de análisis.</li>
 <li>Las capturas de pantalla pueden contener datos personales: lo que usted graba y comparte es responsabilidad suya.</li>
 </ul>
@@ -877,14 +912,18 @@ aplican las declaraciones de privacidad de los respectivos proveedores.</p>
 <tr><td>Campos de contraseña</td><td data-label="Cuándo">al hacer clic en ellos</td><td>Un campo de contraseña en el que se hace clic se vuelve ilegible en la imagen, siempre que Windows lo notifique como tal; su contenido no se adopta como texto. Se trata de una medida de protección adicional, no de una garantía.</td></tr>
 <tr><td>Micrófono</td><td data-label="Cuándo">solo cuando usted activa el dictado</td><td>La voz se convierte en texto en su dispositivo. Los datos de audio no se guardan.</td></tr>
 <tr><td>Nombre del autor</td><td data-label="Cuándo">al crear documentos</td><td>Si no introduce ningún nombre en la configuración, la aplicación utiliza su nombre de usuario de Windows. Este aparece en los documentos creados.</td></tr>
+<tr><td>Reconocimiento de texto en imágenes</td><td data-label="Cuándo">solo si usted lo activa en la configuración</td><td>Windows reconoce el texto de sus capturas de pantalla en su dispositivo, para la búsqueda en el historial y para “Buscar datos sensibles”. El texto reconocido se guarda en el índice de búsqueda de su perfil de usuario.</td></tr>
+<tr><td>Revisión ortográfica</td><td data-label="Cuándo">al escribir descripciones y comentarios</td><td>La revisión la realiza Windows en su dispositivo.</td></tr>
+<tr><td>Traducción</td><td data-label="Cuándo">solo si usted solicita la traducción de una guía</td><td>La traducción se ejecuta con un modelo descargado en su dispositivo. Ningún texto sale de él.</td></tr>
 <tr><td>Configuración y registros</td><td data-label="Cuándo">de forma continua; un registro de diagnóstico detallado solo si usted lo activa</td><td>Se guardan en su perfil de usuario. Los registros pueden contener títulos de ventana y rutas de archivo.</td></tr>
 </tbody>
 </table>
 
 <h2 id="es-3">3. Su responsabilidad sobre las grabaciones</h2>
 <p>Una captura de pantalla muestra todo lo que es visible en la ventana grabada, incluidos datos personales como nombres,
-direcciones de correo electrónico o datos de clientes. La aplicación no detecta este tipo de contenido. Revise sus
-grabaciones antes de compartirlas; en el editor, las imágenes pueden recortarse y desenfocarse parcialmente.</p>
+direcciones de correo electrónico o datos de clientes. La función “Buscar datos sensibles” puede ayudarle a encontrarlos
+(reconocimiento de texto de Windows, se ejecuta en su dispositivo), pero no lo encuentra todo. Revise usted mismo sus
+grabaciones antes de compartirlas; en el editor, las imágenes pueden recortarse y ocultarse o desenfocarse parcialmente.</p>
 <p>Si graba, guarda o comparte contenidos con datos personales de otras personas, usted es el responsable de que ello
 esté permitido, por ejemplo frente a clientes, compañeros de trabajo o su empleador.</p>
 
@@ -894,6 +933,11 @@ esté permitido, por ejemplo frente a clientes, compañeros de trabajo o su empl
 modelo de voz, según la configuración, de <code>huggingface.co</code> (Hugging Face) o de <code>alphacephei.com</code>.
 Como en cualquier descarga, el servidor recibe los datos de conexión técnicamente necesarios, como su dirección IP.
 No se transmiten grabaciones ni textos suyos.</li>
+<li><strong>Modelos de traducción:</strong> cuando descarga un modelo de traducción en la configuración o traduce una
+guía por primera vez, la aplicación descarga el modelo de nuestro propio almacenamiento de descargas en el proveedor
+Cloudflare (Cloudflare R2). Los modelos proceden del proyecto OPUS-MT (Helsinki-NLP, licencia CC BY 4.0). Solo se
+transmiten los datos de conexión técnicamente necesarios, como su dirección IP; la traducción en sí se ejecuta en su
+dispositivo y ningún texto sale de él.</li>
 <li><strong>Versión de Microsoft Store:</strong> la aplicación consulta a Microsoft Store, a través de Windows, si su
 suscripción está activa. “Administrar suscripción” abre su cuenta de Microsoft en el navegador. Encontrará más detalles
 en el <a href="#es-5">apartado 5</a>.</li>
@@ -984,7 +1028,7 @@ ante la Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>)
 <section class="sprache" id="it" lang="it" role="tabpanel" aria-labelledby="tab-it">
 <div class="einleitung">
 <h1>Informativa sulla privacy</h1>
-<p class="stand">Ultimo aggiornamento: 27 settembre 2026 · si applica all'app CNNT Steps – la versione del Microsoft Store e la versione del nostro sito web – e al sito web cnntsteps.com</p>
+<p class="stand">Ultimo aggiornamento: 27 settembre 2026 (integrazione: traduzione, riconoscimento del testo, controllo ortografico) · si applica all'app CNNT Steps – la versione del Microsoft Store e la versione del nostro sito web – e al sito web cnntsteps.com</p>
 <p class="hinweis">Questa è una traduzione. In caso di dubbio prevale la versione tedesca.</p>
 
 <div class="kurz">
@@ -992,7 +1036,7 @@ ante la Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>)
 <ul>
 <li>CNNT Steps funziona sul Suo dispositivo. Le Sue registrazioni non vengono trasmesse a noi.</li>
 <li>L'app non ha account utente, pubblicità né strumenti di analisi o di tracciamento.</li>
-<li>L'app si connette a Internet solo per scaricare i modelli vocali (dettatura) e per verificare la licenza: nella versione del Microsoft Store tramite il Microsoft Store, nella versione del nostro sito web tramite il nostro servizio licenze.</li>
+<li>L'app si connette a Internet solo per scaricare i modelli vocali e di traduzione e per verificare la licenza: nella versione del Microsoft Store tramite il Microsoft Store, nella versione del nostro sito web tramite il nostro servizio licenze.</li>
 <li>Il nostro sito web non utilizza cookie né strumenti di analisi.</li>
 <li>Gli screenshot possono contenere dati personali: ciò che Lei registra e condivide è sotto la Sua responsabilità.</li>
 </ul>
@@ -1037,14 +1081,18 @@ Microsoft Store, per Windows, per il nostro rivenditore e per i server di downlo
 <tr><td>Campi password</td><td data-label="Quando">quando vi si fa clic</td><td>Un campo password su cui si fa clic viene reso illeggibile nell'immagine, nella misura in cui Windows lo segnala come tale; il suo contenuto non viene acquisito come testo. Si tratta di una misura di protezione aggiuntiva, non di una garanzia.</td></tr>
 <tr><td>Microfono</td><td data-label="Quando">solo quando Lei attiva la dettatura</td><td>Il parlato viene convertito in testo sul Suo dispositivo. I dati audio non vengono salvati.</td></tr>
 <tr><td>Nome dell'autore</td><td data-label="Quando">durante la creazione di documenti</td><td>Se Lei non inserisce un nome nelle impostazioni, l'app utilizza il Suo nome utente di Windows. Questo compare nei documenti creati.</td></tr>
+<tr><td>Riconoscimento del testo nelle immagini</td><td data-label="Quando">solo se Lei lo attiva nelle impostazioni</td><td>Windows riconosce il testo nei Suoi screenshot sul Suo dispositivo, per la ricerca nella cronologia e per “Cerca dati sensibili”. Il testo riconosciuto viene conservato nell'indice di ricerca del Suo profilo utente.</td></tr>
+<tr><td>Controllo ortografico</td><td data-label="Quando">durante la scrittura di descrizioni e commenti</td><td>Il controllo viene eseguito da Windows sul Suo dispositivo.</td></tr>
+<tr><td>Traduzione</td><td data-label="Quando">solo se Lei fa tradurre una guida</td><td>La traduzione viene eseguita con un modello scaricato sul Suo dispositivo. Nessun testo lascia il dispositivo.</td></tr>
 <tr><td>Impostazioni e log</td><td data-label="Quando">in modo continuativo; un log di diagnostica dettagliato solo se Lei lo attiva</td><td>Vengono salvati nel Suo profilo utente. I log possono contenere titoli di finestre e percorsi di file.</td></tr>
 </tbody>
 </table>
 
 <h2 id="it-3">3. La Sua responsabilità per le registrazioni</h2>
 <p>Uno screenshot mostra tutto ciò che è visibile nella finestra registrata, compresi dati personali come nomi, indirizzi
-e-mail o dati dei clienti. L'app non riconosce tali contenuti. Controlli le Sue registrazioni prima di condividerle;
-nell'editor le immagini possono essere ritagliate e sfocate in parte.</p>
+e-mail o dati dei clienti. La funzione “Cerca dati sensibili” può aiutarLa a trovarli (riconoscimento del testo di
+Windows, eseguito sul Suo dispositivo), ma non trova tutto. Controlli Lei stesso le Sue registrazioni prima di
+condividerle; nell'editor le immagini possono essere ritagliate, oscurate e sfocate in parte.</p>
 <p>Se Lei registra, salva o condivide contenuti con dati personali di altre persone, è Lei stesso responsabile di
 garantire che ciò sia consentito, ad esempio nei confronti di clienti, colleghi o del Suo datore di lavoro.</p>
 
@@ -1054,6 +1102,11 @@ garantire che ciò sia consentito, ad esempio nei confronti di clienti, colleghi
 modello vocale, a seconda dell'impostazione da <code>huggingface.co</code> (Hugging Face) o da <code>alphacephei.com</code>.
 Come per qualsiasi download, il server riceve i dati di connessione tecnicamente necessari, ad esempio il Suo indirizzo IP.
 Non vengono trasmesse registrazioni né testi Suoi.</li>
+<li><strong>Modelli di traduzione:</strong> quando scarica un modello di traduzione nelle impostazioni o traduce una
+guida per la prima volta, l'app scarica il modello dal nostro archivio di download presso il fornitore Cloudflare
+(Cloudflare R2). I modelli provengono dal progetto OPUS-MT (Helsinki-NLP, licenza CC BY 4.0). Vengono trasmessi solo
+i dati di connessione tecnicamente necessari, ad esempio il Suo indirizzo IP; la traduzione vera e propria avviene sul
+Suo dispositivo e nessun testo lascia il dispositivo.</li>
 <li><strong>Versione del Microsoft Store:</strong> l'app chiede al Microsoft Store, tramite Windows, se il Suo
 abbonamento è attivo. “Gestisci abbonamento” apre il Suo account Microsoft nel browser. Per i dettagli si veda la
 <a href="#it-5">sezione 5</a>.</li>
@@ -1140,7 +1193,7 @@ della Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).<
 <section class="sprache" id="pt" lang="pt-BR" role="tabpanel" aria-labelledby="tab-pt">
 <div class="einleitung">
 <h1>Política de Privacidade</h1>
-<p class="stand">Última atualização: 27 de setembro de 2026 · aplica-se ao aplicativo CNNT Steps – a versão da Microsoft Store e a versão do nosso site – e ao site cnntsteps.com</p>
+<p class="stand">Última atualização: 27 de setembro de 2026 (adendo: tradução, reconhecimento de texto, verificação ortográfica) · aplica-se ao aplicativo CNNT Steps – a versão da Microsoft Store e a versão do nosso site – e ao site cnntsteps.com</p>
 <p class="hinweis">Esta é uma tradução. Em caso de dúvida, prevalece a versão em alemão.</p>
 
 <div class="kurz">
@@ -1148,7 +1201,7 @@ della Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).<
 <ul>
 <li>O CNNT Steps funciona no seu dispositivo. Suas gravações não são transmitidas para nós.</li>
 <li>O aplicativo não tem conta de usuário, nem publicidade, nem ferramentas de análise ou rastreamento.</li>
-<li>O aplicativo só se conecta à internet para baixar os modelos de voz (ditado) e para verificar a licença – na versão da Microsoft Store, por meio da Microsoft Store; na versão do nosso site, por meio do nosso serviço de licenças.</li>
+<li>O aplicativo só se conecta à internet para baixar os modelos de voz e de tradução e para verificar a licença – na versão da Microsoft Store, por meio da Microsoft Store; na versão do nosso site, por meio do nosso serviço de licenças.</li>
 <li>Nosso site não usa cookies nem ferramentas de análise.</li>
 <li>As capturas de tela podem conter dados pessoais – o que você grava e compartilha é de sua responsabilidade.</li>
 </ul>
@@ -1193,14 +1246,18 @@ privacidade dos respectivos fornecedores.</p>
 <tr><td>Campos de senha</td><td data-label="Quando">ao serem clicados</td><td>Um campo de senha clicado é tornado ilegível na imagem, desde que o Windows o informe como tal; seu conteúdo não é capturado como texto. Trata-se de uma medida de proteção adicional, não de uma garantia.</td></tr>
 <tr><td>Microfone</td><td data-label="Quando">somente quando você ativa o ditado</td><td>A fala é convertida em texto no seu dispositivo. Os dados de áudio não são salvos.</td></tr>
 <tr><td>Nome do autor</td><td data-label="Quando">ao criar documentos</td><td>Se você não informar um nome nas configurações, o aplicativo usará seu nome de usuário do Windows. Ele aparece nos documentos criados.</td></tr>
+<tr><td>Reconhecimento de texto em imagens</td><td data-label="Quando">somente se você o ativar nas configurações</td><td>O Windows reconhece o texto das suas capturas de tela no seu dispositivo – para a pesquisa no histórico e para “Procurar dados confidenciais”. O texto reconhecido fica no índice de pesquisa do seu perfil de usuário.</td></tr>
+<tr><td>Verificação ortográfica</td><td data-label="Quando">ao escrever descrições e comentários</td><td>A verificação é feita pelo Windows no seu dispositivo.</td></tr>
+<tr><td>Tradução</td><td data-label="Quando">somente se você mandar traduzir um guia</td><td>A tradução é executada com um modelo baixado no seu dispositivo. Nenhum texto sai dele.</td></tr>
 <tr><td>Configurações e logs</td><td data-label="Quando">continuamente; um log de diagnóstico detalhado somente se você o ativar</td><td>São salvos no seu perfil de usuário. Os logs podem conter títulos de janelas e caminhos de arquivos.</td></tr>
 </tbody>
 </table>
 
 <h2 id="pt-3">3. Sua responsabilidade pelas gravações</h2>
 <p>Uma captura de tela mostra tudo o que está visível na janela gravada – inclusive dados pessoais, como nomes,
-endereços de e-mail ou dados de clientes. O aplicativo não reconhece esse tipo de conteúdo. Verifique suas gravações
-antes de compartilhá-las; no editor, as imagens podem ser cortadas e parcialmente desfocadas.</p>
+endereços de e-mail ou dados de clientes. A função “Procurar dados confidenciais” pode ajudar a encontrá-los
+(reconhecimento de texto do Windows, executado no seu dispositivo), mas não encontra tudo. Verifique você mesmo suas
+gravações antes de compartilhá-las; no editor, as imagens podem ser cortadas e ter partes ocultadas ou desfocadas.</p>
 <p>Se você gravar, armazenar ou compartilhar conteúdos com dados pessoais de outras pessoas, você mesmo é responsável
 por garantir que isso seja permitido – por exemplo, perante clientes, colegas de trabalho ou seu empregador.</p>
 
@@ -1210,6 +1267,11 @@ por garantir que isso seja permitido – por exemplo, perante clientes, colegas 
 modelo de voz, conforme a configuração, de <code>huggingface.co</code> (Hugging Face) ou de <code>alphacephei.com</code>.
 Como em qualquer download, o servidor recebe os dados de conexão tecnicamente necessários, como seu endereço IP.
 Nenhuma gravação ou texto seu é transmitido nesse processo.</li>
+<li><strong>Modelos de tradução:</strong> quando você baixa um modelo de tradução nas configurações ou traduz um guia
+pela primeira vez, o aplicativo baixa o modelo do nosso próprio armazenamento de downloads no provedor Cloudflare
+(Cloudflare R2). Os modelos provêm do projeto OPUS-MT (Helsinki-NLP, licença CC BY 4.0). São transmitidos somente os
+dados de conexão tecnicamente necessários, como seu endereço IP; a tradução em si é executada no seu dispositivo, e
+nenhum texto sai dele.</li>
 <li><strong>Versão da Microsoft Store:</strong> o aplicativo consulta a Microsoft Store, por meio do Windows, se sua
 assinatura está ativa. “Gerenciar assinatura” abre sua conta Microsoft no navegador. Os detalhes estão na
 <a href="#pt-5">seção 5</a>.</li>
@@ -1300,7 +1362,7 @@ trata-se da Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at<
 <section class="sprache" id="nl" lang="nl" role="tabpanel" aria-labelledby="tab-nl">
 <div class="einleitung">
 <h1>Privacyverklaring</h1>
-<p class="stand">Laatst bijgewerkt: 27 september 2026 · geldt voor de app CNNT Steps – de versie uit de Microsoft Store en de versie van onze website – en voor de website cnntsteps.com</p>
+<p class="stand">Laatst bijgewerkt: 27 september 2026 (aanvulling: vertaling, tekstherkenning, spellingcontrole) · geldt voor de app CNNT Steps – de versie uit de Microsoft Store en de versie van onze website – en voor de website cnntsteps.com</p>
 <p class="hinweis">Dit is een vertaling. In geval van twijfel geldt de Duitse versie.</p>
 
 <div class="kurz">
@@ -1308,7 +1370,7 @@ trata-se da Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at<
 <ul>
 <li>CNNT Steps werkt op uw apparaat. Uw opnamen worden niet naar ons verzonden.</li>
 <li>De app heeft geen gebruikersaccount, geen reclame en geen analyse- of trackingtools.</li>
-<li>De app maakt alleen verbinding met internet om de spraakmodellen (dicteren) te downloaden en om de licentie te controleren – in de Store-versie via de Microsoft Store, in de versie van onze website via onze licentiedienst.</li>
+<li>De app maakt alleen verbinding met internet om de spraak- en vertaalmodellen te downloaden en om de licentie te controleren – in de Store-versie via de Microsoft Store, in de versie van onze website via onze licentiedienst.</li>
 <li>Onze website gebruikt geen cookies en geen analysetools.</li>
 <li>Schermafbeeldingen kunnen persoonsgegevens bevatten – wat u opneemt en deelt, valt onder uw verantwoordelijkheid.</li>
 </ul>
@@ -1353,14 +1415,18 @@ privacyverklaringen van de betreffende aanbieders.</p>
 <tr><td>Wachtwoordvelden</td><td data-label="Wanneer">bij het aanklikken</td><td>Een aangeklikt wachtwoordveld wordt, voor zover Windows het als zodanig meldt, in de afbeelding onleesbaar gemaakt; de inhoud ervan wordt niet als tekst overgenomen. Dit is een extra beschermingsmaatregel, geen garantie.</td></tr>
 <tr><td>Microfoon</td><td data-label="Wanneer">alleen als u dicteren inschakelt</td><td>Spraak wordt op uw apparaat omgezet in tekst. De audiogegevens worden daarbij niet opgeslagen.</td></tr>
 <tr><td>Auteursnaam</td><td data-label="Wanneer">bij het maken van documenten</td><td>Als u in de instellingen geen naam invult, gebruikt de app uw Windows-gebruikersnaam. Deze verschijnt in de gemaakte documenten.</td></tr>
+<tr><td>Tekstherkenning in afbeeldingen</td><td data-label="Wanneer">alleen als u dit in de instellingen inschakelt</td><td>Windows herkent tekst in uw schermafbeeldingen op uw apparaat – voor het zoeken in de geschiedenis en voor “Gevoelige gegevens zoeken”. De herkende tekst staat in de zoekindex in uw gebruikersprofiel.</td></tr>
+<tr><td>Spellingcontrole</td><td data-label="Wanneer">bij het schrijven van beschrijvingen en opmerkingen</td><td>De controle wordt door Windows op uw apparaat uitgevoerd.</td></tr>
+<tr><td>Vertaling</td><td data-label="Wanneer">alleen als u een handleiding laat vertalen</td><td>De vertaling wordt met een gedownload model op uw apparaat uitgevoerd. Er verlaat geen tekst uw apparaat.</td></tr>
 <tr><td>Instellingen en logboeken</td><td data-label="Wanneer">doorlopend; een uitgebreid diagnoselogboek alleen als u dit inschakelt</td><td>Ze worden opgeslagen in uw gebruikersprofiel. Logboeken kunnen venstertitels en bestandspaden bevatten.</td></tr>
 </tbody>
 </table>
 
 <h2 id="nl-3">3. Uw verantwoordelijkheid voor opnamen</h2>
 <p>Een schermafbeelding toont alles wat in het opgenomen venster zichtbaar is – ook persoonsgegevens, zoals namen,
-e-mailadressen of klantgegevens. De app herkent dergelijke inhoud niet. Controleer uw opnamen voordat u ze deelt;
-afbeeldingen kunnen in de editor worden bijgesneden en plaatselijk worden vervaagd.</p>
+e-mailadressen of klantgegevens. De functie “Gevoelige gegevens zoeken” kan helpen om deze te vinden (tekstherkenning
+van Windows, draait op uw apparaat), maar vindt niet alles. Controleer uw opnamen zelf voordat u ze deelt; afbeeldingen
+kunnen in de editor worden bijgesneden, onleesbaar gemaakt en plaatselijk worden vervaagd.</p>
 <p>Als u inhoud met persoonsgegevens van andere personen opneemt, opslaat of deelt, bent u er zelf verantwoordelijk voor
 dat dit is toegestaan – bijvoorbeeld tegenover klanten, collega's of uw werkgever.</p>
 
@@ -1370,6 +1436,11 @@ dat dit is toegestaan – bijvoorbeeld tegenover klanten, collega's of uw werkge
 spraakmodel, afhankelijk van de instelling van <code>huggingface.co</code> (Hugging Face) of <code>alphacephei.com</code>.
 Zoals bij elke download ontvangt de server technisch noodzakelijke verbindingsgegevens, zoals uw IP-adres. Opnamen of
 teksten van u worden daarbij niet verzonden.</li>
+<li><strong>Vertaalmodellen:</strong> wanneer u in de instellingen een vertaalmodel downloadt of voor het eerst een
+handleiding vertaalt, downloadt de app het model uit onze eigen downloadopslag bij de aanbieder Cloudflare
+(Cloudflare R2). De modellen zijn afkomstig van het project OPUS-MT (Helsinki-NLP, licentie CC BY 4.0). Alleen
+technisch noodzakelijke verbindingsgegevens, zoals uw IP-adres, worden verzonden; de vertaling zelf wordt op uw
+apparaat uitgevoerd en er verlaat geen tekst uw apparaat.</li>
 <li><strong>Versie uit de Microsoft Store:</strong> de app vraagt via Windows bij de Microsoft Store na of uw
 abonnement actief is. “Abonnement beheren” opent uw Microsoft-account in de browser. Details vindt u in
 <a href="#nl-5">hoofdstuk 5</a>.</li>
@@ -1456,7 +1527,7 @@ Oostenrijk is dat de Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.d
 <section class="sprache" id="pl" lang="pl" role="tabpanel" aria-labelledby="tab-pl">
 <div class="einleitung">
 <h1>Polityka prywatności</h1>
-<p class="stand">Ostatnia aktualizacja: 27 września 2026 r. · dotyczy aplikacji CNNT Steps – wersji z Microsoft Store i wersji z naszej strony internetowej – oraz strony internetowej cnntsteps.com</p>
+<p class="stand">Ostatnia aktualizacja: 27 września 2026 r. (uzupełnienie: tłumaczenie, rozpoznawanie tekstu, sprawdzanie pisowni) · dotyczy aplikacji CNNT Steps – wersji z Microsoft Store i wersji z naszej strony internetowej – oraz strony internetowej cnntsteps.com</p>
 <p class="hinweis">To jest tłumaczenie. W razie wątpliwości obowiązuje wersja niemiecka.</p>
 
 <div class="kurz">
@@ -1464,7 +1535,7 @@ Oostenrijk is dat de Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.d
 <ul>
 <li>CNNT Steps działa na Państwa urządzeniu. Państwa nagrania nie są do nas przesyłane.</li>
 <li>Aplikacja nie ma konta użytkownika, reklam ani narzędzi analitycznych lub śledzących.</li>
-<li>Aplikacja łączy się z internetem wyłącznie w celu pobrania modeli mowy (dyktowanie) oraz sprawdzenia licencji: w wersji z Microsoft Store za pośrednictwem Microsoft Store, a w wersji z naszej strony internetowej za pośrednictwem naszej usługi licencyjnej.</li>
+<li>Aplikacja łączy się z internetem wyłącznie w celu pobrania modeli mowy i modeli tłumaczenia oraz sprawdzenia licencji: w wersji z Microsoft Store za pośrednictwem Microsoft Store, a w wersji z naszej strony internetowej za pośrednictwem naszej usługi licencyjnej.</li>
 <li>Nasza strona internetowa nie używa plików cookie ani narzędzi analitycznych.</li>
 <li>Zrzuty ekranu mogą zawierać dane osobowe – za to, co Państwo nagrywają i udostępniają, odpowiadają Państwo sami.</li>
 </ul>
@@ -1509,14 +1580,18 @@ obowiązują informacje o ochronie prywatności poszczególnych dostawców.</p>
 <tr><td>Pola haseł</td><td data-label="Kiedy">po kliknięciu</td><td>Kliknięte pole hasła jest – o ile Windows zgłasza je jako takie – maskowane na obrazie tak, aby było nieczytelne; jego zawartość nie jest przejmowana jako tekst. Jest to dodatkowy środek ochrony, a nie gwarancja.</td></tr>
 <tr><td>Mikrofon</td><td data-label="Kiedy">wyłącznie wtedy, gdy włączą Państwo dyktowanie</td><td>Mowa jest przekształcana w tekst na Państwa urządzeniu. Dane audio nie są przy tym zapisywane.</td></tr>
 <tr><td>Nazwa autora</td><td data-label="Kiedy">podczas tworzenia dokumentów</td><td>Jeśli nie wpiszą Państwo nazwy w ustawieniach, aplikacja używa Państwa nazwy użytkownika systemu Windows. Pojawia się ona w tworzonych dokumentach.</td></tr>
+<tr><td>Rozpoznawanie tekstu na obrazach</td><td data-label="Kiedy">tylko wtedy, gdy Państwo je włączą w ustawieniach</td><td>System Windows rozpoznaje tekst na Państwa zrzutach ekranu na Państwa urządzeniu – na potrzeby wyszukiwania w historii i funkcji „Szukaj danych wrażliwych”. Rozpoznany tekst jest przechowywany w indeksie wyszukiwania w Państwa profilu użytkownika.</td></tr>
+<tr><td>Sprawdzanie pisowni</td><td data-label="Kiedy">podczas pisania opisów i komentarzy</td><td>Sprawdzanie wykonuje system Windows na Państwa urządzeniu.</td></tr>
+<tr><td>Tłumaczenie</td><td data-label="Kiedy">tylko wtedy, gdy Państwo zlecą przetłumaczenie instrukcji</td><td>Tłumaczenie odbywa się na Państwa urządzeniu przy użyciu pobranego modelu. Żaden tekst nie opuszcza urządzenia.</td></tr>
 <tr><td>Ustawienia i dzienniki</td><td data-label="Kiedy">na bieżąco; szczegółowy dziennik diagnostyczny tylko wtedy, gdy Państwo go włączą</td><td>Są zapisywane w Państwa profilu użytkownika. Dzienniki mogą zawierać tytuły okien i ścieżki plików.</td></tr>
 </tbody>
 </table>
 
 <h2 id="pl-3">3. Państwa odpowiedzialność za nagrania</h2>
 <p>Zrzut ekranu pokazuje wszystko, co jest widoczne w nagrywanym oknie – także dane osobowe, np. imiona i nazwiska,
-adresy e-mail lub dane klientów. Aplikacja nie rozpoznaje takich treści. Prosimy sprawdzać nagrania przed ich
-udostępnieniem; obrazy można w edytorze przycinać i miejscowo rozmywać.</p>
+adresy e-mail lub dane klientów. Funkcja „Szukaj danych wrażliwych” może pomóc w ich odnalezieniu (rozpoznawanie
+tekstu systemu Windows, działa na Państwa urządzeniu), ale nie znajduje wszystkiego. Prosimy samodzielnie sprawdzać
+nagrania przed ich udostępnieniem; obrazy można w edytorze przycinać, zaczerniać i miejscowo rozmywać.</p>
 <p>Jeśli nagrywają, zapisują lub udostępniają Państwo treści zawierające dane osobowe innych osób, sami Państwo
 odpowiadają za to, aby było to dopuszczalne – np. wobec klientów, współpracowników lub Państwa pracodawcy.</p>
 
@@ -1526,6 +1601,11 @@ odpowiadają za to, aby było to dopuszczalne – np. wobec klientów, współpr
 model mowy, w zależności od ustawienia z <code>huggingface.co</code> (Hugging Face) lub <code>alphacephei.com</code>.
 Jak przy każdym pobieraniu, serwer otrzymuje technicznie niezbędne dane połączenia, np. Państwa adres IP. Państwa
 nagrania ani teksty nie są przy tym przesyłane.</li>
+<li><strong>Modele tłumaczenia:</strong> Gdy pobierają Państwo model tłumaczenia w ustawieniach lub po raz pierwszy
+tłumaczą instrukcję, aplikacja pobiera model z naszego własnego magazynu plików do pobrania u dostawcy Cloudflare
+(Cloudflare R2). Modele pochodzą z projektu OPUS-MT (Helsinki-NLP, licencja CC BY 4.0). Przesyłane są wyłącznie
+technicznie niezbędne dane połączenia, np. Państwa adres IP; samo tłumaczenie odbywa się na Państwa urządzeniu i żaden
+tekst nie opuszcza urządzenia.</li>
 <li><strong>Wersja z Microsoft Store:</strong> Aplikacja sprawdza za pośrednictwem systemu Windows w Microsoft Store,
 czy Państwa subskrypcja jest aktywna. „Zarządzaj subskrypcją” otwiera Państwa konto Microsoft w przeglądarce.
 Szczegóły znajdują się w <a href="#pl-5">sekcji 5</a>.</li>
@@ -1614,7 +1694,7 @@ w danym momencie na tej stronie.</p>
 <section class="sprache" id="cs" lang="cs" role="tabpanel" aria-labelledby="tab-cs">
 <div class="einleitung">
 <h1>Zásady ochrany osobních údajů</h1>
-<p class="stand">Poslední aktualizace: 27. září 2026 · platí pro aplikaci CNNT Steps – verzi z Microsoft Store i verzi z našeho webu – a pro web cnntsteps.com</p>
+<p class="stand">Poslední aktualizace: 27. září 2026 (dodatek: překlad, rozpoznávání textu, kontrola pravopisu) · platí pro aplikaci CNNT Steps – verzi z Microsoft Store i verzi z našeho webu – a pro web cnntsteps.com</p>
 <p class="hinweis">Jedná se o překlad. V případě pochybností platí německé znění.</p>
 
 <div class="kurz">
@@ -1622,7 +1702,7 @@ w danym momencie na tej stronie.</p>
 <ul>
 <li>CNNT Steps pracuje ve vašem zařízení. Vaše záznamy se nám nepředávají.</li>
 <li>Aplikace nemá uživatelský účet, reklamu ani analytické či sledovací nástroje.</li>
-<li>Aplikace se připojuje k internetu pouze kvůli stažení modelů řeči (diktování) a kvůli ověření licence – ve verzi z Microsoft Store prostřednictvím Microsoft Store, ve verzi z našeho webu prostřednictvím naší licenční služby.</li>
+<li>Aplikace se připojuje k internetu pouze kvůli stažení modelů řeči a modelů překladu a kvůli ověření licence – ve verzi z Microsoft Store prostřednictvím Microsoft Store, ve verzi z našeho webu prostřednictvím naší licenční služby.</li>
 <li>Náš web nepoužívá soubory cookie ani analytické nástroje.</li>
 <li>Snímky obrazovky mohou obsahovat osobní údaje – za to, co zaznamenáte a sdílíte, odpovídáte vy.</li>
 </ul>
@@ -1667,14 +1747,18 @@ poskytovatelů.</p>
 <tr><td>Pole pro hesla</td><td data-label="Kdy">při kliknutí</td><td>Pole pro heslo, na které bylo kliknuto, je – pokud je Windows jako takové ohlásí – na obrázku znečitelněno; jeho obsah se nepřebírá jako text. Jde o dodatečné ochranné opatření, nikoli o záruku.</td></tr>
 <tr><td>Mikrofon</td><td data-label="Kdy">pouze když zapnete diktování</td><td>Řeč se převádí na text ve vašem zařízení. Zvuková data se přitom neukládají.</td></tr>
 <tr><td>Jméno autora</td><td data-label="Kdy">při vytváření dokumentů</td><td>Pokud v nastavení nezadáte žádné jméno, použije aplikace vaše uživatelské jméno ve Windows. Zobrazuje se ve vytvořených dokumentech.</td></tr>
+<tr><td>Rozpoznávání textu v obrázcích</td><td data-label="Kdy">pouze když jej zapnete v nastavení</td><td>Windows rozpoznává text ve vašich snímcích obrazovky ve vašem zařízení – pro hledání v historii a pro funkci „Hledat citlivá data“. Rozpoznaný text se ukládá do vyhledávacího indexu ve vašem uživatelském profilu.</td></tr>
+<tr><td>Kontrola pravopisu</td><td data-label="Kdy">při psaní popisů a komentářů</td><td>Kontrolu provádí Windows ve vašem zařízení.</td></tr>
+<tr><td>Překlad</td><td data-label="Kdy">pouze když necháte přeložit návod</td><td>Překlad probíhá pomocí staženého modelu ve vašem zařízení. Žádný text zařízení neopouští.</td></tr>
 <tr><td>Nastavení a protokoly</td><td data-label="Kdy">průběžně; podrobný diagnostický protokol pouze tehdy, když jej zapnete</td><td>Ukládají se ve vašem uživatelském profilu. Protokoly mohou obsahovat názvy oken a cesty k souborům.</td></tr>
 </tbody>
 </table>
 
 <h2 id="cs-3">3. Vaše odpovědnost za záznamy</h2>
 <p>Snímek obrazovky zobrazuje vše, co je v zaznamenávaném okně viditelné – včetně osobních údajů, například jmen,
-e-mailových adres nebo údajů o zákaznících. Aplikace takový obsah nerozpoznává. Před sdílením své záznamy
-zkontrolujte; obrázky lze v editoru oříznout a místy rozostřit.</p>
+e-mailových adres nebo údajů o zákaznících. Funkce „Hledat citlivá data“ může pomoci takový obsah najít (rozpoznávání
+textu ve Windows, probíhá ve vašem zařízení), nenajde však vše. Před sdílením své záznamy sami zkontrolujte; obrázky
+lze v editoru oříznout, začernit a místy rozostřit.</p>
 <p>Pokud zaznamenáváte, ukládáte nebo sdílíte obsah s osobními údaji jiných osob, sami odpovídáte za to, že je to
 přípustné – například vůči zákazníkům, kolegům nebo vašemu zaměstnavateli.</p>
 
@@ -1684,6 +1768,10 @@ přípustné – například vůči zákazníkům, kolegům nebo vašemu zaměst
 nastavení ze serveru <code>huggingface.co</code> (Hugging Face) nebo <code>alphacephei.com</code>. Jako při každém
 stahování obdrží server technicky nezbytné údaje o připojení, například vaši IP adresu. Vaše záznamy ani texty se
 přitom nepřenášejí.</li>
+<li><strong>Modely překladu:</strong> Když v nastavení stáhnete model překladu nebo poprvé necháte přeložit návod,
+aplikace stáhne model z našeho vlastního úložiště pro stahování u poskytovatele Cloudflare (Cloudflare R2). Modely
+pocházejí z projektu OPUS-MT (Helsinki-NLP, licence CC BY 4.0). Přenášejí se pouze technicky nezbytné údaje
+o připojení, například vaše IP adresa; samotný překlad probíhá ve vašem zařízení a žádný text zařízení neopouští.</li>
 <li><strong>Verze z Microsoft Store:</strong> Zda je vaše předplatné aktivní, zjišťuje aplikace prostřednictvím
 Windows v Microsoft Store. „Spravovat předplatné“ otevře váš účet Microsoft v prohlížeči. Podrobnosti najdete
 v <a href="#cs-5">oddílu 5</a>.</li>
@@ -1769,7 +1857,7 @@ Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
 <section class="sprache" id="ro" lang="ro" role="tabpanel" aria-labelledby="tab-ro">
 <div class="einleitung">
 <h1>Politica de confidențialitate</h1>
-<p class="stand">Ultima actualizare: 27 septembrie 2026 · se aplică aplicației CNNT Steps – versiunii din Microsoft Store și versiunii de pe site-ul nostru – precum și site-ului cnntsteps.com</p>
+<p class="stand">Ultima actualizare: 27 septembrie 2026 (completare: traducere, recunoașterea textului, verificarea ortografiei) · se aplică aplicației CNNT Steps – versiunii din Microsoft Store și versiunii de pe site-ul nostru – precum și site-ului cnntsteps.com</p>
 <p class="hinweis">Aceasta este o traducere. În caz de îndoială, se aplică versiunea în limba germană.</p>
 
 <div class="kurz">
@@ -1777,7 +1865,7 @@ Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
 <ul>
 <li>CNNT Steps funcționează pe dispozitivul dumneavoastră. Înregistrările dumneavoastră nu ne sunt transmise.</li>
 <li>Aplicația nu are cont de utilizator, nu conține reclame și nu folosește instrumente de analiză sau de urmărire.</li>
-<li>Aplicația se conectează la internet numai pentru a descărca modelele vocale (dictare) și pentru a verifica licența – în versiunea din Microsoft Store prin Microsoft Store, în versiunea de pe site-ul nostru prin serviciul nostru de licențe.</li>
+<li>Aplicația se conectează la internet numai pentru a descărca modelele vocale și de traducere și pentru a verifica licența – în versiunea din Microsoft Store prin Microsoft Store, în versiunea de pe site-ul nostru prin serviciul nostru de licențe.</li>
 <li>Site-ul nostru nu folosește cookie-uri și nici instrumente de analiză.</li>
 <li>Capturile de ecran pot conține date cu caracter personal – ceea ce înregistrați și partajați este responsabilitatea dumneavoastră.</li>
 </ul>
@@ -1822,14 +1910,18 @@ declarațiile de confidențialitate ale furnizorilor respectivi.</p>
 <tr><td>Câmpuri de parolă</td><td data-label="Când">la clic</td><td>Un câmp de parolă pe care s-a făcut clic este, în măsura în care Windows îl raportează ca atare, făcut ilizibil în imagine; conținutul său nu este preluat ca text. Aceasta este o măsură de protecție suplimentară, nu o garanție.</td></tr>
 <tr><td>Microfon</td><td data-label="Când">numai când activați dictarea</td><td>Vorbirea este convertită în text pe dispozitivul dumneavoastră. Datele audio nu sunt salvate.</td></tr>
 <tr><td>Numele autorului</td><td data-label="Când">la crearea documentelor</td><td>Dacă nu introduceți un nume în setări, aplicația folosește numele dumneavoastră de utilizator Windows. Acesta apare în documentele create.</td></tr>
+<tr><td>Recunoașterea textului din imagini</td><td data-label="Când">numai dacă o activați în setări</td><td>Windows recunoaște textul din capturile dumneavoastră de ecran pe dispozitivul dumneavoastră – pentru căutarea în istoric și pentru „Căutare date sensibile”. Textul recunoscut este păstrat în indexul de căutare din profilul dumneavoastră de utilizator.</td></tr>
+<tr><td>Verificarea ortografiei</td><td data-label="Când">la scrierea descrierilor și a comentariilor</td><td>Verificarea este efectuată de Windows pe dispozitivul dumneavoastră.</td></tr>
+<tr><td>Traducere</td><td data-label="Când">numai dacă solicitați traducerea unui ghid</td><td>Traducerea rulează cu un model descărcat pe dispozitivul dumneavoastră. Niciun text nu părăsește dispozitivul.</td></tr>
 <tr><td>Setări și jurnale</td><td data-label="Când">în mod continuu; un jurnal de diagnosticare detaliat numai dacă îl activați</td><td>Sunt salvate în profilul dumneavoastră de utilizator. Jurnalele pot conține titluri de ferestre și căi de fișiere.</td></tr>
 </tbody>
 </table>
 
 <h2 id="ro-3">3. Responsabilitatea dumneavoastră pentru înregistrări</h2>
 <p>O captură de ecran arată tot ce este vizibil în fereastra înregistrată – inclusiv date cu caracter personal, de
-exemplu nume, adrese de e-mail sau date ale clienților. Aplicația nu recunoaște astfel de conținut. Verificați
-înregistrările înainte de a le partaja; imaginile pot fi decupate și estompate parțial în editor.</p>
+exemplu nume, adrese de e-mail sau date ale clienților. Funcția „Căutare date sensibile” vă poate ajuta să le găsiți
+(recunoașterea textului din Windows, rulează pe dispozitivul dumneavoastră), dar nu găsește tot. Verificați chiar
+dumneavoastră înregistrările înainte de a le partaja; imaginile pot fi decupate, ascunse și estompate parțial în editor.</p>
 <p>Dacă înregistrați, salvați sau partajați conținut care include date cu caracter personal ale altor persoane, vă
 revine dumneavoastră responsabilitatea de a vă asigura că acest lucru este permis – de exemplu față de clienți, colegi
 sau angajatorul dumneavoastră.</p>
@@ -1840,6 +1932,11 @@ sau angajatorul dumneavoastră.</p>
 vocal, în funcție de setare de pe <code>huggingface.co</code> (Hugging Face) sau de pe <code>alphacephei.com</code>. Ca
 la orice descărcare, serverul primește datele de conexiune necesare din punct de vedere tehnic, de exemplu adresa
 dumneavoastră IP. Înregistrările sau textele dumneavoastră nu sunt transmise cu această ocazie.</li>
+<li><strong>Modele de traducere:</strong> Când descărcați un model de traducere în setări sau traduceți un ghid pentru
+prima dată, aplicația descarcă modelul din propriul nostru spațiu de descărcare de la furnizorul Cloudflare
+(Cloudflare R2). Modelele provin din proiectul OPUS-MT (Helsinki-NLP, licență CC BY 4.0). Sunt transmise numai
+datele de conexiune necesare din punct de vedere tehnic, de exemplu adresa dumneavoastră IP; traducerea propriu-zisă
+rulează pe dispozitivul dumneavoastră și niciun text nu părăsește dispozitivul.</li>
 <li><strong>Versiunea din Microsoft Store:</strong> Aplicația verifică prin Windows, la Microsoft Store, dacă abonamentul
 dumneavoastră este activ. „Gestionare abonament” deschide contul dumneavoastră Microsoft în browser. Detalii găsiți în
 <a href="#ro-5">secțiunea 5</a>.</li>
@@ -1927,7 +2024,7 @@ aici la momentul respectiv.</p>
 <section class="sprache" id="uk" lang="uk" role="tabpanel" aria-labelledby="tab-uk">
 <div class="einleitung">
 <h1>Політика конфіденційності</h1>
-<p class="stand">Останнє оновлення: 27 вересня 2026 р. · стосується програми CNNT Steps – версії з Microsoft Store і версії з нашого вебсайту – а також вебсайту cnntsteps.com</p>
+<p class="stand">Останнє оновлення: 27 вересня 2026 р. (доповнення: переклад, розпізнавання тексту, перевірка правопису) · стосується програми CNNT Steps – версії з Microsoft Store і версії з нашого вебсайту – а також вебсайту cnntsteps.com</p>
 <p class="hinweis">Це переклад. У разі сумнівів чинною є німецька версія.</p>
 
 <div class="kurz">
@@ -1935,7 +2032,7 @@ aici la momentul respectiv.</p>
 <ul>
 <li>CNNT Steps працює на вашому пристрої. Ваші записи нам не передаються.</li>
 <li>Програма не має облікового запису користувача, реклами, а також інструментів аналітики чи відстеження.</li>
-<li>Програма підключається до інтернету лише для завантаження мовних моделей (диктування) та для перевірки ліцензії – у версії з Microsoft Store через Microsoft Store, у версії з нашого вебсайту через наш ліцензійний сервіс.</li>
+<li>Програма підключається до інтернету лише для завантаження мовних моделей і моделей перекладу, а також для перевірки ліцензії – у версії з Microsoft Store через Microsoft Store, у версії з нашого вебсайту через наш ліцензійний сервіс.</li>
 <li>Наш вебсайт не використовує файли cookie та інструменти аналітики.</li>
 <li>Знімки екрана можуть містити персональні дані – за те, що ви записуєте й поширюєте, відповідаєте ви.</li>
 </ul>
@@ -1980,14 +2077,18 @@ aici la momentul respectiv.</p>
 <tr><td>Поля паролів</td><td data-label="Коли">після клацання</td><td>Поле пароля, на яке клацнули, – якщо Windows повідомляє про нього як про поле пароля – на зображенні робиться нерозбірливим; його вміст не переноситься як текст. Це додатковий захід захисту, а не гарантія.</td></tr>
 <tr><td>Мікрофон</td><td data-label="Коли">лише якщо ви вмикаєте диктування</td><td>Мовлення перетворюється на текст на вашому пристрої. Аудіодані при цьому не зберігаються.</td></tr>
 <tr><td>Ім’я автора</td><td data-label="Коли">під час створення документів</td><td>Якщо ви не вкажете ім’я в параметрах, програма використовує ваше ім’я користувача Windows. Воно відображається у створених документах.</td></tr>
+<tr><td>Розпізнавання тексту на зображеннях</td><td data-label="Коли">лише якщо ви ввімкнете його в параметрах</td><td>Windows розпізнає текст у ваших знімках екрана на вашому пристрої – для пошуку в журналі записів і для функції «Шукати конфіденційні дані». Розпізнаний текст зберігається в пошуковому індексі у вашому профілі користувача.</td></tr>
+<tr><td>Перевірка правопису</td><td data-label="Коли">під час написання описів і коментарів</td><td>Перевірку виконує Windows на вашому пристрої.</td></tr>
+<tr><td>Переклад</td><td data-label="Коли">лише якщо ви запускаєте переклад інструкції</td><td>Переклад виконується за допомогою завантаженої моделі на вашому пристрої. Жоден текст не залишає пристрій.</td></tr>
 <tr><td>Параметри та журнали</td><td data-label="Коли">постійно; докладний журнал діагностики – лише якщо ви його ввімкнете</td><td>Вони зберігаються у вашому профілі користувача. Журнали можуть містити заголовки вікон і шляхи до файлів.</td></tr>
 </tbody>
 </table>
 
 <h2 id="uk-3">3. Ваша відповідальність за записи</h2>
 <p>Знімок екрана показує все, що видно в записуваному вікні, – зокрема й персональні дані, наприклад імена, адреси
-електронної пошти чи дані клієнтів. Програма не розпізнає такий вміст. Перевіряйте свої записи, перш ніж поширювати їх;
-зображення можна обрізати та частково розмити в редакторі.</p>
+електронної пошти чи дані клієнтів. Функція «Шукати конфіденційні дані» може допомогти знайти такий вміст
+(розпізнавання тексту Windows, працює на вашому пристрої), але знаходить не все. Самостійно перевіряйте свої записи,
+перш ніж поширювати їх; зображення можна обрізати, а окремі ділянки приховати чи розмити в редакторі.</p>
 <p>Якщо ви записуєте, зберігаєте або поширюєте вміст, що містить персональні дані інших осіб, ви самі відповідаєте за
 те, щоб це було допустимо, – наприклад щодо клієнтів, колег або вашого роботодавця.</p>
 
@@ -1997,6 +2098,11 @@ aici la momentul respectiv.</p>
 модель, залежно від налаштування з <code>huggingface.co</code> (Hugging Face) або <code>alphacephei.com</code>. Як і під
 час будь-якого завантаження, сервер отримує технічно необхідні дані з’єднання, наприклад вашу IP-адресу. Ваші записи
 чи тексти при цьому не передаються.</li>
+<li><strong>Моделі перекладу:</strong> Коли ви завантажуєте модель перекладу в параметрах або вперше перекладаєте
+інструкцію, програма завантажує модель з нашого власного сховища для завантажень у постачальника Cloudflare
+(Cloudflare R2). Моделі походять із проєкту OPUS-MT (Helsinki-NLP, ліцензія CC BY 4.0). Передаються лише технічно
+необхідні дані з’єднання, наприклад ваша IP-адреса; сам переклад виконується на вашому пристрої, і жоден текст не
+залишає пристрій.</li>
 <li><strong>Версія з Microsoft Store:</strong> Чи активна ваша передплата, програма перевіряє через Windows
 у Microsoft Store. «Керувати передплатою» відкриває ваш обліковий запис Microsoft у браузері. Докладніше –
 у <a href="#uk-5">розділі 5</a>.</li>
@@ -2084,7 +2190,7 @@ Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
 <section class="sprache" id="ru" lang="ru" role="tabpanel" aria-labelledby="tab-ru">
 <div class="einleitung">
 <h1>Политика конфиденциальности</h1>
-<p class="stand">Последнее обновление: 27 сентября 2026 г. · распространяется на приложение CNNT Steps — версию из Microsoft Store и версию с нашего веб-сайта — а также на веб-сайт cnntsteps.com</p>
+<p class="stand">Последнее обновление: 27 сентября 2026 г. (дополнение: перевод, распознавание текста, проверка орфографии) · распространяется на приложение CNNT Steps — версию из Microsoft Store и версию с нашего веб-сайта — а также на веб-сайт cnntsteps.com</p>
 <p class="hinweis">Это перевод. В случае сомнений действует немецкая версия.</p>
 
 <div class="kurz">
@@ -2092,7 +2198,7 @@ Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
 <ul>
 <li>CNNT Steps работает на вашем устройстве. Ваши записи нам не передаются.</li>
 <li>В приложении нет учетной записи пользователя, рекламы, а также инструментов аналитики или отслеживания.</li>
-<li>Приложение подключается к интернету только для скачивания речевых моделей (диктовка) и для проверки лицензии — в версии из Microsoft Store через Microsoft Store, в версии с нашего веб-сайта через наш сервис лицензирования.</li>
+<li>Приложение подключается к интернету только для скачивания речевых моделей и моделей перевода, а также для проверки лицензии — в версии из Microsoft Store через Microsoft Store, в версии с нашего веб-сайта через наш сервис лицензирования.</li>
 <li>Наш веб-сайт не использует файлы cookie и инструменты аналитики.</li>
 <li>Снимки экрана могут содержать персональные данные — за то, что вы записываете и передаете другим, отвечаете вы.</li>
 </ul>
@@ -2137,14 +2243,19 @@ Windows, нашего реселлера и серверов загрузки, �
 <tr><td>Поля паролей</td><td data-label="Когда">при щелчке</td><td>Поле пароля, по которому выполнен щелчок, — если Windows сообщает о нем как о таковом — делается на изображении неразборчивым; его содержимое не переносится в виде текста. Это дополнительная мера защиты, а не гарантия.</td></tr>
 <tr><td>Микрофон</td><td data-label="Когда">только если вы включаете диктовку</td><td>Речь преобразуется в текст на вашем устройстве. Аудиоданные при этом не сохраняются.</td></tr>
 <tr><td>Имя автора</td><td data-label="Когда">при создании документов</td><td>Если вы не укажете имя в параметрах, приложение использует ваше имя пользователя Windows. Оно отображается в создаваемых документах.</td></tr>
+<tr><td>Распознавание текста на изображениях</td><td data-label="Когда">только если вы включите его в параметрах</td><td>Windows распознает текст на ваших снимках экрана на вашем устройстве — для поиска в журнале записей и для функции «Найти конфиденциальные данные». Распознанный текст хранится в поисковом индексе в вашем профиле пользователя.</td></tr>
+<tr><td>Проверка орфографии</td><td data-label="Когда">при написании описаний и комментариев</td><td>Проверку выполняет Windows на вашем устройстве.</td></tr>
+<tr><td>Перевод</td><td data-label="Когда">только если вы запускаете перевод инструкции</td><td>Перевод выполняется с помощью скачанной модели на вашем устройстве. Никакой текст не покидает устройство.</td></tr>
 <tr><td>Параметры и журналы</td><td data-label="Когда">постоянно; подробный журнал диагностики — только если вы его включите</td><td>Они хранятся в вашем профиле пользователя. Журналы могут содержать заголовки окон и пути к файлам.</td></tr>
 </tbody>
 </table>
 
 <h2 id="ru-3">3. Ваша ответственность за записи</h2>
 <p>Снимок экрана показывает все, что видно в записываемом окне, — в том числе персональные данные, например имена,
-адреса электронной почты или данные клиентов. Приложение не распознает такое содержимое. Проверяйте свои записи,
-прежде чем передавать их другим; изображения можно обрезать и частично размыть в редакторе.</p>
+адреса электронной почты или данные клиентов. Функция «Найти конфиденциальные данные» может помочь найти такое
+содержимое (распознавание текста Windows, работает на вашем устройстве), но находит не все. Самостоятельно проверяйте
+свои записи, прежде чем передавать их другим; изображения можно обрезать, а отдельные участки скрыть или размыть
+в редакторе.</p>
 <p>Если вы записываете, сохраняете или передаете другим содержимое с персональными данными других лиц, вы сами
 отвечаете за то, чтобы это было допустимо, — например по отношению к клиентам, коллегам или вашему работодателю.</p>
 
@@ -2154,6 +2265,11 @@ Windows, нашего реселлера и серверов загрузки, �
 модель, в зависимости от настройки с <code>huggingface.co</code> (Hugging Face) или <code>alphacephei.com</code>. Как
 и при любом скачивании, сервер получает технически необходимые данные подключения, например ваш IP-адрес. Ваши записи
 или тексты при этом не передаются.</li>
+<li><strong>Модели перевода:</strong> Когда вы скачиваете модель перевода в параметрах или впервые переводите
+инструкцию, приложение скачивает модель из нашего собственного хранилища загрузок у поставщика Cloudflare
+(Cloudflare R2). Модели взяты из проекта OPUS-MT (Helsinki-NLP, лицензия CC BY 4.0). Передаются только технически
+необходимые данные подключения, например ваш IP-адрес; сам перевод выполняется на вашем устройстве, и никакой текст
+не покидает устройство.</li>
 <li><strong>Версия из Microsoft Store:</strong> Активна ли ваша подписка, приложение проверяет через Windows
 в Microsoft Store. «Управление подпиской» открывает вашу учетную запись Microsoft в браузере. Подробнее см.
 в <a href="#ru-5">разделе 5</a>.</li>
@@ -2241,7 +2357,7 @@ Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
 <section class="sprache" id="ja" lang="ja" role="tabpanel" aria-labelledby="tab-ja">
 <div class="einleitung">
 <h1>プライバシーポリシー</h1>
-<p class="stand">最終更新日：2026年9月27日 · CNNT Steps アプリ（Microsoft Store 版および当社ウェブサイト版）ならびにウェブサイト cnntsteps.com に適用されます</p>
+<p class="stand">最終更新日：2026年9月27日（追補：翻訳、文字認識、スペルチェック） · CNNT Steps アプリ（Microsoft Store 版および当社ウェブサイト版）ならびにウェブサイト cnntsteps.com に適用されます</p>
 <p class="hinweis">これは翻訳です。疑義がある場合は、ドイツ語版が優先されます。</p>
 
 <div class="kurz">
@@ -2249,7 +2365,7 @@ Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
 <ul>
 <li>CNNT Steps はお使いのデバイス上で動作します。お客様の記録が当社に送信されることはありません。</li>
 <li>本アプリには、ユーザーアカウント、広告、分析ツールやトラッキングツールはありません。</li>
-<li>本アプリがインターネットに接続するのは、音声モデル（音声入力）のダウンロードと、ライセンスの確認（Microsoft Store 版では Microsoft Store を介して、当社ウェブサイト版では当社のライセンスサービスを介して）の場合に限られます。</li>
+<li>本アプリがインターネットに接続するのは、音声モデルおよび翻訳モデルのダウンロードと、ライセンスの確認（Microsoft Store 版では Microsoft Store を介して、当社ウェブサイト版では当社のライセンスサービスを介して）の場合に限られます。</li>
 <li>当社のウェブサイトでは、Cookie も分析ツールも使用していません。</li>
 <li>スクリーンショットには個人データが含まれる場合があります。何を記録し、共有するかはお客様の責任です。</li>
 </ul>
@@ -2291,17 +2407,21 @@ Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
 <tr><td>パスワードフィールド</td><td data-label="タイミング">クリックしたとき</td><td>クリックされたパスワードフィールドは、Windows がパスワードフィールドとして通知する限りにおいて、画像内で判読できないように処理されます。その内容がテキストとして取り込まれることはありません。これは追加の保護措置であり、保証ではありません。</td></tr>
 <tr><td>マイク</td><td data-label="タイミング">音声入力をオンにした場合のみ</td><td>音声はお使いのデバイス上でテキストに変換されます。その際、音声データは保存されません。</td></tr>
 <tr><td>作成者名</td><td data-label="タイミング">ドキュメントの作成時</td><td>設定で名前を入力しない場合、本アプリはお客様の Windows ユーザー名を使用します。この名前は作成されたドキュメントに表示されます。</td></tr>
+<tr><td>画像内の文字認識</td><td data-label="タイミング">設定でオンにした場合のみ</td><td>Windows が、お使いのデバイス上でスクリーンショット内の文字を認識します。これは、履歴内の検索および「機密データを検索」に使用されます。認識された文字は、お客様のユーザープロファイル内の検索インデックスに保存されます。</td></tr>
+<tr><td>スペルチェック</td><td data-label="タイミング">説明やコメントの入力時</td><td>チェックは、お使いのデバイス上で Windows が行います。</td></tr>
+<tr><td>翻訳</td><td data-label="タイミング">ガイドの翻訳を実行した場合のみ</td><td>翻訳は、ダウンロードしたモデルを使用してお使いのデバイス上で実行されます。テキストがデバイスの外に出ることはありません。</td></tr>
 <tr><td>設定およびログ</td><td data-label="タイミング">常時。詳細な診断ログは、お客様がオンにした場合のみ</td><td>お客様のユーザープロファイルに保存されます。ログにはウィンドウタイトルやファイルパスが含まれる場合があります。</td></tr>
 </tbody>
 </table>
 
 <h2 id="ja-3">3. 記録に関するお客様の責任</h2>
-<p>スクリーンショットには、記録したウィンドウに表示されているものがすべて写ります。これには、氏名、メールアドレス、顧客データなどの個人データも含まれます。本アプリはこのような内容を検出しません。記録を共有する前に内容をご確認ください。画像はエディターでトリミングしたり、部分的にぼかしたりできます。</p>
+<p>スクリーンショットには、記録したウィンドウに表示されているものがすべて写ります。これには、氏名、メールアドレス、顧客データなどの個人データも含まれます。「機密データを検索」機能は、このような内容を見つける手助けになります（Windows の文字認識を使用し、お使いのデバイス上で実行されます）が、すべてを見つけられるわけではありません。記録を共有する前に、お客様ご自身で内容をご確認ください。画像はエディターでトリミングしたり、黒塗りしたり、部分的にぼかしたりできます。</p>
 <p>他者の個人データを含む内容を記録、保存または共有する場合、それが許容されることを確保する責任はお客様ご自身にあります。これは、たとえば顧客、同僚、または雇用主に対する関係において当てはまります。</p>
 
 <h2 id="ja-4">4. 本アプリがインターネットに接続する場合</h2>
 <ul>
 <li><strong>音声入力用の音声モデル：</strong>初めて音声入力を使用するとき、本アプリは設定に応じて <code>huggingface.co</code>（Hugging Face）または <code>alphacephei.com</code> から音声モデルをダウンロードします。ほかのダウンロードと同様に、サーバーは IP アドレスなど技術的に必要な接続データを受け取ります。その際、お客様の記録やテキストが送信されることはありません。</li>
+<li><strong>翻訳モデル：</strong>設定で翻訳モデルをダウンロードするとき、または初めてガイドを翻訳するとき、本アプリは事業者 Cloudflare 上にある当社独自のダウンロード用ストレージ（Cloudflare R2）からモデルをダウンロードします。モデルは OPUS-MT プロジェクト（Helsinki-NLP、ライセンス CC BY 4.0）に由来するものです。送信されるのは IP アドレスなど技術的に必要な接続データのみです。翻訳自体はお使いのデバイス上で実行され、テキストがデバイスの外に出ることはありません。</li>
 <li><strong>Microsoft Store 版：</strong>本アプリは、お客様のサブスクリプションが有効かどうかを、Windows を介して Microsoft Store に照会します。「サブスクリプションの管理」は、ブラウザーでお客様の Microsoft アカウントを開きます。詳細は<a href="#ja-5">第5項</a>をご覧ください。</li>
 <li><strong>当社ウェブサイト版：</strong>ライセンスキーの入力時、およびその後の起動時と最大で1日1回（インターネット接続がある場合のみ）、本アプリはライセンスが有効かどうかを当社のライセンスサービスに照会します。詳細は<a href="#ja-6">第6項</a>をご覧ください。</li>
 </ul>
@@ -2347,7 +2467,7 @@ Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
 <section class="sprache" id="zh" lang="zh-CN" role="tabpanel" aria-labelledby="tab-zh">
 <div class="einleitung">
 <h1>隐私政策</h1>
-<p class="stand">更新日期：2026年9月27日 · 适用于 CNNT Steps 应用（Microsoft Store 版本和我们网站提供的版本）以及网站 cnntsteps.com</p>
+<p class="stand">更新日期：2026年9月27日（补充：翻译、文字识别、拼写检查） · 适用于 CNNT Steps 应用（Microsoft Store 版本和我们网站提供的版本）以及网站 cnntsteps.com</p>
 <p class="hinweis">本文为译文。如有疑义，以德文版本为准。</p>
 
 <div class="kurz">
@@ -2355,7 +2475,7 @@ Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
 <ul>
 <li>CNNT Steps 在您的设备上运行。您的录制内容不会传输给我们。</li>
 <li>本应用没有用户帐户，没有广告，也没有任何分析或跟踪工具。</li>
-<li>本应用仅在下载语音模型（听写）以及检查许可证时才会连接互联网——Microsoft Store 版本通过 Microsoft Store 检查，我们网站提供的版本通过我们的许可证服务检查。</li>
+<li>本应用仅在下载语音模型和翻译模型以及检查许可证时才会连接互联网——Microsoft Store 版本通过 Microsoft Store 检查，我们网站提供的版本通过我们的许可证服务检查。</li>
 <li>我们的网站不使用 Cookie，也不使用任何分析工具。</li>
 <li>屏幕截图可能包含个人数据——您录制和分享的内容由您自行负责。</li>
 </ul>
@@ -2397,17 +2517,21 @@ Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
 <tr><td>密码字段</td><td data-label="时间">点击时</td><td>被点击的密码字段，只要 Windows 将其报告为密码字段，就会在图像中被处理为无法辨认；其内容不会作为文本被采集。这是一项额外的保护措施，而非保证。</td></tr>
 <tr><td>麦克风</td><td data-label="时间">仅在您开启听写时</td><td>语音在您的设备上被转换为文本。在此过程中，音频数据不会被保存。</td></tr>
 <tr><td>作者姓名</td><td data-label="时间">创建文档时</td><td>如果您未在设置中输入姓名，本应用将使用您的 Windows 用户名。该名称会显示在所创建的文档中。</td></tr>
+<tr><td>图像中的文字识别</td><td data-label="时间">仅在您于设置中开启时</td><td>Windows 在您的设备上识别您屏幕截图中的文字——用于在历史记录中搜索以及“查找敏感数据”功能。识别出的文字保存在您的用户配置文件中的搜索索引里。</td></tr>
+<tr><td>拼写检查</td><td data-label="时间">撰写描述和注释时</td><td>检查由 Windows 在您的设备上完成。</td></tr>
+<tr><td>翻译</td><td data-label="时间">仅在您让本应用翻译指南时</td><td>翻译使用已下载的模型在您的设备上运行。任何文本都不会离开您的设备。</td></tr>
 <tr><td>设置与日志</td><td data-label="时间">持续进行；详细的诊断日志仅在您开启时记录</td><td>保存在您的用户配置文件中。日志可能包含窗口标题和文件路径。</td></tr>
 </tbody>
 </table>
 
 <h2 id="zh-3">3. 您对录制内容的责任</h2>
-<p>屏幕截图会显示所录制窗口中可见的所有内容——包括个人数据，例如姓名、电子邮件地址或客户数据。本应用无法识别此类内容。请在分享录制内容之前对其进行检查；图像可以在编辑器中裁剪，也可以对局部进行模糊处理。</p>
+<p>屏幕截图会显示所录制窗口中可见的所有内容——包括个人数据，例如姓名、电子邮件地址或客户数据。“查找敏感数据”功能可以帮助您查找此类内容（使用 Windows 文字识别，在您的设备上运行），但无法找出所有内容。请在分享录制内容之前自行对其进行检查；图像可以在编辑器中裁剪，也可以对局部进行遮盖或模糊处理。</p>
 <p>如果您录制、存储或分享包含他人个人数据的内容，您须自行负责确保此类行为合法合规——例如对客户、同事或您的雇主而言。</p>
 
 <h2 id="zh-4">4. 本应用何时连接互联网</h2>
 <ul>
 <li><strong>用于听写的语音模型：</strong>当您首次使用听写功能时，本应用会根据设置从 <code>huggingface.co</code>（Hugging Face）或 <code>alphacephei.com</code> 下载语音模型。与任何下载一样，服务器会获得技术上必需的连接数据，例如您的 IP 地址。在此过程中，您的录制内容或文本不会被传输。</li>
+<li><strong>翻译模型：</strong>当您在设置中下载翻译模型或首次翻译指南时，本应用会从我们自己在提供商 Cloudflare 处的下载存储（Cloudflare R2）下载模型。这些模型来自 OPUS-MT 项目（Helsinki-NLP，许可证 CC BY 4.0）。仅传输技术上必需的连接数据，例如您的 IP 地址；翻译本身在您的设备上运行，任何文本都不会离开您的设备。</li>
 <li><strong>Microsoft Store 版本：</strong>本应用通过 Windows 向 Microsoft Store 查询您的订阅是否有效。“管理订阅”会在浏览器中打开您的 Microsoft 帐户。详情请参阅<a href="#zh-5">第 5 节</a>。</li>
 <li><strong>我们网站提供的版本：</strong>在输入许可证密钥时，以及此后在启动时且每天最多一次（仅在有互联网连接时），本应用会向我们的许可证服务查询许可证是否有效。详情请参阅<a href="#zh-6">第 6 节</a>。</li>
 </ul>
@@ -2453,7 +2577,7 @@ Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
 <section class="sprache" id="ko" lang="ko" role="tabpanel" aria-labelledby="tab-ko">
 <div class="einleitung">
 <h1>개인정보 처리방침</h1>
-<p class="stand">최종 업데이트: 2026년 9월 27일 · CNNT Steps 앱(Microsoft Store 버전 및 당사 웹사이트 버전)과 웹사이트 cnntsteps.com에 적용됩니다</p>
+<p class="stand">최종 업데이트: 2026년 9월 27일(추가: 번역, 텍스트 인식, 맞춤법 검사) · CNNT Steps 앱(Microsoft Store 버전 및 당사 웹사이트 버전)과 웹사이트 cnntsteps.com에 적용됩니다</p>
 <p class="hinweis">이 문서는 번역본입니다. 의문이 있는 경우 독일어판이 우선합니다.</p>
 
 <div class="kurz">
@@ -2461,7 +2585,7 @@ Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
 <ul>
 <li>CNNT Steps는 사용자의 기기에서 작동합니다. 사용자의 기록은 당사로 전송되지 않습니다.</li>
 <li>이 앱에는 사용자 계정, 광고, 분석 또는 추적 도구가 없습니다.</li>
-<li>이 앱은 음성 모델(받아쓰기) 다운로드와 라이선스 확인(Microsoft Store 버전은 Microsoft Store를 통해, 당사 웹사이트 버전은 당사 라이선스 서비스를 통해)을 위해서만 인터넷에 연결합니다.</li>
+<li>이 앱은 음성 및 번역 모델 다운로드와 라이선스 확인(Microsoft Store 버전은 Microsoft Store를 통해, 당사 웹사이트 버전은 당사 라이선스 서비스를 통해)을 위해서만 인터넷에 연결합니다.</li>
 <li>당사 웹사이트는 쿠키나 분석 도구를 사용하지 않습니다.</li>
 <li>스크린샷에는 개인정보가 포함될 수 있습니다. 무엇을 기록하고 공유할지는 사용자의 책임입니다.</li>
 </ul>
@@ -2503,17 +2627,21 @@ Datenschutzbehörde (<a href="https://www.dsb.gv.at/">www.dsb.gv.at</a>).</p>
 <tr><td>암호 입력란</td><td data-label="시점">클릭할 때</td><td>클릭한 암호 입력란은 Windows가 이를 암호 입력란으로 보고하는 범위에서 이미지에서 알아볼 수 없게 처리되며, 그 내용은 텍스트로 가져오지 않습니다. 이는 추가적인 보호 조치일 뿐 보장은 아닙니다.</td></tr>
 <tr><td>마이크</td><td data-label="시점">받아쓰기를 켠 경우에만</td><td>음성은 사용자의 기기에서 텍스트로 변환됩니다. 이 과정에서 오디오 데이터는 저장되지 않습니다.</td></tr>
 <tr><td>작성자 이름</td><td data-label="시점">문서를 작성할 때</td><td>설정에서 이름을 입력하지 않으면 앱은 사용자의 Windows 사용자 이름을 사용합니다. 이 이름은 작성된 문서에 표시됩니다.</td></tr>
+<tr><td>이미지의 텍스트 인식</td><td data-label="시점">설정에서 켠 경우에만</td><td>Windows가 사용자의 기기에서 스크린샷의 텍스트를 인식합니다. 이는 내역 검색과 “민감한 데이터 찾기”에 사용됩니다. 인식된 텍스트는 사용자 프로필의 검색 인덱스에 보관됩니다.</td></tr>
+<tr><td>맞춤법 검사</td><td data-label="시점">설명과 메모를 작성할 때</td><td>검사는 사용자의 기기에서 Windows가 수행합니다.</td></tr>
+<tr><td>번역</td><td data-label="시점">가이드 번역을 실행한 경우에만</td><td>번역은 다운로드한 모델을 사용하여 사용자의 기기에서 실행됩니다. 어떤 텍스트도 기기 밖으로 나가지 않습니다.</td></tr>
 <tr><td>설정 및 로그</td><td data-label="시점">상시; 상세 진단 로그는 사용자가 켠 경우에만</td><td>사용자 프로필에 저장됩니다. 로그에는 창 제목과 파일 경로가 포함될 수 있습니다.</td></tr>
 </tbody>
 </table>
 
 <h2 id="ko-3">3. 기록에 대한 사용자의 책임</h2>
-<p>스크린샷에는 기록된 창에 보이는 모든 것이 담깁니다. 여기에는 이름, 이메일 주소, 고객 데이터와 같은 개인정보도 포함됩니다. 앱은 이러한 내용을 인식하지 않습니다. 기록을 공유하기 전에 확인하십시오. 편집기에서 이미지를 자르거나 일부를 흐리게 처리할 수 있습니다.</p>
+<p>스크린샷에는 기록된 창에 보이는 모든 것이 담깁니다. 여기에는 이름, 이메일 주소, 고객 데이터와 같은 개인정보도 포함됩니다. “민감한 데이터 찾기” 기능이 이러한 내용을 찾는 데 도움이 될 수 있지만(Windows 텍스트 인식 사용, 사용자의 기기에서 실행), 모든 것을 찾아내지는 못합니다. 기록을 공유하기 전에 사용자가 직접 확인하십시오. 편집기에서 이미지를 자르거나 일부를 가리거나 흐리게 처리할 수 있습니다.</p>
 <p>다른 사람의 개인정보가 포함된 내용을 기록, 저장 또는 공유하는 경우, 이것이 허용되는지 확인할 책임은 사용자 본인에게 있습니다. 예를 들어 고객, 동료 또는 고용주와의 관계에서 그러합니다.</p>
 
 <h2 id="ko-4">4. 앱이 인터넷에 연결하는 경우</h2>
 <ul>
 <li><strong>받아쓰기용 음성 모델:</strong> 받아쓰기를 처음 사용할 때 앱은 설정에 따라 <code>huggingface.co</code>(Hugging Face) 또는 <code>alphacephei.com</code>에서 음성 모델을 다운로드합니다. 여느 다운로드와 마찬가지로 서버는 사용자의 IP 주소 등 기술적으로 필요한 연결 데이터를 받습니다. 이때 사용자의 기록이나 텍스트는 전송되지 않습니다.</li>
+<li><strong>번역 모델:</strong> 설정에서 번역 모델을 다운로드하거나 처음으로 가이드를 번역할 때 앱은 제공업체 Cloudflare에 있는 당사 자체 다운로드 저장소(Cloudflare R2)에서 모델을 다운로드합니다. 모델은 OPUS-MT 프로젝트(Helsinki-NLP, 라이선스 CC BY 4.0)에서 나온 것입니다. 사용자의 IP 주소 등 기술적으로 필요한 연결 데이터만 전송되며, 번역 자체는 사용자의 기기에서 실행되고 어떤 텍스트도 기기 밖으로 나가지 않습니다.</li>
 <li><strong>Microsoft Store 버전:</strong> 앱은 Windows를 통해 Microsoft Store에 사용자의 구독이 활성 상태인지 조회합니다. “구독 관리”를 선택하면 브라우저에서 사용자의 Microsoft 계정이 열립니다. 자세한 내용은 <a href="#ko-5">제5항</a>을 참조하십시오.</li>
 <li><strong>당사 웹사이트 버전:</strong> 라이선스 키를 입력할 때, 그리고 그 이후에는 앱을 시작할 때와 하루 최대 한 번(인터넷에 연결되어 있는 경우에만) 앱이 당사 라이선스 서비스에 라이선스가 유효한지 조회합니다. 자세한 내용은 <a href="#ko-6">제6항</a>을 참조하십시오.</li>
 </ul>
